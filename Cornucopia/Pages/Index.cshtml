@@ -1,0 +1,32 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Cornucopia</h1>
+    <p>Your Info Portal</p>
+
+    <form method="post">
+        <input type="text" name="Enter name">
+        <select name="Dwelling">
+            <option value="">Select dwelling type</option>
+            <option value="1">Apartment</option>
+            <option value="2">Duplex</option>
+            <option value="3">Townhouse</option>
+            <option value="4">Semi</option>
+            <option value="5">House</option>
+        </select>
+        <select name="Location">
+            <option value="">Select Location</option>
+            <option value="1">CBD</option>
+            <option value="2">Inner City</option>
+            <option value="3">Outer Suburb</option>
+            <option value="4">Rural</option>           
+        </select>
+        <input type="submit" />
+
+
+    </form>
+</div>
