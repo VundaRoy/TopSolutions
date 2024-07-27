@@ -11,8 +11,8 @@ namespace TopSolutions.ConsoleApp.OOP.Classes
     {        
         string IRecipe.Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         string IRecipe.Description { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-        public List<Ingredient> GetIngredients(string ingredientEntry)
+        
+        public List<Ingredient> GetIngredients(Ingredient ingredient)
         {
             throw new NotImplementedException();
         }

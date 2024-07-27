@@ -7,12 +7,9 @@ using TopSolutions.ConsoleApp.OOP.Classes;
 
 namespace TopSolutions.ConsoleApp.OOP.Interface
 {
-    public interface IRecipe
+    public interface ICreateRecipe
     {
-        string Name { get; set; }
-        string Description { get; set; }
-       
         List<Ingredient> GetIngredients(Ingredient ingredient);
-
+        void Method();       
     }
 }

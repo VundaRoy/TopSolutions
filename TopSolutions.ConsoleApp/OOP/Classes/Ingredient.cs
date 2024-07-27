@@ -9,10 +9,12 @@ namespace TopSolutions.ConsoleApp.OOP.Classes
 {
     public class Ingredient : IIngredient
     {
-        public string Name => throw new NotImplementedException();
+        IIngredient _ingredient;
 
-        public string Description => throw new NotImplementedException();
+        public string Name { get; set; }
 
-        public IngredientType Type => throw new NotImplementedException();
+        public string Description { get; set; }
+
+        public IngredientType Type {get; set;}
     }
 }
