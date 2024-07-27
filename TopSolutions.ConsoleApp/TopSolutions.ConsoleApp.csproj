@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="OOP\Abstract\" />
     <Folder Include="Samples\GitHub\" />
     <Folder Include="Samples\Misc\ElasticSearch\Before\" />
     <Folder Include="Samples\Misc\ElasticSearch\After\" />
@@ -19,6 +20,11 @@
     <Folder Include="Samples\Patterns\Segunda\Composite\" />
     <Folder Include="Samples\Patterns\Tercera\Before\" />
     <Folder Include="Samples\Patterns\Tercera\Factory\" />
+    <Folder Include="SOLID\LSP\" />
+    <Folder Include="SOLID\ISP\" />
+    <Folder Include="SOLID\DIP\" />
+    <Folder Include="SOLID\OCP\" />
+    <Folder Include="SOLID\SRP\" />
   </ItemGroup>
 
 </Project>
