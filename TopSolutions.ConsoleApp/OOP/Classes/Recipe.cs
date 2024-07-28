@@ -8,10 +8,15 @@ using TopSolutions.ConsoleApp.OOP.Interface;
 namespace TopSolutions.ConsoleApp.OOP.Classes
 {
     public class Recipe : IRecipe
-    {        
-        string IRecipe.Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        string IRecipe.Description { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        
+    {
+        public Recipe()
+        {
+            Console.WriteLine("Starting recipe..");
+        }
+
+        public string Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string Description { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         public List<Ingredient> GetIngredients(Ingredient ingredient)
         {
             throw new NotImplementedException();
