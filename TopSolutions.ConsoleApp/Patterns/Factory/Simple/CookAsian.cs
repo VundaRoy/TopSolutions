@@ -3,18 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TopSolutions.ConsoleApp.Patterns.Factory.Simple.Contract;
 
 namespace TopSolutions.ConsoleApp.Patterns.Factory.Simple
 {
-    public class CookAsian : Cook
+    public class CookAsian : ICook
     {
         public CookAsian() 
         {
             Console.WriteLine("Welcome to Asian cuisine");
         }
-        public void StirFry()
+
+        public void CookFood()
         {
-            Console.WriteLine("start stir fry");
+            Console.WriteLine("Ready to stir fry");
         }
+
+        public void GetIngredients()
+        {
+            Console.WriteLine("Dice and slice veges");
+        }
+
+        public void PrepareIngredients()
+        {
+            Console.WriteLine("Pour oil and temper spices");
+        }
+
+        public void ServerFood()
+        {
+            Console.WriteLine("Bring out the pandan leaves");
+        }
+
+        
     }
 }

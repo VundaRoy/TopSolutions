@@ -9,9 +9,9 @@ namespace TopSolutions.ConsoleApp.Patterns.Factory.Simple.FactoryClass
 {
     public class CookFactory 
     {
-        public static Cook GetCookType(string cookType)
+        public static ICook GetCookType(string cookType)
         {
-            Cook cook = new Cook();
+            ICook cook = new Cook();
             if (cookType == "Asian")
             {
                 cook = new CookAsian();

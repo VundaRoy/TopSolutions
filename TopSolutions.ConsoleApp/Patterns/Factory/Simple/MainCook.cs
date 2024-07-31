@@ -9,11 +9,11 @@ namespace TopSolutions.ConsoleApp.Patterns.Factory.Simple
 {
     public class MainCook
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            Cook cook = CookFactory.GetCookType("Asian");
+            var cook = CookFactory.GetCookType("Asian");
 
-            if (cook == null) 
+            if (cook != null) 
             {
                 Console.WriteLine("Welcome statement " + cook.CookFood);
                 Console.WriteLine("Ingredients" + cook.GetIngredients);
