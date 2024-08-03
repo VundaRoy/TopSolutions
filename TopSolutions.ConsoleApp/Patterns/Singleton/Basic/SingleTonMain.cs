@@ -8,11 +8,18 @@ namespace TopSolutions.ConsoleApp.Patterns.Singleton.Basic
 {
     public class SingleTonMain
     {
-      public static void Main() 
+        public static readonly OneWay one = OneWay.OneTime;
+        public static void Main() 
       {
-            OneWay one = OneWay.OneTime;
+            
             one.DoOnewayRun();
+            RunAny();
       }
+
+        public static void RunAny()
+        {
+            one.DoOnewayRun("and a couple of guys");
+        }
 
     }
 }

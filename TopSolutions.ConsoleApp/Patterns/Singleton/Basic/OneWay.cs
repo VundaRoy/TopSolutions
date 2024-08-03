@@ -22,9 +22,9 @@ namespace TopSolutions.ConsoleApp.Patterns.Singleton.Basic
             }
 
         }
-        public void DoOnewayRun()
+        public void DoOnewayRun(string extraText = null)
         {
-            Console.WriteLine("Faye runaway");
+            Console.WriteLine("Faye runaway " + extraText);
         }
     }
 
