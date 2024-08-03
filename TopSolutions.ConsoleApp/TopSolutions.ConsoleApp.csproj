@@ -9,6 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Patterns\Bridge\" />
+    <Folder Include="Patterns\Memento\" />
     <Folder Include="Patterns\NullObject\" />
     <Folder Include="Patterns\Singleton\" />
     <Folder Include="Samples\GitHub\" />

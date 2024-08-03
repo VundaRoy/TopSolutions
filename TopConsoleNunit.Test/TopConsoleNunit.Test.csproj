@@ -23,7 +23,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="SOLID\" />
+    <Folder Include="Patterns\Bridge\" />
+    <Folder Include="Patterns\Memento\" />
+    <Folder Include="Patterns\Singleton\" />
+    <Folder Include="SOLID\LSP\" />
+    <Folder Include="SOLID\ISP\" />
+    <Folder Include="SOLID\DIP\" />
+    <Folder Include="SOLID\OCP\" />
+    <Folder Include="SOLID\SRP\" />
   </ItemGroup>
 
   <ItemGroup>
