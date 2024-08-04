@@ -33,7 +33,11 @@ namespace TopSolutions.ConsoleApp.Patterns.Factory.Simple
         {
             Console.WriteLine("Bring out the pandan leaves");
         }
+        public string GetProfile(string name) 
+        {
+            return "Asian cook";
+        }
 
-        
+
     }
 }

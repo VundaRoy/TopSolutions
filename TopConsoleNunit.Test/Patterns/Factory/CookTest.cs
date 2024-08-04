@@ -22,5 +22,13 @@ namespace TopConsoleNunit.Test.Patterns.Factory
 
             Assert.IsFalse(serviceMock.Name.Equals(null));
         }
+        [Test]
+        public void AsianCookTest2() 
+        { 
+          var asianMock = new Mock<ICook>();
+           asianMock.Setup(a => a.GetProfile(It.IsAny<string>())).Returns("Profile");
+            var profile = asianMock.Object.GetProfile("Profile");
+            Assert.AreEqual("Profile", profile);
+        }
     }
 }

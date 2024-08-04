@@ -12,6 +12,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Factory.Simple.Contract
         void PrepareIngredients();
         void CookFood();
         void ServerFood();
+        string GetProfile(string name);
 
     }
 }

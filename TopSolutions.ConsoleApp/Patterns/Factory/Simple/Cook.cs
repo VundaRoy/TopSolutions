@@ -28,5 +28,9 @@ namespace TopSolutions.ConsoleApp.Patterns.Factory.Simple
         {
             Console.WriteLine("Serve food");
         }
+        public string GetProfile(string name)
+        {
+            return "general cook";
+        }
     }
 }

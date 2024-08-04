@@ -33,5 +33,9 @@ namespace TopSolutions.ConsoleApp.Patterns.Factory.Simple
         {
             Console.WriteLine("Serve on large plate");
         }
+        public string GetProfile(string name)
+        {
+            return "Latin cook";
+        }
     }
 }
