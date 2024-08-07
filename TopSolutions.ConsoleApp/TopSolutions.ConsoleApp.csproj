@@ -5,12 +5,11 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.Patterns.Singleton.LazyLoad.VoterMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.Patterns.Memento.MementoMain</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="Patterns\Bridge\" />
-    <Folder Include="Patterns\Memento\" />
     <Folder Include="Patterns\NullObject\" />
     <Folder Include="Samples\GitHub\" />
     <Folder Include="Samples\Misc\ElasticSearch\Before\" />
