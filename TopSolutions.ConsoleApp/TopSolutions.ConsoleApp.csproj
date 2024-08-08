@@ -5,12 +5,11 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.Patterns.Memento.MementoMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.Patterns.NullObject.Basic.BasicNullMain</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="Patterns\Bridge\" />
-    <Folder Include="Patterns\NullObject\" />
     <Folder Include="Samples\GitHub\" />
     <Folder Include="Samples\Misc\ElasticSearch\Before\" />
     <Folder Include="Samples\Misc\ElasticSearch\After\" />
