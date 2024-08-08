@@ -12,6 +12,7 @@ namespace TopSolutions.ConsoleApp.OOP.InheritanceAbstract
         {
             var t = base.GetVoter(Id);
             Console.WriteLine("This is a state election");
+            Console.WriteLine("State policy is "+ statePolicy);
             return t;
         }
     }

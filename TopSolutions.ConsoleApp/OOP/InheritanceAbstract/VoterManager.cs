@@ -8,6 +8,7 @@ namespace TopSolutions.ConsoleApp.OOP.InheritanceAbstract
         public Voter GetVoter(int VoterId)
         {
             Voter voter = new Voter();
+            Console.WriteLine("Voter " + VoterId + " is registered.");
             return voter;
         }
         public void UpdateVoter(Voter voter)
