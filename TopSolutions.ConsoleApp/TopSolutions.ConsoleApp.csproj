@@ -5,10 +5,11 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Sealed.MainSealed</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Structs.TestStructure</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="GeneralCSharp\Constructors\" />
     <Folder Include="Patterns\Bridge\" />
     <Folder Include="Samples\GitHub\" />
     <Folder Include="Samples\Misc\ElasticSearch\Before\" />
