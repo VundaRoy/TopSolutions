@@ -22,7 +22,6 @@
     <Folder Include="Samples\Patterns\Tercera\Before\" />
     <Folder Include="Samples\Patterns\Tercera\Factory\" />
     <Folder Include="SOLID\LSP\" />
-    <Folder Include="SOLID\ISP\" />
     <Folder Include="SOLID\DIP\" />
   </ItemGroup>
 
