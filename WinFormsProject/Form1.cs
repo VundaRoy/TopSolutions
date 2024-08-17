@@ -23,5 +23,28 @@ namespace WinFormsProject
         {
             Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.Text.Equals("Critical"))
+            {
+                panel1.BackColor = Color.Red;
+            }
+            else
+            if (comboBox1.Text.Equals("Serious"))
+
+            {
+                panel1.BackColor = Color.Pink;
+            }
+            if (radioButton1.Checked)
+            {
+                panel1.BackColor = Color.Blue;
+            }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
