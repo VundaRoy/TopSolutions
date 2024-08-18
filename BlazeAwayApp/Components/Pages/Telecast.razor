@@ -1,0 +1,26 @@
+﻿@page "/telecast"
+@rendermode InteractiveServer
+
+
+<h3>Telecast</h3>
+
+@code {
+    private string todayDate = "yom kippur";
+
+}
+<div style="border:dashed">
+    <div style="border:double">
+       Domestic <input id="DomesticRadio" type="radio" value="Domestic" />
+        International <input id="InternationalRadio" type="radio" value="International" />
+    </div>
+    Limited service<input id="LimitedCheckbox" type="checkbox" value="Limited Service" />
+    <div>
+        Today is @todayDate
+    </div>
+   
+</div>
+
+
+
+
+<table style="width:100%;"><tr><td>Content&nbsp;</td><td>Telegram&nbsp;</td><td>Televised&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></table>
