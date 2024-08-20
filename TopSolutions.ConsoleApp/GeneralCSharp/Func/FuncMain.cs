@@ -26,6 +26,15 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Func
             Func<int, int, bool> areEqual = (x, y) => x == y;
             Console.WriteLine(areEqual(2000, 3000));
 
+            //Action
+            Action<string> printResponse;
+            printResponse = Console.WriteLine;
+            printResponse("this is it!");
+            //action lambda
+            
+            printResponse = p => Console.WriteLine(p);
+            printResponse("c3po was my design");
+            printResponse("and so what?");
 
         }
     }
