@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Arrays.ArrayMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.SOLID.LSP.Basic.Comply.LiskovMain</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,7 +21,6 @@
     <Folder Include="Samples\Patterns\Segunda\Composite\" />
     <Folder Include="Samples\Patterns\Tercera\Before\" />
     <Folder Include="Samples\Patterns\Tercera\Factory\" />
-    <Folder Include="SOLID\LSP\" />
     <Folder Include="SOLID\DIP\" />
   </ItemGroup>
 
