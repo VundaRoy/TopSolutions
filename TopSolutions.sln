@@ -15,11 +15,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandConnect", "CommandCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopConsoleNunit.Test", "TopConsoleNunit.Test\TopConsoleNunit.Test.csproj", "{00C6EAD3-2BB2-4E9C-A8C3-139699F493F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsProject", "WinFormsProject\WinFormsProject.csproj", "{02888C6D-D1F7-459F-BFAA-8FA0D5F6B516}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsProject", "WinFormsProject\WinFormsProject.csproj", "{02888C6D-D1F7-459F-BFAA-8FA0D5F6B516}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UltraWPFApp", "UltraWPFApp\UltraWPFApp.csproj", "{6A315EFD-8F74-4123-AB0C-4DA5D3B4F8F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UltraWPFApp", "UltraWPFApp\UltraWPFApp.csproj", "{6A315EFD-8F74-4123-AB0C-4DA5D3B4F8F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazeAwayApp", "BlazeAwayApp\BlazeAwayApp.csproj", "{BEA35A0C-4064-48FE-A64C-EAF901425ECF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazeAwayApp", "BlazeAwayApp\BlazeAwayApp.csproj", "{BEA35A0C-4064-48FE-A64C-EAF901425ECF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
