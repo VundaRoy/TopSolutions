@@ -18,6 +18,8 @@ namespace TopSolutions.ConsoleApp.SOLID.LSP.Basic.Comply
             // This will not work
             //square.ChangeDimensions(square, 4, 5);  
             Console.WriteLine("Square area is : " + square.GetArea());
+            var circle = new Circle { Radius = 3 };
+            Console.WriteLine("Circle with radius of 3 has area of :" + circle.GetArea());
             Console.ReadKey();
         }
     }
