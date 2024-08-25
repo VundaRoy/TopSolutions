@@ -8,7 +8,11 @@ namespace BlazeAwayApp.Services
         private static List<Employee>? _employees = default!;
         private static List<JobCategory>? _jobCategories = default!;
         private static List<Country>? _countries = default!;
-
+        public static void InitCategories()
+        {
+            _jobCategories = InitializeMockJobCategories();
+            _countries = InitializeMockCountries();
+        }
         public static List<Employee>? Employees
         {
             get
@@ -22,6 +26,7 @@ namespace BlazeAwayApp.Services
         }
         private static List<Employee> InitializeMockEmployees()
         {
+            InitCategories();
             var e1 = new Employee
             {
                 MaritalStatus = MaritalStatus.Single,
@@ -36,12 +41,12 @@ namespace BlazeAwayApp.Services
                 Smoker = false,
                 Street = "Grote Markt 1",
                 Zip = "1000",
-                JobCategory = _jobCategories[2],
+                JobCategory = _jobCategories[2] ?? throw new InvalidOperationException("Job categories not initialized."),
                 JobCategoryId = _jobCategories[2].JobCategoryId,
                 Comment = "Lorem Ipsum",
                 ExitDate = null,
                 JoinedDate = new DateTime(2015, 3, 1),
-                Country = _countries[0],
+                Country = _countries[0] ?? throw new InvalidOperationException("Countries not initialized."),
                 CountryId = _countries[0].CountryId,
                 IsOnHoliday = false
             };
