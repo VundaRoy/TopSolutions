@@ -14,12 +14,29 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.HashTableSample
             hashtable.Add("Location", "Samabula");
             hashtable.Add("Email", "aga@tel.com.fj");
             Console.WriteLine("Printing list");
-            foreach (object key in hashtable) 
+            foreach (DictionaryEntry key in hashtable) 
             { 
-                Console.WriteLine(key.ToString() + " : " + hashtable["Name"]);
+                Console.WriteLine(key.Key + " : " + key.Value);
             }
             Console.WriteLine("Location : " + hashtable["Location"]);
             Console.WriteLine("\n Printing using keys ");
+            //without using Add method
+            Hashtable altHash = new()
+            {
+                {1, "Towoomba" },
+                {2, "Windhoek" },
+                {3, "Walvis Bay" },
+                {4, "Cape Town" },
+                {5, "Longreach" },
+                {14, "Cabo Verde" },
+                {113, "Barcaldine" },
+                {1117, "Emerald" }
+            };
+            foreach (var element in altHash.Keys)
+            {
+                Console.WriteLine("{0} is the city of {1}", element, altHash[element]);
+            }
+
         }
     }
 }
