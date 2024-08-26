@@ -10,8 +10,8 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Structs
     {
         public static void Main(string[] args)
         {
-            BooksStruct book1 = new BooksStruct();
-            BooksStruct book2 = new BooksStruct();
+            BooksStruct book1 = new();
+            BooksStruct book2 = new();
 
             book1.getBookInfo("French English Phrases", "A full on language book", "Harrap Editors", "Language learning");
             book2.getBookInfo("Structural Pattern", "Go4 typical books for engineers", "Keith Reigh", "Software engineering");

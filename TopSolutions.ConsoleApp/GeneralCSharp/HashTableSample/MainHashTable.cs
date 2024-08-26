@@ -16,7 +16,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.HashTableSample
             Console.WriteLine("Printing list");
             foreach (object key in hashtable) 
             { 
-                Console.WriteLine(key + " : " + hashtable[key]);
+                Console.WriteLine(key.ToString() + " : " + hashtable["Name"]);
             }
             Console.WriteLine("Location : " + hashtable["Location"]);
             Console.WriteLine("\n Printing using keys ");
