@@ -15,6 +15,8 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Extensions
             string s = "So this is the original text. ";
             string result = s.AppendDisclosure();
             Console.WriteLine(result);
+            result = s.CapsLockTheThing();
+            Console.WriteLine(result);
         }
 
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,10 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Extensions
         { 
             return text + " By the way I deny all links to this statement"; 
         
+        }
+        public static string CapsLockTheThing(this string text) 
+        {
+            return text + " when caps is " + text.ToUpper();
         }
     }
 }
