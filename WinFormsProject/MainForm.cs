@@ -1,8 +1,10 @@
+using WinFormsProject.Forms;
+
 namespace WinFormsProject
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -45,6 +47,12 @@ namespace WinFormsProject
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            PatternsTest pt = new PatternsTest();
+            pt.Show();
         }
     }
 }

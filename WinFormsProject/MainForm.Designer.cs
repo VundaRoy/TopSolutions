@@ -1,6 +1,6 @@
 ﻿namespace WinFormsProject
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -43,13 +43,14 @@
             helpToolStripMenuItem = new ToolStripMenuItem();
             dateTimePicker1 = new DateTimePicker();
             panel1 = new Panel();
+            label3 = new Label();
             comboBox1 = new ComboBox();
             button2 = new Button();
             groupBox1 = new GroupBox();
-            checkBox1 = new CheckBox();
-            label3 = new Label();
-            radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
+            radioButton1 = new RadioButton();
+            checkBox1 = new CheckBox();
+            button3 = new Button();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -164,6 +165,15 @@
             panel1.Size = new Size(377, 328);
             panel1.TabIndex = 6;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(23, 210);
+            label3.Name = "label3";
+            label3.Size = new Size(94, 25);
+            label3.TabIndex = 4;
+            label3.Text = "Enter Type";
+            // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
@@ -196,24 +206,16 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Internals";
             // 
-            // checkBox1
+            // radioButton2
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(29, 29);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(108, 29);
-            checkBox1.TabIndex = 0;
-            checkBox1.Text = "Required";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(23, 210);
-            label3.Name = "label3";
-            label3.Size = new Size(94, 25);
-            label3.TabIndex = 4;
-            label3.Text = "Enter Type";
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(31, 96);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(136, 29);
+            radioButton2.TabIndex = 2;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "International";
+            radioButton2.UseVisualStyleBackColor = true;
             // 
             // radioButton1
             // 
@@ -226,23 +228,34 @@
             radioButton1.Text = "National";
             radioButton1.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // checkBox1
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(31, 96);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(136, 29);
-            radioButton2.TabIndex = 2;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "International";
-            radioButton2.UseVisualStyleBackColor = true;
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(29, 29);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(108, 29);
+            checkBox1.TabIndex = 0;
+            checkBox1.Text = "Required";
+            checkBox1.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // button3
+            // 
+            button3.Location = new Point(93, 388);
+            button3.Name = "button3";
+            button3.RightToLeft = RightToLeft.No;
+            button3.Size = new Size(177, 47);
+            button3.TabIndex = 7;
+            button3.Text = "Call Patterns";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Honeydew;
             ClientSize = new Size(889, 582);
+            Controls.Add(button3);
             Controls.Add(panel1);
             Controls.Add(dateTimePicker1);
             Controls.Add(label2);
@@ -252,7 +265,7 @@
             Controls.Add(menuStrip1);
             ForeColor = SystemColors.ActiveCaptionText;
             MainMenuStrip = menuStrip1;
-            Name = "Form1";
+            Name = "MainForm";
             Text = "Form Entry Specimen";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -288,5 +301,6 @@
         private CheckBox checkBox1;
         private RadioButton radioButton2;
         private RadioButton radioButton1;
+        private Button button3;
     }
 }
