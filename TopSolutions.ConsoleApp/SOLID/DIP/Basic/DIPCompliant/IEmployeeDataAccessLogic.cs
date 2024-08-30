@@ -10,5 +10,6 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant
     {
         Employee GetEmployeeDetails(int id);
         void UpdateEmployee(int id, Employee employee);
+        void NotifyEmployee(int id);
     }
 }

@@ -21,5 +21,9 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant
         { 
             _IEmployeeDataAccessLogic.UpdateEmployee(id, employee);
         }
+        public void NotifyEmployee(int id) 
+        {  
+            _IEmployeeDataAccessLogic.NotifyEmployee(id);
+        }
     }
 }

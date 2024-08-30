@@ -22,6 +22,11 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant
             return emp;
         }
 
+        public void NotifyEmployee(int id)
+        {
+            Console.WriteLine("Sent to employee " + id);
+        }
+
         public void UpdateEmployee(int id, Employee employee)
         {
             Console.WriteLine("The updated employee with id of " + id + " has a name of " +employee.Name);

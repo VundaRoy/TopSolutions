@@ -10,12 +10,12 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant
     {
         static void Main(string[] args)
         {
-            EmployeeBusinessLogic employeeBusinessLogic = new EmployeeBusinessLogic();
+            EmployeeBusinessLogic employeeBusinessLogic = new();
             Employee emp = employeeBusinessLogic.GetEmployeeDetails(1001);
             PrintEmployeeDetails(emp);
             
             employeeBusinessLogic.UpdateEmployee(1001, emp);
-
+            employeeBusinessLogic.NotifyEmployee(1001);
             Employee staff01 = new Employee { ID = 200, Department = "OP", Name = "Sentinel", Salary = 500000 };
             //emp = employeeBusinessLogic.GetEmployeeDetails(200);
             PrintEmployeeDetails(staff01);
