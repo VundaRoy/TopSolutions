@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant
+namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant.Contract
 {
     public interface IEmployeeDataAccessLogic
     {

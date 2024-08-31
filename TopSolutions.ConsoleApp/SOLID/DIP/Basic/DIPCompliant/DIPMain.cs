@@ -20,6 +20,12 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant
             //emp = employeeBusinessLogic.GetEmployeeDetails(200);
             PrintEmployeeDetails(staff01);
             Console.ReadKey();
+            //overseas
+
+            Console.WriteLine("Employee from UAE is " + employeeBusinessLogic.ValidateOverseasEmployee("UAE"));
+            Console.WriteLine("Employee from UK with pay of $60000 is $" + employeeBusinessLogic.GetOverseasEmployeePay(1001, "UK", 60000.00));
+            Console.WriteLine("Whereas employee from Canada with pay of $60000 is $" + employeeBusinessLogic.GetOverseasEmployeePay(1001, "Canada", 60000.00));
+
         }
 
         static void PrintEmployeeDetails(Employee emp) 
