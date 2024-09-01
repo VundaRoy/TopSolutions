@@ -17,6 +17,15 @@ body {
   margin-bottom: 60px;
 }
 h1{
-    font-size:x-large;
-    color:forestgreen;    
+    font-size:45px;
+    color:forestgreen;
+    font-family:Arial;    
+}
+h2 {
+    color: dodgerblue;
+    font-size: 30px;
+}
+h4{
+    color:crimson;
+    font-size:20px;
 }
