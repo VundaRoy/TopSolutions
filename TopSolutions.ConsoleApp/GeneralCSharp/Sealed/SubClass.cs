@@ -16,7 +16,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Sealed
         public sealed override void ColorMeShocked()
         {
             base.ColorMeShocked();
-            Console.WriteLine("Sealed subclass says...");
+            Console.WriteLine("Sealed subclass says sub shocked...");
         }
     }
 }

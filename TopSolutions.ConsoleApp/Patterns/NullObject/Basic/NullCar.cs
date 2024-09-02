@@ -4,12 +4,12 @@
     {
         public void Drive()
         {
-            Console.WriteLine("Drive the null car.");
+            //Console.WriteLine("Drive the null car.");
         }
 
         public void Stop()
         {
-            Console.WriteLine("Stop the null car.");
+            //Console.WriteLine("Stop the null car.");
         }
     }
 }

@@ -14,8 +14,9 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Sealed
             subClass.Paint();
             subClass.ColorMeShocked();
 
-            FinalClass finalClass = new FinalClass();
+            FinalClass finalClass = new();
             finalClass.Paint();
+            finalClass.ColorMeShocked();
         }
     }
 }
