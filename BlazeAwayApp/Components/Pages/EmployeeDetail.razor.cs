@@ -14,9 +14,6 @@ namespace BlazeAwayApp.Components.Pages
             Employee = MockDataService.Employees.Single(e => e.EmployeeId == EmployeeId);
         }
 
-        private void ChangeHolidayState()
-        {
-            Employee.IsOnHoliday = !Employee.IsOnHoliday;
-        }
+        private void ChangeHolidayState() => Employee.IsOnHoliday = !Employee.IsOnHoliday;
     }
 }
