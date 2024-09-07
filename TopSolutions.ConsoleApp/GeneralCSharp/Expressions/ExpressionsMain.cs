@@ -11,7 +11,8 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Expressions
         static void Main(string[] args) 
         {
             Employee employee = new("Yuni", "Ta");
-            employee.GetFullName();
+            Console.WriteLine(employee.GetFullName());
+            employee.DisplayName();
         }
     }
 }
