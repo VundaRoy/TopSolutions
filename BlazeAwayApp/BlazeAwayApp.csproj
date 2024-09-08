@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Components\EmployeeCard.razor" />
     <Content Remove="Components\Pages\EmployeeAlt.razor" />
     <Content Remove="Components\Pages\EmployeeDetail.razor" />
   </ItemGroup>
@@ -16,17 +17,23 @@
   </ItemGroup>
 
   <ItemGroup>
+    <_ContentIncludedByDefault Remove="Components\EmployeeCard.razor" />
     <_ContentIncludedByDefault Remove="Components\Pages\EmployeeAlt.razor" />
     <_ContentIncludedByDefault Remove="Components\Pages\EmployeeDetail.razor" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Components\EmployeeCard.razor" />
     <None Include="Components\Pages\EmployeeAlt.razor" />
     <None Include="Components\Pages\EmployeeDetail.razor" />
   </ItemGroup>
 
   <ItemGroup>
     <UpToDateCheckInput Remove="Components\Pages\EmployeeAlt.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Components\EmployeeCard.razor" />
   </ItemGroup>
 
 </Project>
