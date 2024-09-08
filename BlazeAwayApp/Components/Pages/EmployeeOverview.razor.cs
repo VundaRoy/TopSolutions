@@ -11,7 +11,7 @@ namespace BlazeAwayApp.Components.Pages
         private string Description = "employee overview";
         protected async override Task OnInitializedAsync()
         {
-            //await Task.Delay(2000);
+            await Task.Delay(2000);
             Employees = MockDataService.Employees;
         }
         public void ShowQuickViewPopup(Employee selectedEmployee)
