@@ -22,15 +22,21 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Arrays
 
             //array of classes
 
-            Vehicle v1 = new Vehicle();
-            Person p2 = new Person();
-            object[] mixedTypes = new object[2];
+            Vehicle v1 = new() { Description = "Sedan", Make="Elantra", Name="Nissan", Year="2005"};
+            Person p2 = new () { Id=2, Age = 34, Name="Forbes Milton", Description="Salary man"};
+            Person p3 = new() { Id = 10, Age = 41, Name = "Nelson Mandelson", Description = "Politician" };
+            object[] mixedTypes = new object[3];
             mixedTypes[0] = v1;
             mixedTypes[1] = p2;
+            mixedTypes[2] = p3;
 
             foreach (var mx in mixedTypes) 
             { 
                 Console.WriteLine(mx);
+                if (mx is Person person)
+                {
+                    Console.WriteLine(person.Name + " is aged "+ person.Age);
+                }
             }
 
         }

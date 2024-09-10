@@ -22,9 +22,10 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Async
                 "Manipur",
                 "Rajasthan"
             };
-            Index i1 = 3, i2 = 4;
-            Console.WriteLine($"{states[i1]}");
-            Console.WriteLine($"{states[i2]}");
+            Index third = 2, fourth = 3, fifth = 4;
+            Console.WriteLine($"{states[third]}");
+            Console.WriteLine($"{states[fourth]}");
+            Console.WriteLine($"{states[fifth]}");
         }
     }
 }
