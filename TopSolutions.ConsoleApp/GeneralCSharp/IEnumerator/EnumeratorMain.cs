@@ -29,17 +29,19 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.IEnumerator
         }
         static void Main(string[] args)
         {
-            List<string> Month = new List<string>();
-            Month.Add("Chaitra");
-            Month.Add("Vaishakka");
-            Month.Add("Jyaishta");
-            Month.Add("Ashadha");
-            Month.Add("Shravana");
-            Month.Add("Kartika");
-            Month.Add("Margashira");
-            Month.Add("Pausha");
-            Month.Add("Magha");
-            Month.Add("Phalguna");
+            List<string> Month = new()
+            {
+                "Chaitra",
+                "Vaishakka",
+                "Jyaishta",
+                "Ashadha",
+                "Shravana",
+                "Kartika",
+                "Margashira",
+                "Pausha",
+                "Magha",
+                "Phalguna"
+            };
             //Create IEnumerator of string.
 
             IEnumerator<string> iEnumeratorOfString = Month.GetEnumerator();//to convert list into IEnumerator we can invoke the GetEnumerator method
