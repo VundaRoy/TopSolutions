@@ -8,7 +8,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.IEnumerator
 {
     public class EnumeratorMain
     {
-        static void iEnumeratorMethodOne(IEnumerator<string> i)
+        static void EnumeratorMethodOne(IEnumerator<string> i)
         {
             while (i.MoveNext())
             {
@@ -16,11 +16,11 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.IEnumerator
 
                 if (i.Current == "Shravana")
                 {
-                    iEnumeratorMethodTwo(i);
+                    EnumeratorMethodTwo(i);
                 }
             }
         }
-        static void iEnumeratorMethodTwo(IEnumerator<string> i)
+        static void EnumeratorMethodTwo(IEnumerator<string> i)
         {
             while (i.MoveNext())
             {
@@ -51,7 +51,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.IEnumerator
                 Console.WriteLine(iEnumeratorOfString.Current);
             }
              iEnumeratorOfString = Month.GetEnumerator();
-            iEnumeratorMethodOne(iEnumeratorOfString);
+            EnumeratorMethodOne(iEnumeratorOfString);
         }
     }
 }

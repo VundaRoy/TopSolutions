@@ -10,19 +10,21 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.IEnumerable
     {
         static void Main(string[] args)
         {
-            List<string> Month = new List<string>();
-            Month.Add("January");
-            Month.Add("February");
-            Month.Add("March");
-            Month.Add("April");
-            Month.Add("May");
-            Month.Add("June");
-            Month.Add("July");
-            Month.Add("August");
-            Month.Add("September");
-            Month.Add("October");
-            Month.Add("November");
-            Month.Add("December");
+            List<string> Month = new()
+            {
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+            };
             //create IEnumerable of string
             IEnumerable<string> iEnumerableOfString = (IEnumerable<string>)Month;
             foreach (string AllMonths in iEnumerableOfString)

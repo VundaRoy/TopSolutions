@@ -21,6 +21,9 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Tuples
             Console.WriteLine("square of 7 is " + square(7) +" and square of 9 is " +square(9));
             static int sum(int x, int y, int z) => x + z + y;
             Console.WriteLine("Sum of 6,8 and 9 is " + sum(6, 7, 9));
+
+            Func<int, double> circleArea = x => 3.14 * (x ^ 2);
+            Console.WriteLine("Area of circle with radius of 5cm is :" + circleArea(5));
         }
         //Declaring the return type as Tuple<int, double>
         private static Tuple<int, double> Calculate(IEnumerable<double> values)
