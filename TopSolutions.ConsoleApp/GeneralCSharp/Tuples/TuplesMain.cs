@@ -18,12 +18,17 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Tuples
             Console.ReadKey();
 
             static int square(int x) => x * x;
-            Console.WriteLine("square of 7 is " + square(7) +" and square of 9 is " +square(9));
+            Console.WriteLine("square of 7 is " + square(7) + " and square of 9 is " + square(9));
             static int sum(int x, int y, int z) => x + z + y;
             Console.WriteLine("Sum of 6,8 and 9 is " + sum(6, 7, 9));
 
             Func<int, double> circleArea = x => 3.14 * (x ^ 2);
             Console.WriteLine("Area of circle with radius of 5cm is :" + circleArea(5));
+
+            Func<int, double> sphereVolume = x => (4 / 3) * 3.34 * (x ^ 3);
+            Console.WriteLine("Sphere of radius 7cm has a volume of " + sphereVolume(7).ToString("#.###") + "cm cubed");
+            Func<int, int, int, double> cuboidVolume = (x, y, z) => x * y * z;
+            Console.WriteLine("A cuboid with dimensions 7,6,4 has a volume of " + cuboidVolume(7,6,4).ToString("#.###") + "cm cubed");
         }
         //Declaring the return type as Tuple<int, double>
         private static Tuple<int, double> Calculate(IEnumerable<double> values)
