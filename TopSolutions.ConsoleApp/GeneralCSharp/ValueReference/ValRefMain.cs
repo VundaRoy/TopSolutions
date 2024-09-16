@@ -26,6 +26,12 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.ValueReference
             //Using method to update name
             UpdatePersonWithTitle( person );
             Console.WriteLine($"After title update person is {person.Name}");
+            //After nullifying
+            NulliFyPerson(person);
+            Console.WriteLine($"After nullify person is {person.Name}");
+            //After nullifying with ref passed
+            NulliFyPersonWithRef(ref person);
+            Console.WriteLine($"After nullify person is {person.Name}");
 
         }
         static void UpdateNumber(int aNumber) 
@@ -35,7 +41,14 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.ValueReference
         static void UpdatePersonWithTitle(Person person) 
         { 
             person.Name = "Mr " + person.Name;
-           // Console.WriteLine($"Person is now called {person.Name}");
+        }
+        static void NulliFyPerson(Person person)
+        {
+            person =null;
+        }
+        static void NulliFyPersonWithRef(ref Person person)
+        {
+            person = null;
         }
     }
 }
