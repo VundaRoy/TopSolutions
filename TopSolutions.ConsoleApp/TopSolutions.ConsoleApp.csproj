@@ -5,10 +5,11 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.Collections.ConcurrentSampleMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Classes.Nested.DemoClassMain</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="GeneralCSharp\Classes\Partial\" />
     <Folder Include="GeneralCSharp\Constructors\" />
     <Folder Include="Samples\GitHub\" />
     <Folder Include="Samples\Misc\ElasticSearch\Before\" />
