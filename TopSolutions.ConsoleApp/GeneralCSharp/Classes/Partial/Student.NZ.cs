@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.Partial
 {
-    public interface IStudentLocal
+    public partial class Student : IStudentLocal
     {
-        string FirstName { set;  get; }
-        string LastName { set; get; }
-        string NationalID { set; get; }
-        void ApplyHecsAid();
+        public void RegisterNZCampus()
+        {
+            Console.WriteLine("Registering NZ campus");
+        }
     }
 }

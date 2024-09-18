@@ -11,5 +11,6 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.Partial
         string FirstName { set; get; }
         string LastName { set; get; }
         string PassportID {  set; get; }
+        void ApplyOverseasScholarship();
     }
 }
