@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.Nested
 {
-    public class DemoClassMain : ContainerClass.InnerClass
+    public class DemoClassMain : ContainerClass.InnerClass.FurtherInnerClass
     {
         public DemoClassMain()
         {

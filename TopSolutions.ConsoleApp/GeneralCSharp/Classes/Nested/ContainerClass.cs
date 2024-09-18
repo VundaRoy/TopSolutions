@@ -18,6 +18,13 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.Nested
             {
                 Console.WriteLine("I am an inner class");
             }
+            public class FurtherInnerClass : InnerClass
+            {
+                public FurtherInnerClass()
+                {
+                    Console.WriteLine("Innum inner irukkuthu");
+                }
+            }
         }
     }
 }
