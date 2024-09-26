@@ -17,6 +17,16 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Files.Stream
             //count (bytedata.Length): The maximum number of bytes to write.
             fileStream.Write(bytedata, 0, bytedata.Length);
             fileStream.Close();
+            //Read
+            string data;
+            FileStream fileStreamRead = new FileStream(FilePath,FileMode.Open, FileAccess.Read);
+            using (StreamReader sr = new StreamReader(fileStreamRead))
+            {
+                data = sr.ReadToEnd();
+            }
+            fileStreamRead.Close();
+            Console.WriteLine(data);
+           
             Console.WriteLine("File created is in C:\\dev\\Text");
             Console.ReadKey();
             
