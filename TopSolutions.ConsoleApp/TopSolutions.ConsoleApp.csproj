@@ -5,11 +5,12 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Events.Delegates.DelegateMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Files.Stream.StreamMain</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="GeneralCSharp\Constructors\" />
+    <Folder Include="GeneralCSharp\Files\Binary\" />
     <Folder Include="Samples\GitHub\" />
     <Folder Include="Samples\Misc\ElasticSearch\Before\" />
     <Folder Include="Samples\Misc\ElasticSearch\After\" />
