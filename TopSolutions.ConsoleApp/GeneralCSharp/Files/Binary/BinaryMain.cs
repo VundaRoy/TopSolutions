@@ -11,8 +11,18 @@
                 writer.Write(true);
             }
             Console.WriteLine("Binary file created ");
+            ReadDataFromBinaryFile();
             Console.ReadKey();
 
+        }
+        static void ReadDataFromBinaryFile()
+        {
+            using (BinaryReader reader = new BinaryReader(File.Open("C:\\dev\\Text\\TheBinary.bin", FileMode.Open)))
+            {
+                Console.WriteLine("Error Code : " + reader.ReadString());
+                Console.WriteLine("Message : " + reader.ReadString());
+                Console.WriteLine("Restart Explorer : " + reader.ReadBoolean());
+            }
         }
     }
 }
