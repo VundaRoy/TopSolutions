@@ -14,6 +14,11 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Extensions
             return text + " By the way I deny all links to this statement"; 
         
         }
+        public static string AppendDisclosureExtra(this string text, string extraText)
+        {
+            return text + " By the way I deny all links to this statement "+ extraText;
+
+        }
         public static string CapsLockTheThing(this string text) 
         {
             return text + " when caps is " + text.ToUpper();
