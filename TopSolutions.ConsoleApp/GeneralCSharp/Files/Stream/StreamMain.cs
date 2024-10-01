@@ -29,7 +29,18 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Files.Stream
            
             Console.WriteLine("File created is in C:\\dev\\Text");
             Console.ReadKey();
-            
+            //Create new file
+            string streamPath = @"C:\dev\Text\StreamText.txt";
+            int a, b, result;
+            a = 182; b = 2723;
+            result = a + b;
+            using (StreamWriter streamWriter = new StreamWriter(streamPath))
+            {
+                streamWriter.Write($"Sum of {a} + {b} = {result}");
+            }
+            Console.WriteLine("Variable is saved into the File");
+
+            Console.ReadKey();
         }
     }
 }
