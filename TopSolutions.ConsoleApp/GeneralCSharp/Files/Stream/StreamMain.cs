@@ -32,11 +32,15 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Files.Stream
             //Create new file
             string streamPath = @"C:\dev\Text\StreamText.txt";
             int a, b, result;
-            a = 182; b = 2723;
+            // Create a new Random object
+            Random random = new Random();
+
+            a = random.Next(1, 999);
+            b = random.Next(1000, 4500); ;
             result = a + b;
-            using (StreamWriter streamWriter = new StreamWriter(streamPath))
+            using (StreamWriter streamWriter = new StreamWriter(streamPath, true))
             {
-                streamWriter.Write($"Sum of {a} + {b} = {result}");
+                streamWriter.WriteLine($"\nSum of {a} + {b} = {result}");
             }
             Console.WriteLine("Variable is saved into the File");
 
