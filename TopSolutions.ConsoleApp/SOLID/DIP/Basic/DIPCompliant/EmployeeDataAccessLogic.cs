@@ -45,6 +45,11 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant
                 return pay * 1.2;
         }
 
+        public void RegisterWithConsulate(int EmployeeID, string Country)
+        {
+            Console.WriteLine($"Student id :{EmployeeID} is from {Country}.");
+        }
+
         public void UpdateEmployee(int id, Employee employee)
         {
             Console.WriteLine("The updated employee with id of " + id + " has a name of " +employee.Name);

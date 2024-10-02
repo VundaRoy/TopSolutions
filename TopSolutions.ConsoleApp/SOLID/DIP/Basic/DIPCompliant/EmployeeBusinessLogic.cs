@@ -36,5 +36,9 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant
         {
             return _IOverseasEmployee.ProcessForeignPay(id, country, pay);
         }
+        public void RegisterStudentWithConsulate(int studentId, string country)
+        {
+            _IOverseasEmployee.RegisterWithConsulate(studentId, country);
+        }
     }
 }
