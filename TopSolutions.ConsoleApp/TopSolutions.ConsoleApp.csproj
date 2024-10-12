@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Basics.Boxing.BoxingMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Excel.Sample.SampleExcel</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,6 +20,10 @@
     <Folder Include="Samples\Patterns\Segunda\Composite\" />
     <Folder Include="Samples\Patterns\Tercera\Before\" />
     <Folder Include="Samples\Patterns\Tercera\Factory\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NPOI.Excel" Version="2.1.1" />
   </ItemGroup>
 
 </Project>
