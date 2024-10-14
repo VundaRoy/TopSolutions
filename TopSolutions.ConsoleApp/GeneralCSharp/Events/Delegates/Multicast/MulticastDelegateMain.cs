@@ -30,6 +30,10 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Events.Delegates.Multicast
         {
             Console.WriteLine($"Division of {x} and {y} is : {x / y}");
         }
+        public void XpowerY(int x, int y)
+        {
+            Console.WriteLine($"{x} to the power of {y} is : {Math.Pow( x, y)}");
+        }
         static void Main(string[] args)
         {
             MulticastDelegateMain main = new MulticastDelegateMain();
@@ -37,9 +41,10 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Events.Delegates.Multicast
             MathDelegate del2 = new MathDelegate(Sub);
             MathDelegate del3 = new MathDelegate(main.Mul);
             MathDelegate del4 = new MathDelegate(main.Div);
+            MathDelegate del5 = new MathDelegate(main.XpowerY);
 
-            MathDelegate del5 = del1 + del2 + del3 + del4;
-            Delegate[] InvocationList = del5.GetInvocationList();
+            MathDelegate deln = del1 + del2 + del3 + del4 + del5;
+            Delegate[] InvocationList = deln.GetInvocationList();
             Console.WriteLine("InvocationList");
             foreach (var item in InvocationList)
             {
@@ -47,11 +52,11 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Events.Delegates.Multicast
             }
             Console.WriteLine();
             Console.WriteLine("Invoking Multicast delegate");
-            del5.Invoke(20, 5);
+            deln.Invoke(20, 5);
             Console.WriteLine();
             Console.WriteLine("Invoking Multicast Delegate After Removing one Delegate:");
-            del5 -= del2;
-            del5(22, 7);
+            deln -= del2;
+            deln(22, 7);
             Console.ReadKey();
 
         }
