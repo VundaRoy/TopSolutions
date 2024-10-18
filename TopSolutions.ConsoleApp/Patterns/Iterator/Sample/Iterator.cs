@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TopSolutions.ConsoleApp.Patterns.Iterator.Sample
 {
-    public class Iterator
+    public class Iterator : IAbstractIterator
     {
         //ConcreteAggregate variable to hold the collection elements
         private ConcreteCollection Collection;
