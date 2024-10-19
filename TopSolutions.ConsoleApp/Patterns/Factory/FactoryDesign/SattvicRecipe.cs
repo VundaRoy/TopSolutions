@@ -23,7 +23,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Factory.FactoryDesign
                 {
                     if(item.Equals("onion", StringComparison.OrdinalIgnoreCase) || item.Equals("garlic", StringComparison.OrdinalIgnoreCase))
                     {
-                        Console.WriteLine("Not sattvic compliant");
+                        Console.WriteLine("Not sattvic compliant. Ingredient contains " + item);
                         return false;
                     }
                 }

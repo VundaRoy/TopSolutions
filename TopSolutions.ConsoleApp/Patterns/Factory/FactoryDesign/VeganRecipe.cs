@@ -25,7 +25,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Factory.FactoryDesign
                         || item.Equals("butter", StringComparison.OrdinalIgnoreCase)|| item.Equals("cheese", StringComparison.OrdinalIgnoreCase)
                         || item.Equals("ghee", StringComparison.OrdinalIgnoreCase))
                     {
-                        Console.WriteLine("Not vegan compliant");
+                        Console.WriteLine("Not vegan compliant. Ingredient contains " + item );
                         return false;
                     }
                 }
