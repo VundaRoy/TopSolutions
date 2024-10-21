@@ -19,6 +19,8 @@ namespace TopSolutions.ConsoleApp.Patterns.ChainOfResponsibility.ATM
             atm.Withdraw(600);
             Console.WriteLine("\nRequested Amount 750");
             atm.Withdraw(750);
+            Console.WriteLine("\nRequested Amount 710");
+            atm.Withdraw(710);
             Console.Read();
         }
     }
