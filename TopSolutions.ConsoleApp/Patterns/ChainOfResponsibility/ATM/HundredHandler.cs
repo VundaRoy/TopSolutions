@@ -23,7 +23,14 @@ namespace TopSolutions.ConsoleApp.Patterns.ChainOfResponsibility.ATM
                     Console.WriteLine(numberofNotesToBeDispatched + " Hundred note is dispatched by HundredHandler");
                 }
             }
-            //No Need to Check the Next Handler
+            //Then check the Pending amount
+            long pendingAmountToBeProcessed = requestedAmount % 100;
+            //If Pending amount is greater than 0, then call the next handler to handle the request
+            if (pendingAmountToBeProcessed > 0)
+            {
+                //For FiveHundredHandler, the next handler is TwoHundredHandler  
+                NextHandler.DispatchNote(pendingAmountToBeProcessed);
+            }
         }
     }
 }

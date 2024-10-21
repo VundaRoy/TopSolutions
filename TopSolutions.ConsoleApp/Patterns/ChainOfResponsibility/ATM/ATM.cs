@@ -29,7 +29,7 @@ namespace TopSolutions.ConsoleApp.Patterns.ChainOfResponsibility.ATM
         public void Withdraw(long requestedAmount)
         {
             //First check whether the amount is Divisible by 100 or not
-            if (requestedAmount % 100 == 0)
+            if (requestedAmount % 100 == 0 || requestedAmount % 50 == 0)
             {
                 twoThousandHandler.DispatchNote(requestedAmount);
             }
