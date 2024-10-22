@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TopSolutions.ConsoleApp.Patterns.Adapter.Basic
+namespace TopSolutions.ConsoleApp.Patterns.Adapter.ClassAdapter
 {
     //Adaptee
     public class ThirdPartyBillingSystem
