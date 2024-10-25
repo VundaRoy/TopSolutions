@@ -16,7 +16,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Composite.Sample
         private List<Component> ChildComponents = new List<Component>();
         //The Constructor takes the Composite Component name as the input parameter 
         //and passed that parameter value to the base class constructor
-        public Composite(string name) : base(name)
+        public Composite(string name, string address) : base(name, address)
         {
         }
 

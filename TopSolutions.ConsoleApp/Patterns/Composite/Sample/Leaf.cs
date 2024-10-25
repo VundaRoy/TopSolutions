@@ -17,7 +17,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Composite.Sample
         //we need to pass the Name and the Salary of the Employee
         //The Employee Name we need to pass to the Base class constructor
         //Initializing the Salary Property using the Constructor
-        public Leaf(string Name, int Salary) : base(Name)
+        public Leaf(string Name, string address, int Salary) : base(Name, address)
         {
             this.Salary = Salary;
         }
@@ -25,7 +25,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Composite.Sample
         public override int GetSalary()
         {
             //We are Printing the Name and Salary of the Employee and then returning the Salary
-            Console.WriteLine($"\t Name: {Name} and Salary: {Salary}");
+            Console.WriteLine($"\t Name: {Name} of {Address} and Salary: {Salary}");
             return Salary;
         }
     }

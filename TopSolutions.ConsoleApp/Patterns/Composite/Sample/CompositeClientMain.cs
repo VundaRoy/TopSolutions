@@ -14,19 +14,19 @@ namespace TopSolutions.ConsoleApp.Patterns.Composite.Sample
             // Component means the class that implements the Component abstract class
             // In our example Leaf and Composite classes implement the Component abstract class
             //Creating Leaf Objects or you can say child objects
-            Component Pranaya = new Leaf("Pranaya", 22000);
-            Component Rohit = new Leaf("Rohit", 33000);
-            Component Anurag = new Leaf("Anurag", 42000);
-            Component Priyanka = new Leaf("Priyanka", 52000);
-            Component Sambit = new Leaf("Sambit", 28000);
-            Component Kausalya = new Leaf("Kausalya", 58000);
-            Component Karthik = new Leaf("Karthik", 48000);
-            Component Govardhan = new Leaf("Govardhan", 41000);
+            Component Pranaya = new Leaf("Pranaya","12 Anderi West Mumbai", 22000);
+            Component Rohit = new Leaf("Rohit","2F 223 Manikkar rd North Bhiwandi", 33000);
+            Component Anurag = new Leaf("Anurag", "1112/23 Jyothish str East Pune", 42000);
+            Component Priyanka = new Leaf("Priyanka", "Haridwar city", 52000);
+            Component Sambit = new Leaf("Sambit", "RB Patel stadium", 28000);
+            Component Kausalya = new Leaf("Kausalya", "Secundarabad road Hyderabad", 58000);
+            Component Karthik = new Leaf("Karthik", "Jhanvi street Chennai", 48000);
+            Component Govardhan = new Leaf("Govardhan", "Tumkur district Karnataka", 41000);
             //Creating Composite Objects
-            Composite ITDepartment = new Composite("ITDepartment");
-            Composite HRDepartment = new Composite("HRDepartment");
-            Composite Directors = new Composite("Directors");
-            Composite Company = new Composite("Company");
+            Composite ITDepartment = new Composite("ITDepartment", "New Ward South");
+            Composite HRDepartment = new Composite("HRDepartment", "Raiwind East");
+            Composite Directors = new Composite("Directors", "Gulbarga");
+            Composite Company = new Composite("Company", "Central Zone");
             //Creating Tree Structure i.e. Adding Child Components inside the Composite Component
             //Adding Pranaya, Rohit, and Anurag to ITDepartment Composite Object
             ITDepartment.AddComponent(Pranaya);
