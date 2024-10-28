@@ -21,7 +21,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.ParallelSample
             stopwatch = new Stopwatch();
             RunParallel(stopwatch);
 
-            Console.WriteLine($"Time Taken by Standard Foreach Loop in Miliseconds {stopwatch.ElapsedMilliseconds}");
+            Console.WriteLine($"Time Taken by Parallel Foreach Loop in Miliseconds {stopwatch.ElapsedMilliseconds}");
             Console.ReadLine();
         }
 
