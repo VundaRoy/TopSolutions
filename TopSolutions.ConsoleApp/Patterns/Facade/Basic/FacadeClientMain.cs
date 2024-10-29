@@ -11,7 +11,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Facade.Basic
         static void Main(string[] args)
         {
             //The Client will use the Facade Interface instead of the Subsystems
-            Order order = new Order();
+            Order order = new();
             order.PlaceOrder();
             Console.Read();
         }

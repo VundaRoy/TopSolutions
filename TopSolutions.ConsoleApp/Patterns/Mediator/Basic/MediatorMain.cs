@@ -35,6 +35,10 @@ namespace TopSolutions.ConsoleApp.Patterns.Mediator.Basic
             Console.WriteLine();
             //Another user Sending another Message in the Facebook Group
             Rajesh.Send("What is Design Patterns? Please explain ");
+            Console.WriteLine();
+            John.Send("It is what it is");
+            Console.WriteLine();
+            Pam.Receive("Yesterday was fine");
             Console.Read();
         }
     }

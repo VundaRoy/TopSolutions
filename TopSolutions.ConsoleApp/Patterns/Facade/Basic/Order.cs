@@ -15,13 +15,13 @@ namespace TopSolutions.ConsoleApp.Patterns.Facade.Basic
         {
             Console.WriteLine("Place Order Started");
             //Get the Product Details
-            Product product = new Product();
+            Product product = new();
             product.GetProductDetails();
             //Make the Payment
-            Payment payment = new Payment();
+            Payment payment = new();
             payment.MakePayment();
             //Send the Invoice
-            Invoice invoice = new Invoice();
+            Invoice invoice = new();
             invoice.Sendinvoice();
             Console.WriteLine("Order Placed Successfully");
         }
