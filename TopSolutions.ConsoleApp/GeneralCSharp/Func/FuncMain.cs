@@ -27,8 +27,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Func
             Console.WriteLine(areEqual(2000, 3000));
 
             //func with areas
-            Func<double, double, double> GetAreaOfQuadrilateral =(x,y) => x * y;
-            Console.WriteLine("Rectangle of width 3 and length 5 is " + GetAreaOfQuadrilateral(3, 5));
+            Console.WriteLine("Rectangle of width 3 and length 5 is " + ((Func<double, double, double>)((x,y) => x * y))(3, 5));
             Func<double, double> GetCircleArea = (x) => 3.14 * Math.Pow(x,2);
             Console.WriteLine("Circle area of radius 3 is " + GetCircleArea(3));
             Console.WriteLine("Circle area of radius 30.5 is " + GetCircleArea(30.5));
