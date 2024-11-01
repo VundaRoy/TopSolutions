@@ -17,7 +17,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.Polly.WhileSample
                 .Handle<Exception>()
                 .CircuitBreaker(
                 exceptionsAllowedBeforeBreaking: 3,
-                durationOfBreak: TimeSpan.FromSeconds(10),
+                durationOfBreak: TimeSpan.FromSeconds(2),
                 onBreak: (exception, timespan) => {
                     Console.WriteLine("Circuit broken!");
                 },
@@ -27,7 +27,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.Polly.WhileSample
                 onHalfOpen: () => {
                     Console.WriteLine("Circuit half-open, next call is a trial.");
                 });
-
+            int count = 0;
             while (true)
             {
                 try
@@ -35,14 +35,14 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.Polly.WhileSample
                     circuitBreakerPolicy.Execute(() =>
                     {
                         // Your code that might throw exceptions
-                       // SendRequest();
+                        SendRequest(ref count);
                         Console.WriteLine("Request sent successfully.");
                     });
                 }
                 catch (BrokenCircuitException)
                 {
                     Console.WriteLine("Circuit is open; waiting before retrying...");
-                     Task.Delay(TimeSpan.FromSeconds(15)); // Wait before retrying
+                     Task.Delay(TimeSpan.FromSeconds(5)); // Wait before retrying
                 }
                 catch (Exception ex)
                 {
@@ -52,7 +52,14 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.Polly.WhileSample
 
 
         }
-
+         static void SendRequest(ref int count)
+        {
+            Console.WriteLine("Sending something...");
+            Task.Delay(TimeSpan.FromSeconds(2));
+            throw new NotImplementedException();
+            Console.WriteLine("Ending round "+ count);
+            count++;
+        }
 
     }
 }
