@@ -1,6 +1,4 @@
-﻿using TopSolutions.ConsoleApp.Patterns.NullObject.Basic;
-
-namespace TopSolutions.ConsoleApp.Patterns.Behavioural.NullObject.Basic
+﻿namespace TopSolutions.ConsoleApp.Patterns.Behavioural.NullObject.Basic
 {
     public class BasicNullMain
     {

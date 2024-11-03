@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TopSolutions.ConsoleApp.Patterns.Mediator.ATC;
-
-namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.ATC
+﻿namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.ATC
 {
     public class ClientATCMain
     {

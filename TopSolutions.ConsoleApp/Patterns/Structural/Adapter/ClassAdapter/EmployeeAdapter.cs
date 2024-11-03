@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TopSolutions.ConsoleApp.Patterns.Adapter.Basic;
-
-namespace TopSolutions.ConsoleApp.Patterns.Structural.Adapter.ClassAdapter
+﻿namespace TopSolutions.ConsoleApp.Patterns.Structural.Adapter.ClassAdapter
 {
     public class EmployeeAdapter : ThirdPartyBillingSystem, ITarget
     {
