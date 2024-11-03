@@ -1,7 +1,7 @@
 ﻿using Moq;
 using TopSolutions.ConsoleApp.OOP.Classes;
 using TopSolutions.ConsoleApp.OOP.Interface;
-using TopSolutions.ConsoleApp.Patterns.Factory.Simple.Contract;
+using TopSolutions.ConsoleApp.Patterns.Creational.Factory.Simple.Contract;
 
 namespace TopConsoleNunit.Test.Patterns.Factory
 {

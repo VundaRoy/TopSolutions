@@ -7,8 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TopSolutions.ConsoleApp.Patterns.Factory.Simple.FactoryClass;
-
+using TopSolutions.ConsoleApp.Patterns.Creational.Factory.Simple.FactoryClass;
 
 namespace WinFormsProject.Forms
 {
