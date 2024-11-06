@@ -25,8 +25,13 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.FactoryDesign
             vegetarianRecipe1.PrepareIngredients();
             //validate both vegan and sattvic
             IVegetarianRecipe sattvicVegan = VegetarianRecipeFactory.GetRecipe("Vegan");
-            Console.WriteLine("Ingredients 3 is vegan compliant ? " + sattvicVegan.GetValidIngredients(ingredients3).ToString());
-            Console.WriteLine("Ingredients 3 is sattvic compliant ? " + sattvicVegan.GetValidIngredients(ingredients3).ToString());
+            Console.WriteLine("Ingredients 3 is vegan compliant ? " + IsValidFoodType(sattvicVegan, ingredients3));
+            sattvicVegan = VegetarianRecipeFactory.GetRecipe("Sattvic");
+            Console.WriteLine("Ingredients 3 is sattvic compliant ? " + IsValidFoodType(sattvicVegan, ingredients3));
+        }
+        static bool IsValidFoodType(IVegetarianRecipe vegetarianRecipe, List<string> ingredients)
+        {
+            return vegetarianRecipe.GetValidIngredients(ingredients);
         }
     }
 }
