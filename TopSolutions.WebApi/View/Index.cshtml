@@ -1,0 +1,39 @@
+﻿@page
+@model TopSolutions.WebApi.Model
+@{
+    ViewData["Title"] = "Staff List";
+}
+
+<h1>Staff List</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>UserName</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.StaffList)
+        {
+            <tr>
+                <td>@item.UserName</td>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.Email</td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@item.StaffId">Edit</a> |
+                    <a asp-page="Details" asp-route-id="@item.StaffId">Details</a> |
+                    <a asp-page="Delete" asp-route-id="@item.StaffId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
