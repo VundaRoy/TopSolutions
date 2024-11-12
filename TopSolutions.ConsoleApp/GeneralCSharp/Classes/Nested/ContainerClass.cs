@@ -24,6 +24,10 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.Nested
                 {
                     Console.WriteLine("Innum inner irukkuthu");
                 }
+                public void FurtherMethod()
+                {
+                    Console.WriteLine("Further meth");
+                }
             }
         }
     }

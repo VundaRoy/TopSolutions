@@ -15,6 +15,16 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.Nested
         public static void Main()
         {
             DemoClassMain DC = new DemoClassMain();
+            ContainerClass container = new ContainerClass();
+            InnerClass innerClass = new InnerClass();
+            
+            if (container.Equals(innerClass))
+            {
+                Console.WriteLine("Inner is equal to outer");
+            }
+            FurtherInnerClass further = new FurtherInnerClass();
+            further.FurtherMethod();
+            
         }
     }
 }
