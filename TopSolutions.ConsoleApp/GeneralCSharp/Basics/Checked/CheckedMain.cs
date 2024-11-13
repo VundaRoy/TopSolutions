@@ -22,6 +22,14 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Basics.Checked
 
             int c = unchecked(a + b);//checked will error out
             Console.WriteLine(c);
+
+            //with int max
+            int maxInt = int.MaxValue;
+            int newVal = checked(maxInt + 300);
+            Console.WriteLine(newVal);
+            Console.WriteLine(int.MaxValue);
+            Console.WriteLine($"Difference is {int.MaxValue - newVal}" );
+
         }
     }
 }
