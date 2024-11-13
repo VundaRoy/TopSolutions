@@ -14,6 +14,9 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Generics
             EvaluateAndPrint(isEqual, "10.5 and 20.5");
             isEqual = GenericCalculator.AreEqual<string>("ABC", "ABC");
             EvaluateAndPrint(isEqual, "ABC and ABC");
+            isEqual = GenericCalculator.AreEqual<int>(122, 123);
+            EvaluateAndPrint(isEqual, "122 and 123");
+
 
         }
 

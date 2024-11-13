@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Basics.Checked.CheckedMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Generics.GenericMain</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
