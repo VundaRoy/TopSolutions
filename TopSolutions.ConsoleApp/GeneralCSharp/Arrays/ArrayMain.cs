@@ -32,10 +32,14 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Arrays
 
             foreach (var mx in mixedTypes) 
             { 
-                Console.WriteLine(mx);
+               // Console.WriteLine(mx);
                 if (mx is Person person)
                 {
-                    Console.WriteLine(person.Name + " is aged "+ person.Age);
+                    Console.WriteLine($"The person is {person.Name} who is aged {person.Age}");
+                }
+                else if(mx is Vehicle vehicle)
+                {
+                    Console.WriteLine($"The vehicle is a {vehicle.Make} and year is {vehicle.Year}");
                 }
             }
 
