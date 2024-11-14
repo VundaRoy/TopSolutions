@@ -22,34 +22,10 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.Partial
             Console.WriteLine("Local register");
         }
     }
-    public partial class Student : IStudentInternational
+    public partial class Student : StudentBase, IStudentInternational
     {
-        public string PassportID { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-        public void ApplyOverseasScholarship()
-        {
-            Console.WriteLine("Eligibilty form for Overseas AUSAID application");
-        }
-
-        public void OverseasRegister()
-        {
-            Console.WriteLine("Overseas/International registry");
-        }
     }
-    public class Demo
+    public class Demo : DemoBaseMain
     {
-        public static void Main(string[] args)
-        {
-            Student s = new();
-            s.LocalRegistration();
-            s.OverseasRegister();
-            s.ApplyHecsAid();
-            Student foreignStudent1 = new();
-            foreignStudent1.ApplyOverseasScholarship();
-            //NZ file
-            Student nz = new Student();
-            nz.RegisterNZCampus();
-            nz.ApplyHecsAid();
-        }
     }
 }
