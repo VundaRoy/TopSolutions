@@ -28,7 +28,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.ParallelSample
         static void RunNormal(Stopwatch stopwatch)
         {
             stopwatch.Start();
-            List<int> integerList = Enumerable.Range(1, 15).ToList();
+            List<int> integerList = Enumerable.Range(1, 10).ToList();
             foreach (int i in integerList)
             {
                 long total = DoSomeIndependentTimeConsumingTask();
@@ -41,7 +41,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.ParallelSample
         {
             Console.WriteLine("Parallel Foreach Loop Started");
             stopwatch.Start();
-            List<int> integerList = Enumerable.Range(1, 15).ToList();
+            List<int> integerList = Enumerable.Range(1, 30).ToList();
             Parallel.ForEach(integerList, i =>
             {
                 long total = DoSomeIndependentTimeConsumingTask();
