@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.ParallelSample
 {
-    internal class ParallelMain
+    public class ParallelMain
     {
         static void Main()
         {
@@ -16,12 +16,12 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.ParallelSample
 
             RunNormal(stopwatch);
 
-            Console.WriteLine($"Time Taken by Standard Foreach Loop in Miliseconds {stopwatch.ElapsedMilliseconds}");
+            ResultPrint("standard", stopwatch);
             Console.ReadLine();
             stopwatch = new Stopwatch();
             RunParallel(stopwatch);
 
-            Console.WriteLine($"Time Taken by Parallel Foreach Loop in Miliseconds {stopwatch.ElapsedMilliseconds}");
+            ResultPrint("parallel", stopwatch);
             Console.ReadLine();
         }
 
@@ -59,6 +59,11 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.ParallelSample
                 total += i;
             }
             return total;
+        }
+        static void ResultPrint(string type, Stopwatch stopwatch)
+        {
+            Console.WriteLine($"Time Taken by {type} Foreach Loop in Miliseconds {stopwatch.ElapsedMilliseconds}");
+            Console.ReadLine();
         }
     }
 }
