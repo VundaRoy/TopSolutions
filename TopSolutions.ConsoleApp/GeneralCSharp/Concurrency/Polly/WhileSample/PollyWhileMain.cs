@@ -55,8 +55,8 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.Polly.WhileSample
          static void SendRequest(ref int count)
         {
             Console.WriteLine("Sending something...");
-            Task.Delay(TimeSpan.FromSeconds(2));
-            if (count > 100)
+            Task.Delay(TimeSpan.FromSeconds(1));
+            if (count > 10)
             {
                 throw new NotImplementedException();
             }
