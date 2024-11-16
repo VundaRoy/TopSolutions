@@ -58,7 +58,8 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.Polly.WhileSample
             Task.Delay(TimeSpan.FromSeconds(1));
             if (count > 10)
             {
-                throw new NotImplementedException();
+                //throw new NotImplementedException();
+                Console.WriteLine("yay!");
             }
             Console.WriteLine("Ending round "+ count);
             count++;
