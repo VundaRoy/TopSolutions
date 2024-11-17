@@ -8,7 +8,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <ListView Name="UserGrid" Grid.Row="1" Margin="4,178,12,13" ItemsSource="{Binding Users}">
+        <ListView Name="UserGrid" Grid.Row="1" Margin="4,128,12,13" ItemsSource="{Binding Users}">
             <ListView.View>
                 <GridView x:Name="grdTest">
                     <GridViewColumn Header="UserId" DisplayMemberBinding="{Binding UserId}" Width="50"/>
@@ -21,11 +21,13 @@
             </ListView.View>
         </ListView>
         <!-- Textboxes and labels for user details -->
-        <TextBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="80,7,0,0" Name="txtUserId" VerticalAlignment="Top" Width="178" Text="{Binding ElementName=UserGrid, Path=SelectedItem.UserId}"/>
+        <TextBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="85,35,0,0" Name="txtUserId" VerticalAlignment="Top" Width="178" Text="{Binding ElementName=UserGrid, Path=SelectedItem.UserId}"/>
         <!-- Other TextBoxes and Labels for User details -->
-        <Button Content="Update" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="310,40,0,0" Name="btnUpdate" VerticalAlignment="Top" Width="141" Command="{Binding Path=UpdateCommad}" />
+        <Button Content="Update" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="313,78,0,0" Name="btnUpdate" VerticalAlignment="Top" Width="141" Command="{Binding Path=UpdateCommad}" />
         <!-- Textboxes and labels for user's City, State, and Country -->
-        <TextBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="80,143,0,0" Name="txtCity" VerticalAlignment="Top" Width="178" Text="{Binding SelectedItem.City, ElementName=UserGrid}"/>
+        <TextBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="85,77,0,0" Name="txtCity" VerticalAlignment="Top" Width="178" Text="{Binding SelectedItem.City, ElementName=UserGrid}"/>
+        <Label x:Name="CityLabel" Content="City" HorizontalAlignment="Left" Margin="10,77,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Id" HorizontalAlignment="Left" Margin="10,34,0,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
         <!-- Labels for Country, City, State -->
         <!-- Textboxes and labels for Country, City, State -->
     </Grid>
