@@ -23,7 +23,13 @@ namespace UltraWPFApp.ViewModel
             new User { UserId = 5, FirstName = "Harsh", LastName = "Kumar", City = "Ghaziabad", State = "UP", Country = "INDIA" },
             new User { UserId = 6, FirstName = "Reetesh", LastName = "Tomar", City = "Mumbai", State = "MAH", Country = "INDIA" },
             new User { UserId = 7, FirstName = "Deven", LastName = "Verma", City = "Palwal", State = "HP", Country = "INDIA" },
-            new User { UserId = 8, FirstName = "Ravi", LastName = "Taneja", City = "Delhi", State = "DEL", Country = "INDIA" }
+            new User { UserId = 8, FirstName = "Ravi", LastName = "Taneja", City = "Delhi", State = "DEL", Country = "INDIA" },
+            new User { UserId = 9, FirstName = "Vikram", LastName = "Ahluwala", City = "Patna", State = "BIH", Country = "INDIA" },
+            new User { UserId = 10, FirstName = "Sambandhar", LastName = "Pillai", City = "Madurai", State = "TN", Country = "INDIA" },
+            new User { UserId = 11, FirstName = "Abdul-Latif", LastName = "Junejo", City = "Karachi", State = "SND", Country = "PAKISTAN" },
+            new User { UserId = 12, FirstName = "Khwaja", LastName = "Ahmad", City = "Abu Dhabi", State = "ABU", Country = "UAE" },
+            new User { UserId = 13, FirstName = "Ricardo", LastName = "Palma", City = "Mascot", State = "NSW", Country = "AUSTRALIA" },
+            new User { UserId = 14, FirstName = "Luis", LastName = "Borges", City = "Wincester", State = "QLD", Country = "AUSTRALIA" }
         };
         }
 

@@ -28,6 +28,8 @@
         <TextBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="85,77,0,0" Name="txtCity" VerticalAlignment="Top" Width="178" Text="{Binding SelectedItem.City, ElementName=UserGrid}"/>
         <Label x:Name="CityLabel" Content="City" HorizontalAlignment="Left" Margin="10,77,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Label Content="Id" HorizontalAlignment="Left" Margin="10,34,0,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Margin="351,34,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="{Binding SelectedItem.FirstName, ElementName=UserGrid}" VerticalAlignment="Top" Width="120"/>
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="279,30,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.402,1.915" Grid.RowSpan="2"/>
         <!-- Labels for Country, City, State -->
         <!-- Textboxes and labels for Country, City, State -->
     </Grid>
