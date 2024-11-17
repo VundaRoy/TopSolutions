@@ -37,13 +37,13 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Events.Delegates.Multicast
         static void Main(string[] args)
         {
             MulticastDelegateMain main = new MulticastDelegateMain();
-            MathDelegate del1 = new MathDelegate(Add);
-            MathDelegate del2 = new MathDelegate(Sub);
-            MathDelegate del3 = new MathDelegate(main.Mul);
-            MathDelegate del4 = new MathDelegate(main.Div);
-            MathDelegate del5 = new MathDelegate(main.XpowerY);
+            MathDelegate addDel = new MathDelegate(Add);
+            MathDelegate subDel = new MathDelegate(Sub);
+            MathDelegate multDel = new MathDelegate(main.Mul);
+            MathDelegate divDel = new MathDelegate(main.Div);
+            MathDelegate powDel = new MathDelegate(main.XpowerY);
 
-            MathDelegate deln = del1 + del2 + del3 + del4 + del5;
+            MathDelegate deln = addDel + subDel + multDel + divDel + powDel;
             Delegate[] InvocationList = deln.GetInvocationList();
             Console.WriteLine("InvocationList");
             foreach (var item in InvocationList)
@@ -55,8 +55,10 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Events.Delegates.Multicast
             deln.Invoke(20, 5);
             Console.WriteLine();
             Console.WriteLine("Invoking Multicast Delegate After Removing one Delegate:");
-            deln -= del2;
+            deln -= subDel;
             deln(22, 7);
+            deln += addDel;
+            deln(2, 8);
             Console.ReadKey();
 
         }
