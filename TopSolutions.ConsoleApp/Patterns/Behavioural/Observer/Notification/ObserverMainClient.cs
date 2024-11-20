@@ -26,7 +26,12 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Observer.Notification
             user3.RemoveSubscriber(RedMI);
             // Now the product is available
             RedMI.SetAvailability("Available");
+            user3.AddSubscriber(RedMI);
+            RedMI.SetAvailability("Available on demand");
             Console.Read();
+            Subject OrangeNet = new Subject("Orange mobile", 8090, "New arrivals");
+            user1.AddSubscriber(OrangeNet);
+            OrangeNet.SetAvailability(" in your local store ");
         }
     }
 }
