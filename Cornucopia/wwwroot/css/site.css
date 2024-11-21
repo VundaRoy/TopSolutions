@@ -15,10 +15,11 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color:lavender;
 }
 h1{
     font-size:45px;
-    color:forestgreen;
+    color:blueviolet;
     font-family:Arial;    
 }
 h2 {
