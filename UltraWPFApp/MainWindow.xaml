@@ -2,13 +2,13 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:ultrawpfapp="clr-namespace:UltraWPFApp"
         Title="MainWindow" Height="485" Width="525">
-    <Grid Margin="0,0,0,20">
+    <Grid Margin="0,0,0,20" Background="#FFEAE5F5">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <ListView Name="UserGrid" Grid.Row="1" Margin="4,128,12,13" ItemsSource="{Binding Users}">
+        <ListView Name="UserGrid" Grid.Row="1" Margin="4,128,12,13" ItemsSource="{Binding Users}" Background="#FFF0F9EE">
             <ListView.View>
                 <GridView x:Name="grdTest">
                     <GridViewColumn Header="UserId" DisplayMemberBinding="{Binding UserId}" Width="50"/>
@@ -21,15 +21,16 @@
             </ListView.View>
         </ListView>
         <!-- Textboxes and labels for user details -->
-        <TextBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="85,35,0,0" Name="txtUserId" VerticalAlignment="Top" Width="178" Text="{Binding ElementName=UserGrid, Path=SelectedItem.UserId}"/>
+        <TextBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="85,35,0,0" Name="txtUserId" VerticalAlignment="Top" Width="178" Text="{Binding ElementName=UserGrid, Path=SelectedItem.UserId}" Background="#FFF9DADA"/>
         <!-- Other TextBoxes and Labels for User details -->
         <Button Content="Update" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="313,78,0,0" Name="btnUpdate" VerticalAlignment="Top" Width="141" Command="{Binding Path=UpdateCommad}" />
         <!-- Textboxes and labels for user's City, State, and Country -->
-        <TextBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="85,77,0,0" Name="txtCity" VerticalAlignment="Top" Width="178" Text="{Binding SelectedItem.City, ElementName=UserGrid}"/>
+        <TextBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="85,77,0,0" Name="txtCity" VerticalAlignment="Top" Width="178" Text="{Binding SelectedItem.City, ElementName=UserGrid}" Background="#FFFDDFDF"/>
         <Label x:Name="CityLabel" Content="City" HorizontalAlignment="Left" Margin="10,77,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Label Content="Id" HorizontalAlignment="Left" Margin="10,34,0,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
-        <TextBox HorizontalAlignment="Left" Margin="351,34,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="{Binding SelectedItem.FirstName, ElementName=UserGrid}" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="351,34,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="{Binding SelectedItem.FirstName, ElementName=UserGrid}" VerticalAlignment="Top" Width="120" Background="#FFF9FBD2"/>
         <Label Content="First Name" HorizontalAlignment="Left" Margin="279,30,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.402,1.915" Grid.RowSpan="2"/>
+        <Label Content="WPF Form" HorizontalAlignment="Left" Margin="174,-10,0,0" VerticalAlignment="Top" FontSize="18"/>
         <!-- Labels for Country, City, State -->
         <!-- Textboxes and labels for Country, City, State -->
     </Grid>
