@@ -30,7 +30,7 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant
         }
         public bool ValidateOverseasEmployee(string country)
         {
-            return _IOverseasEmployee.ForeignValidation(country);
+            return _IOverseasEmployee.IsAForeignCountry(country);
         }
         public double GetOverseasEmployeePay(int id, string country, double pay)
         {

@@ -9,13 +9,13 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant
 {
     public class EmployeeDataAccessLogic : IEmployeeDataAccessLogic, IEmployeeOverseas
     {
-        public bool ForeignValidation(string country)
+        public bool IsAForeignCountry(string country)
         {
-            if (country == "UK" || country =="Canada")
+            if (country == "Australia" || country =="NZ" || country =="Nauru")
             {
-                return true;
+                return false;
             }
-            return false;
+            return true;
         }
 
         public Employee GetEmployeeDetails(int id)

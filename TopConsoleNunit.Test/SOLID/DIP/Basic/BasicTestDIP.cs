@@ -30,5 +30,17 @@ namespace TopConsoleNunit.Test.SOLID.DIP.Basic
             // Assert
             return result;
         }
+        [Test]
+        [TestCase("UAE", ExpectedResult = true)]
+        [TestCase("Australia", ExpectedResult = false)]
+        [TestCase("UK", ExpectedResult = true)]
+        [TestCase("NZ", ExpectedResult = false)]
+        public bool ForeignValidation_CountryIsForeign(string country) 
+        { 
+            //act 
+            var result = _employeeDataAccessLogic.IsAForeignCountry(country);
+            //Assert
+            return result;
+        }
     }
 }
