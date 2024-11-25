@@ -20,6 +20,9 @@ namespace TopSolutions.ConsoleApp.SOLID.LSP.Basic.Comply
             Console.WriteLine("Square area is : " + square.GetArea());
             var circle = new Circle { Radius = 3 };
             Console.WriteLine("Circle with radius of 3 has area of :" + circle.GetArea());
+            var triangle = new Triangle { Base=12, Height=56};
+
+            Console.WriteLine($"Triangle with base {triangle.Base} and height of {triangle.Height} has an area of {triangle.GetArea()} ");
             Console.ReadKey();
         }
     }
