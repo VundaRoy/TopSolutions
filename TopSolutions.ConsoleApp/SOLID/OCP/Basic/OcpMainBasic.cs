@@ -17,6 +17,9 @@ namespace TopSolutions.ConsoleApp.SOLID.OCP.Basic
             Translate latin = new TranslateLatin();
             string latinWord = latin.GetMeaning("Cicero");
             Console.WriteLine(latinWord);
+            Translate sanskrit = new TranslateSanskrit();
+            string sanskritWord = sanskrit.GetMeaning("Budhi");
+            Console.WriteLine(sanskritWord);
             
         }
     }
