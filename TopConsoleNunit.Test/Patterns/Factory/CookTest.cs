@@ -7,28 +7,38 @@ namespace TopConsoleNunit.Test.Patterns.Factory
 {
     public class CookTest
     {
+        private Mock<ICook> _cookMock;
         [SetUp]
         public void Setup()
         {
+            _cookMock = new Mock<ICook>();
         }
 
         [Test]
-        public void AsianCookTest()
+        public void CookFood_ShouldInvokeCookFoodMethod()
         {
-            var serviceMock = new Mock<ICook>();
-            
-            
-            serviceMock.Setup(n => n.CookFood());
+            // Arrange
+            _cookMock.Setup(n => n.CookFood());
 
-            Assert.IsFalse(serviceMock.Name.Equals(null));
+            // Act
+            _cookMock.Object.CookFood();
+
+            // Assert
+            _cookMock.Verify(n => n.CookFood(), Times.Once);
         }
         [Test]
-        public void AsianCookTest2() 
-        { 
-          var asianMock = new Mock<ICook>();
-           asianMock.Setup(a => a.GetProfile(It.IsAny<string>())).Returns("Profile");
-            var profile = asianMock.Object.GetProfile("Profile");
+        public void GetProfile_ShouldReturnProfile()
+        {
+            // Arrange
+            _cookMock.Setup(a => a.GetProfile(It.IsAny<string>())).Returns("Profile");
+
+            // Act
+            var profile = _cookMock.Object.GetProfile("Profile");
+
+            // Assert
             Assert.AreEqual("Profile", profile);
         }
+
+        
     }
 }
