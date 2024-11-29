@@ -54,5 +54,15 @@ namespace WinFormsProject
             PatternsTest pt = new PatternsTest();
             pt.Show();
         }
+
+        private void horizonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainForm.ActiveForm.BackColor = Color.Firebrick;
+        }
+
+        private void containerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainForm.ActiveForm.BackColor = Color.Gainsboro;
+        }
     }
 }

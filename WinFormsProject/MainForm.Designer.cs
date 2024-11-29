@@ -40,6 +40,8 @@
             viewToolStripMenuItem = new ToolStripMenuItem();
             offsetToolStripMenuItem = new ToolStripMenuItem();
             onsetToolStripMenuItem = new ToolStripMenuItem();
+            containerToolStripMenuItem = new ToolStripMenuItem();
+            horizonToolStripMenuItem = new ToolStripMenuItem();
             helpToolStripMenuItem = new ToolStripMenuItem();
             dateTimePicker1 = new DateTimePicker();
             panel1 = new Panel();
@@ -123,7 +125,7 @@
             // 
             // viewToolStripMenuItem
             // 
-            viewToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { offsetToolStripMenuItem, onsetToolStripMenuItem });
+            viewToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { offsetToolStripMenuItem, onsetToolStripMenuItem, containerToolStripMenuItem, horizonToolStripMenuItem });
             viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             viewToolStripMenuItem.Size = new Size(65, 29);
             viewToolStripMenuItem.Text = "View";
@@ -131,14 +133,28 @@
             // offsetToolStripMenuItem
             // 
             offsetToolStripMenuItem.Name = "offsetToolStripMenuItem";
-            offsetToolStripMenuItem.Size = new Size(163, 34);
+            offsetToolStripMenuItem.Size = new Size(270, 34);
             offsetToolStripMenuItem.Text = "Offset";
             // 
             // onsetToolStripMenuItem
             // 
             onsetToolStripMenuItem.Name = "onsetToolStripMenuItem";
-            onsetToolStripMenuItem.Size = new Size(163, 34);
+            onsetToolStripMenuItem.Size = new Size(270, 34);
             onsetToolStripMenuItem.Text = "Onset";
+            // 
+            // containerToolStripMenuItem
+            // 
+            containerToolStripMenuItem.Name = "containerToolStripMenuItem";
+            containerToolStripMenuItem.Size = new Size(270, 34);
+            containerToolStripMenuItem.Text = "Container";
+            containerToolStripMenuItem.Click += containerToolStripMenuItem_Click;
+            // 
+            // horizonToolStripMenuItem
+            // 
+            horizonToolStripMenuItem.Name = "horizonToolStripMenuItem";
+            horizonToolStripMenuItem.Size = new Size(270, 34);
+            horizonToolStripMenuItem.Text = "Horizon";
+            horizonToolStripMenuItem.Click += horizonToolStripMenuItem_Click;
             // 
             // helpToolStripMenuItem
             // 
@@ -302,5 +318,7 @@
         private RadioButton radioButton2;
         private RadioButton radioButton1;
         private Button button3;
+        private ToolStripMenuItem containerToolStripMenuItem;
+        private ToolStripMenuItem horizonToolStripMenuItem;
     }
 }
