@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TopSolutions.ConsoleApp.Patterns.Creational.Singleton.ThreadSafety.ThreadSafe
 {
-    public class MainThreadSafe
+    public class MainDoubleCheckLock
     {
         //Example to Understand Thraed-Safe Problem with Singleton Design Pattern
         //When use in a Multithreaded Environment
