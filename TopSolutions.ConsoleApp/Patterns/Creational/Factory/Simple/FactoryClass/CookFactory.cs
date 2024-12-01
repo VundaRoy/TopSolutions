@@ -9,6 +9,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.Simple.FactoryClas
 {
     public class CookFactory
     {
+       
         public static ICook GetCookType(string cookType)
         {
             ICook cook = new Cook();

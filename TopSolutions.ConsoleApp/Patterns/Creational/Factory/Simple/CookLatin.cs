@@ -14,9 +14,9 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.Simple
             Console.WriteLine("Welcome to Latino cuisine");
         }
 
-        public void CookFood()
+        public void CookFood(string ingredient)
         {
-            Console.WriteLine("Boil beans first");
+            Console.WriteLine($"Boil beans first and then {ingredient}");
         }
 
         public void GetIngredients()

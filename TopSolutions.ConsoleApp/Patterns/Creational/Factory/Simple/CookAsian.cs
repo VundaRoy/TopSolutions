@@ -14,9 +14,9 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.Simple
             Console.WriteLine("Welcome to Asian cuisine");
         }
 
-        public void CookFood()
+        public void CookFood(string ingredient)
         {
-            Console.WriteLine("Ready to stir fry");
+            Console.WriteLine($"Ready to stir fry {ingredient}");
         }
 
         public void GetIngredients()

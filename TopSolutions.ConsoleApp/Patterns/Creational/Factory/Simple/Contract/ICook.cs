@@ -10,7 +10,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.Simple.Contract
     {
         void GetIngredients();
         void PrepareIngredients();
-        void CookFood();
+        void CookFood(string ingredient);
         void ServerFood();
         string GetProfile(string name);
 

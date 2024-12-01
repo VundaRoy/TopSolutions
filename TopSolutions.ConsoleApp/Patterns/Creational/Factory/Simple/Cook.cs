@@ -9,9 +9,9 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.Simple
 {
     public class Cook : ICook
     {
-        public void CookFood()
+        public void CookFood(string ingredient)
         {
-            Console.WriteLine("Cook away!");
+            Console.WriteLine($"Cook away! With {ingredient}");
         }
 
         public void GetIngredients()
