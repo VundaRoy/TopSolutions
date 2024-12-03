@@ -26,6 +26,9 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Decorator.Car
             ICar bmwCar2 = new BMWCar();
             PetrolCarDecorator carWithPetrolEngine = new PetrolCarDecorator(bmwCar2);
             carWithPetrolEngine.ManufactureCar();
+            ICar bmwcar3 = new BMWCar();
+            HybridCarDecorator carHyrbrid = new HybridCarDecorator(bmwcar3);
+            carHyrbrid.ManufactureCar();
             Console.ReadKey();
         }
     }
