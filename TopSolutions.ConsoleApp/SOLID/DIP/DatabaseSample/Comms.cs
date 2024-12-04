@@ -17,5 +17,9 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.DatabaseSample
         {
             _dataService.Save(message);
         }
+        public void UnSendMessage(string message)
+        {
+            _dataService.RollBack(message);
+        }
     }
 }

@@ -19,5 +19,9 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.DatabaseSample
         {
             _dataService.Save(message);
         }
+        public void RollbackTransaction(string transId)
+        {
+            _dataService.RollBack(transId);
+        }
     }
 }

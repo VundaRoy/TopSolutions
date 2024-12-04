@@ -9,5 +9,6 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.DatabaseSample
     public interface IDataService
     {
         public void Save(string message);
+        public void RollBack(string message);
     }
 }
