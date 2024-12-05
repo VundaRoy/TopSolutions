@@ -25,6 +25,7 @@
   <ItemGroup>
     <Folder Include="OOP\Inheritance\" />
     <Folder Include="Patterns\Bridge\" />
+    <Folder Include="Patterns\Factory\" />
     <Folder Include="Patterns\Memento\" />
     <Folder Include="Patterns\Singleton\" />
     <Folder Include="SOLID\LSP\" />
