@@ -54,6 +54,30 @@ namespace TopConsoleNunit.Test.Patterns.Factory.FactoryDesign
             // Assert
             Assert.IsTrue(result);
         }
+        [Test]
+        public void GetValidIngredients_ShouldReturnTrue_WhenNull()
+        {
+            // Arrange
+            var ingredients = new List<string> { null, null, null };
+
+            // Act
+            var result = _sattvicRecipe.GetValidIngredients(ingredients);
+
+            // Assert
+            Assert.IsTrue(result);
+        }
+        [Test]
+        public void GetValidIngredients_ShouldReturnTrue_WhenEmpty()
+        {
+            // Arrange
+            var ingredients = new List<string> { };
+
+            // Act
+            var result = _sattvicRecipe.GetValidIngredients(ingredients);
+
+            // Assert
+            Assert.IsTrue(result);
+        }
 
         [Test]
         public void PrepareIngredients_ShouldOutputCorrectMessage()
