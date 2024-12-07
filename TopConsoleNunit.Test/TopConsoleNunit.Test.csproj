@@ -27,7 +27,6 @@
     <Folder Include="OOP\Recipe\" />
     <Folder Include="Patterns\Bridge\" />
     <Folder Include="Patterns\Memento\" />
-    <Folder Include="Patterns\Singleton\" />
     <Folder Include="SOLID\LSP\" />
     <Folder Include="SOLID\ISP\" />
     <Folder Include="SOLID\OCP\" />
