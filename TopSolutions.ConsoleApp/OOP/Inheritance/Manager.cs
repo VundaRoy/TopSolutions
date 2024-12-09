@@ -2,11 +2,15 @@
 {
     public class Manager : IPersonalDetails
     {
-        public Person GetPerson(int Id)
+        public Person GetPerson(int Id, List<Person> person)
         {
-            Person person = new Person();
+            foreach (var personItem in person) 
+            {
+                if(personItem.Id == Id)
+                return personItem;
+            }
            
-            return person;
+            return new Person();
         }
 
         public void UpdatePerson(int Id)

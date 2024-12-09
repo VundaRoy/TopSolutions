@@ -2,10 +2,14 @@
 {
     public class Employee : IPersonalDetails
     {
-        public Person GetPerson(int Id)
+        public Person GetPerson(int Id, List<Person> person)
         {
-            Person person = new Person();
-            return person;
+            foreach (var p in person)
+            {
+                if (p.Id == Id)
+                 return p; 
+            }
+            return new Person();
         }
 
         public void UpdatePerson(int Id)

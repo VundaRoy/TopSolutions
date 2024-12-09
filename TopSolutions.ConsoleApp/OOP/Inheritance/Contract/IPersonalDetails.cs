@@ -2,7 +2,7 @@
 {
     public interface IPersonalDetails
     {
-        Person GetPerson(int Id);
+        Person GetPerson(int Id, List<Person> person);
         void UpdatePerson(int Id);
     }
 }
