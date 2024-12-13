@@ -15,7 +15,7 @@ namespace TopSolutions.ConsoleApp.OOP.Polymorphism
         }
         internal virtual void PrintTargetOfTruth(string variable) 
         { 
-            Console.WriteLine("Protected "+ variable); 
+            Console.WriteLine("Internal "+ variable); 
         }
     }
     public class Override : Source
@@ -30,7 +30,29 @@ namespace TopSolutions.ConsoleApp.OOP.Polymorphism
             base.PrintTargetOfTruth(variable);
             Console.WriteLine("Plus more of "+ variable);
         }
+        protected void GetProtectedMethod(string method) 
+        { 
+            Console.WriteLine("You got the method "+ method);
+        }
     }
+
+    public class SovietStyle : Override 
+    { 
+       public void InnerMethod(string method)
+        {
+            var pass = "Soviet style governance method is "+ method;
+            GetProtectedMethod(pass);
+        }
+        private void NoAccess()
+        {
+
+        }
+        protected void OnlyAccessFromDerived()
+        {
+
+        }
+    }
+
     public class MainOverride
     {
         public static void Main(string[] args)
@@ -44,6 +66,10 @@ namespace TopSolutions.ConsoleApp.OOP.Polymorphism
             source1.PrintSourceOfTruth("Avesta");
             Source source2 = new Override();
             source2.PrintTargetOfTruth("which one");
+
+            SovietStyle soviet = new SovietStyle();
+            soviet.InnerMethod("stalinist");
+           // soviet.OnlyAccessFromDerived(); //inaccessible
         }
     }
 }
