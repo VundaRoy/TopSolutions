@@ -23,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="OOP\Inheritance\" />
     <Folder Include="OOP\Recipe\" />
     <Folder Include="Patterns\Bridge\" />
     <Folder Include="Patterns\Memento\" />
