@@ -37,5 +37,24 @@ namespace TopConsoleNunit.Test.OOP.Inheritance
             Assert.IsTrue(res.Name.Equals("fr"));
 
         }
+        [Test]
+        public void GetLanguage_null_entry()
+        { 
+            var res = _languageInfo.GetLanguage(0,null);
+            Assert.IsTrue(res.LanguageId.Equals(0));
+        }
+        [TestCase(1, "en")]
+        [TestCase(2, "fr")]
+        [TestCase(3, "es")]
+        [TestCase(4, "zh")]
+        [TestCase(5, "hi")]        
+        public void GetLanguage_multi(int languageId, string expectedName)
+        {
+            // Act
+            var res = _languageInfo.GetLanguage(languageId, languages);
+
+            // Assert
+            Assert.IsTrue(res.Name.Equals(expectedName));
+        }
     }
 }

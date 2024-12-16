@@ -10,12 +10,15 @@ namespace TopSolutions.ConsoleApp.OOP.Interface.Contract
     {
         public Language GetLanguage(int langId, List<Language> languageList)
         {
-            foreach (Language lang in languageList) 
-            { 
-                if(lang.LanguageId == langId) 
-                   {  
-                      return lang; 
-                   }
+            if (languageList != null)
+            {
+                foreach (Language lang in languageList)
+                {
+                    if (lang.LanguageId == langId)
+                    {
+                        return lang;
+                    }
+                }
             }
             return new Language();
         }
