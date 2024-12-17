@@ -7,11 +7,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="View\Create.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Contract\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="View\Create.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="View\Create.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="View\Create.cshtml" />
   </ItemGroup>
 
 </Project>
