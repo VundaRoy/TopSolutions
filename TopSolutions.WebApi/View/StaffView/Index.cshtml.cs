@@ -1,8 +1,9 @@
-﻿using TopSolutions.WebApi.Model;
+﻿
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using TopSolutions.WebApi.Model;
 
-namespace TopSolutions.WebApi.View.Staff
+namespace TopSolutions.WebApi.View.StaffView
 {
     public class IndexModel : PageModel
     {

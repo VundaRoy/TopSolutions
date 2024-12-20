@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace TopSolutions.WebApi.View.Staff
+namespace TopSolutions.WebApi.View.StaffView
 {
     public class DeleteModel : PageModel
     {
