@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace TopSolutions.WebApi.View
+namespace TopSolutions.WebApi.View.Staff
 {
     public class IndexModel : PageModel
     {
-        public List<Staff> StaffList { get; set; } 
+        public List<Staff> StaffList { get; set; }
         public void OnGet()
         {
             StaffList = new List<Staff>
