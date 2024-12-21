@@ -1,0 +1,35 @@
+﻿@page
+@model TopSolutions.WebApi.View.CountryView.IndexModel
+@{
+    ViewData["Title"] = "Country List";
+}
+
+<h1>Country List</h1>
+<p>
+    <a asp-page="Creadte">Create new country</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>CountryId</th>
+            <th>CountryCode</th>
+            <th>CountryName</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach( var item in Model.Countries)
+        {
+            <tr>
+                <td>@item.CountryId</td>
+                <td>@item.CountryCode</td>
+                <td>@item.CountryName</td>
+                <td>
+                    <a asp-page="Edit" asp-route-id ="@item.CountryId">Edit</a>
+                    <a asp-page="Details" asp-route-id ="@item.CountryId">Details</a>
+                    <a asp-page="Delete" asp-route-itemid="@item.CountryId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

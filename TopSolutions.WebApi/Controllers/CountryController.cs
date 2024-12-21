@@ -17,6 +17,24 @@ namespace TopSolutions.WebApi.Controllers
         {
             return Ok(countryList); 
         }
+        // GET: api/Country/5
+        //[HttpGet("{id}")]
+        //public ActionResult<Country> GetCountry(int id)
+        //{
+        //    var country = countryList.FirstOrDefault(s => s.CountryId == id);
+        //    if (country == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return Ok(country);
+        //}
+        //// POST: api/Country
+        //[HttpPost]
+        //public ActionResult<Country> PostCountry(Country country)
+        //{
+        //    countryList.Add(country);
+        //    return CreatedAtAction(nameof(GetCountry), new { id = country.CountryId }, country);
+        //}
         // GET: CountryController/Details/5
         public ActionResult Details(int id)
         {
