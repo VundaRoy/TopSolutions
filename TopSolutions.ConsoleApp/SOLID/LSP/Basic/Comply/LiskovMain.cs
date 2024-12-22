@@ -19,10 +19,13 @@ namespace TopSolutions.ConsoleApp.SOLID.LSP.Basic.Comply
             //square.ChangeDimensions(square, 4, 5);  
             Console.WriteLine("Square area is : " + square.GetArea());
             var circle = new Circle { Radius = 3 };
-            Console.WriteLine("Circle with radius of 3 has area of :" + circle.GetArea());
+            Console.WriteLine("Circle with radius of 3 has area of :" + circle.GetArea(), 2);
             var triangle = new Triangle { Base=12, Height=56};
 
             Console.WriteLine($"Triangle with base {triangle.Base} and height of {triangle.Height} has an area of {triangle.GetArea()} ");
+            var sphere = new Sphere { Radius = 3 };
+            Console.WriteLine($"Sphere with radius of {sphere.Radius} is {sphere.GetArea(), 2}.");
+            
             Console.ReadKey();
         }
     }
