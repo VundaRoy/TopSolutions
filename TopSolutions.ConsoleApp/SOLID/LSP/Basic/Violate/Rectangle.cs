@@ -8,15 +8,15 @@ namespace TopSolutions.ConsoleApp.SOLID.LSP.Basic.Violate
 {
     public class Rectangle
     {
-        public virtual double Width { get; set; }
+        public virtual double Base { get; set; }
         public virtual double Height { get; set; }
         public double GetArea()
         {
-            return Width * Height;
+            return Base * Height;
         }
         public void ChangeDimensions(Rectangle rect, double width, double height)
         {
-            rect.Width = width;
+            rect.Base = width;
             rect.Height = height;
             Console.WriteLine($"Area: {rect.GetArea()}");
         }

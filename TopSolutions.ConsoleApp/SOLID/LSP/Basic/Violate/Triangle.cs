@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace TopSolutions.ConsoleApp.SOLID.LSP.Basic.Violate
 {
-    public class Square : Rectangle
+    public class Triangle : Rectangle
     {
         public override double Base
         {
             get { return base.Base; }
-            set { base.Base = base.Height = value; }
+            set { base.Base = value/2; }
         }
         public override double Height
         {
             get { return base.Height; }
-            set { base.Base = base.Height = value; }
+            set { base.Height = value; }
         }
     }
 }
