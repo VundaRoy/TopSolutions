@@ -20,6 +20,9 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Extensions
             Console.WriteLine(result);
             result = s.AppendDisclosureExtra("Wananavu koya!");
             Console.WriteLine(result);
+            s = "REMOVE all ITEMS now!!";
+            result = s.LowerCaseTheLot();
+            Console.WriteLine(result);
         }
 
     }

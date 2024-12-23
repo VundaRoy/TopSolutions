@@ -23,5 +23,9 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Extensions
         {
             return text + " when caps is " + text.ToUpper();
         }
+        public static string LowerCaseTheLot(this string text)
+        {
+            return text + " when all lowered is " + text.ToLower();
+        }
     }
 }
