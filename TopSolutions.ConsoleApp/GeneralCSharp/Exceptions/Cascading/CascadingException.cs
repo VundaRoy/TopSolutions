@@ -21,7 +21,8 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Exceptions.Cascading
         }
         private void SecondCall()
         {
-            ThirdCall();
+            AlternateThirdCall();
+            //ThirdCall();
         }
         private void ThirdCall()
         {
@@ -33,6 +34,10 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Exceptions.Cascading
             {
                 throw;
             }
+        }
+        private void AlternateThirdCall()
+        {
+            var terminal = Rebooted(null);  //throws exception to grand-parent
         }
         private bool Rebooted(string TerminalId)
         {
