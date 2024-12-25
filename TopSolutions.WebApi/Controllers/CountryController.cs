@@ -17,7 +17,7 @@ namespace TopSolutions.WebApi.Controllers
         {
             return Ok(countryList); 
         }
-        // GET: api/Country/5
+        //GET: api/Country/5
         //[HttpGet("{id}")]
         //public ActionResult<Country> GetCountry(int id)
         //{
@@ -29,12 +29,12 @@ namespace TopSolutions.WebApi.Controllers
         //    return Ok(country);
         //}
         //// POST: api/Country
-        //[HttpPost]
-        //public ActionResult<Country> PostCountry(Country country)
-        //{
-        //    countryList.Add(country);
-        //    return CreatedAtAction(nameof(GetCountry), new { id = country.CountryId }, country);
-        //}
+        [HttpPost]
+        public ActionResult<Country> PostCountry(Country country)
+        {
+            countryList.Add(country);
+            return CreatedAtAction(nameof(GetCountry), new { id = country.CountryId }, country);
+        }
         // GET: CountryController/Details/5
         public ActionResult Details(int id)
         {

@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="View\StaffView\Create.cshtml" />
+    <None Include="View\Staff\Create.cshtml" />
   </ItemGroup>
 
 </Project>
