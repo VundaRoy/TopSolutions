@@ -26,5 +26,10 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.State.ATM
         {
             Console.WriteLine("you cannot withdraw money, as No Debit Card in ATM Machine slot");
         }
+
+        public void VerifyPin()
+        {
+            Console.WriteLine("Verify pin entered...");
+        }
     }
 }

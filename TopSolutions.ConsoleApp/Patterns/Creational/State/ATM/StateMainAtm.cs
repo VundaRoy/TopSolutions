@@ -16,6 +16,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.State.ATM
                             + atmMachine.AtmMachineState.GetType().Name);
             Console.WriteLine();
             atmMachine.EnterPin();
+            atmMachine.VerifyPin();
             atmMachine.WithdrawMoney();
             atmMachine.EjectDebitCard();
             atmMachine.InsertDebitCard();
@@ -26,6 +27,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.State.ATM
                             + atmMachine.AtmMachineState.GetType().Name);
             Console.WriteLine();
             atmMachine.EnterPin();
+            atmMachine.VerifyPin();
             atmMachine.WithdrawMoney();
             atmMachine.InsertDebitCard();
             atmMachine.EjectDebitCard();

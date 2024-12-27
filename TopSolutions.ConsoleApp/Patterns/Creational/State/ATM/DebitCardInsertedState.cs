@@ -24,5 +24,10 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.State.ATM
         {
             Console.WriteLine("Money has been withdrawn");
         }
+
+        public void VerifyPin()
+        {
+            Console.WriteLine("Verify pin entered for debit card...");
+        }
     }
 }

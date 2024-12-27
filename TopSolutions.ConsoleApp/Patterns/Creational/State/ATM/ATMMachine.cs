@@ -53,5 +53,10 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.State.ATM
             //No need to Change the State, only perform the Operation
             AtmMachineState.WithdrawMoney();
         }
+
+        public void VerifyPin()
+        {
+            AtmMachineState.VerifyPin();
+        }
     }
 }

@@ -11,6 +11,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.State.ATM
         void InsertDebitCard();
         void EjectDebitCard();
         void EnterPin();
+        void VerifyPin();
         void WithdrawMoney();
     }
 }
