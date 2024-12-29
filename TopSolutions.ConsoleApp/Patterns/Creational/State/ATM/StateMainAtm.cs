@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TopSolutions.ConsoleApp.Patterns.Creational.State.Vending;
 
 namespace TopSolutions.ConsoleApp.Patterns.Creational.State.ATM
 {
@@ -36,6 +37,8 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.State.ATM
             // has been changed to DebitCardNotInsertedState
             Console.WriteLine("ATM Machine Current state : "
                             + atmMachine.AtmMachineState.GetType().Name);
+           
+
             Console.Read();
         }
     }

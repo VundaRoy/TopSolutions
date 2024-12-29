@@ -20,10 +20,16 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.State.Vending
         {
             VendingMachineState.SelectProductAndInsertMoney(amount, productName);
             // Money has been inserted so Vending Machine's internal state changed to HasMoneyState
+            
             if (VendingMachineState is NoMoneyState)
             {
                 VendingMachineState = new HasMoneyState();
                 Console.WriteLine($"VendingMachine internal state has been moved to {VendingMachineState.GetType().Name}");
+            }
+            else
+            if (VendingMachineState is DownVendingMachineState)
+            {
+                Console.WriteLine("Vending machine is down");
             }
         }
         // The Context Object allows changing the State of the object at runtime.
@@ -36,6 +42,10 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.State.Vending
                 VendingMachineState = new NoMoneyState();
                 Console.WriteLine($"VendingMachine internal state has been moved to : {VendingMachineState.GetType().Name}");
             }
+        }
+        public void BringDownVendingMachine()
+        {
+            VendingMachineState = new DownVendingMachineState();
         }
     }
 }

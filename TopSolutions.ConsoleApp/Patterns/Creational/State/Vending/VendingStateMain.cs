@@ -21,6 +21,8 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.State.Vending
             vendingMachine.DispenseProduct();
             // Product has been dispensed so vending Machine internal state changed to NoMoneyState
             Console.WriteLine($"\nCurrent VendingMachine State : {vendingMachine.VendingMachineState.GetType().Name}");
+            vendingMachine.BringDownVendingMachine();
+            vendingMachine.SelectProductAndInsertMoney(60, "cc chips");
             Console.Read();
         }
     }
