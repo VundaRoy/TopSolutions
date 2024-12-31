@@ -19,6 +19,9 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Template.House
             houseTemplate = new WoodenHouse();
             //Call the Template Method to Build the Wooden House
             houseTemplate.BuildHouse();
+            houseTemplate = new GreenHouse();
+            houseTemplate.BuildHouse();
+            Console.WriteLine("Build green house");
             Console.Read();
         }
     }
