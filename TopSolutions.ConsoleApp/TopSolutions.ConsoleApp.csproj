@@ -5,11 +5,10 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Events.Delegates.GenericDelegates.GenericDelMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Constructors.ClientForConstructor</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="GeneralCSharp\Constructors\" />
     <Folder Include="Samples\GitHub\" />
     <Folder Include="Samples\Misc\ElasticSearch\Before\" />
     <Folder Include="Samples\Misc\ElasticSearch\After\" />

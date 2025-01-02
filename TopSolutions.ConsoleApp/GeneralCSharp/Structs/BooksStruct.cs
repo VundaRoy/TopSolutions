@@ -12,7 +12,11 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Structs
         private string description;
         private string author;
         private string subject;
-
+        //no constructor for struct
+        //public BooksStruct()
+        //{
+            
+        //}
         public void getBookInfo(string t, string d, string a, string s)
         {
             title = t.Trim();
