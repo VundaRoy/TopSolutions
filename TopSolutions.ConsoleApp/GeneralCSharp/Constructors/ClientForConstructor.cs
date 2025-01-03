@@ -12,7 +12,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Constructors
         {
             ClassConstructor constructor = new ClassConstructor();
             constructor.SomeMeth();
-            constructor.Dispose();
+            //constructor.Dispose();
         }
 
         

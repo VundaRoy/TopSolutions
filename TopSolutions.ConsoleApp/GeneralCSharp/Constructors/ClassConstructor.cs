@@ -15,7 +15,8 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Constructors
         }
         ~ClassConstructor() 
         {
-            Dispose(false);
+            //Dispose(false);
+            Console.WriteLine("final call");
         }
 
         public void Dispose()
