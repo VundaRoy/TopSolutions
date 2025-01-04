@@ -6,7 +6,7 @@ namespace TopSolutions.WebApi.Controllers
 {
     public class CountryController : Controller
     {
-        static List<Country> countryList = new List<Country>();
+        static List<Country> countryList = new();
         // GET: CountryController
         public ActionResult Index()
         {
