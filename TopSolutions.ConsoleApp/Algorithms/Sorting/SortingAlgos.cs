@@ -9,10 +9,8 @@ namespace TopSolutions.ConsoleApp.Algorithms.Sorting
 {
     public class SortingAlgos
     {
-        public Stopwatch Bubble(int[] arr)
+        public void Bubble(int[] arr)
         {
-            Stopwatch stopwatch = new();
-            stopwatch.Start();
             int n = arr.Length;
             for (int i = 0; i < n - 1; i++)
             {
@@ -26,13 +24,10 @@ namespace TopSolutions.ConsoleApp.Algorithms.Sorting
                     }
                 }
             }
-            stopwatch.Stop();
-            return stopwatch;
+           
         }
-        public Stopwatch SelectionSort(int[] arr)
+        public void SelectionSort(int[] arr)
         {
-            Stopwatch stopwatch = new();
-            stopwatch.Start();
             int n = arr.Length;
             for (int i = 0; i < n - 1; i++)
             {
@@ -47,9 +42,36 @@ namespace TopSolutions.ConsoleApp.Algorithms.Sorting
                 int temp = arr[i];
                 arr[i] = arr[minIndex];
                 arr[minIndex] = temp;
+            }            
+        }
+        public void QuickSort(int[] arr, int left, int right)
+        {           
+            if (left < right)
+            {
+                int pivotIndex = Partition(arr, left, right);
+                QuickSort(arr, left, pivotIndex - 1);
+                QuickSort(arr, pivotIndex + 1, right);
+            }           
+        }
+
+        private int Partition(int[] arr, int left, int right)
+        {
+            int pivot = arr[right];
+            int i = left - 1;
+            for (int j = left; j < right; j++)
+            {
+                if (arr[j] < pivot)
+                {
+                    i++;
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
             }
-            stopwatch.Stop();
-            return stopwatch;
+            int temp2 = arr[i + 1];
+            arr[i + 1] = arr[right];
+            arr[right] = temp2;
+            return i + 1;
         }
     }
 }
