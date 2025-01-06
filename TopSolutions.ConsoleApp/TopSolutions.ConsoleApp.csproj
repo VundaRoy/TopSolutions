@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Constructors.ClientForConstructor</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.Algorithms.Timing.TimingMain</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
