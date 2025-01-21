@@ -19,7 +19,10 @@ namespace TopSolutions.ConsoleApp.Algorithms.Sorting
             Console.WriteLine($"Elapsed Time for bubble sort is {bubbleTime.Elapsed.TotalSeconds} ms");
             Stopwatch selectSort = sortTimer.MeasureTime(sortAlgos.SelectionSort, array);
             Console.WriteLine($"Elapsed Time for selection sort is {selectSort.Elapsed.TotalSeconds} ms");
-            //Stopwatch quickSort = sortTimer.MeasureTime(sortAlgos.QuickSort, array);
+            Stopwatch quickSort = sortTimer.MeasureTime(sortAlgos.QuickSort, array, 2,4);
+            Console.WriteLine($"Elepsed time for quicksort is {quickSort.Elapsed.TotalSeconds} ms");
+            Stopwatch partition = sortTimer.MeasureTime(sortAlgos.QuickSort, array, 1, 1);
+            Console.WriteLine($"Elepsed time for partition is {partition.Elapsed.TotalSeconds} ms");
 
         }
     }
