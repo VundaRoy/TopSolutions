@@ -18,13 +18,16 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.Polly.WhileSample
                 .CircuitBreaker(
                 exceptionsAllowedBeforeBreaking: 3,
                 durationOfBreak: TimeSpan.FromSeconds(2),
-                onBreak: (exception, timespan) => {
+                onBreak: (exception, timespan) =>
+                {
                     Console.WriteLine("Circuit broken!");
                 },
-                onReset: () => {
+                onReset: () =>
+                {
                     Console.WriteLine("Circuit reset!");
                 },
-                onHalfOpen: () => {
+                onHalfOpen: () =>
+                {
                     Console.WriteLine("Circuit half-open, next call is a trial.");
                 });
             int count = 0;
@@ -42,7 +45,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.Polly.WhileSample
                 catch (BrokenCircuitException)
                 {
                     Console.WriteLine("Circuit is open; waiting before retrying...");
-                     Task.Delay(TimeSpan.FromSeconds(5)); // Wait before retrying
+                    Task.Delay(TimeSpan.FromSeconds(10)); // Wait before retrying
                 }
                 catch (Exception ex)
                 {
@@ -52,16 +55,16 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.Polly.WhileSample
 
 
         }
-         static void SendRequest(ref int count)
+        static void SendRequest(ref int count)
         {
             Console.WriteLine("Sending something...");
             Task.Delay(TimeSpan.FromSeconds(1));
             if (count > 10)
             {
-                //throw new NotImplementedException();
+                throw new NotImplementedException();
                 Console.WriteLine("yay!");
             }
-            Console.WriteLine("Ending round "+ count);
+            Console.WriteLine("Ending round " + count);
             count++;
         }
 
