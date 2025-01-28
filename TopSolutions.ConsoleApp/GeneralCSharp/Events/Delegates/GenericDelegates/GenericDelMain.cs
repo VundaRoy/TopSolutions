@@ -10,15 +10,15 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Events.Delegates.GenericDelegate
     {
         static void Main(string[] args)
         {
-            Func<int, float, double, double> obj1 = new Func<int, float, double, double>(AddNumber1);
+            Func<int, float, double, double> obj1 = new(AddNumber1);
             double Result = obj1.Invoke(100, 125.45f, 456.789);
             Console.WriteLine(Result);
-            Action<int, float, double> obj2 = new Action<int, float, double>(AddNumber2);
+            Action<int, float, double> obj2 = new(AddNumber2);
             obj2.Invoke(50, 255.45f, 123.456);
-            Predicate<string> obj3 = new Predicate<string>(CheckLength);
-            bool Status = obj3.Invoke("Pranaya");
+            Predicate<string> obj3 = new(CheckLength);
+            bool Status = obj3.Invoke("Pranayama");
             Console.WriteLine("Length is > 5 : " +Status);
-            Status = obj3.Invoke("Pran");
+            Status = obj3.Invoke("Pranam");
             Console.WriteLine("Length is > 5 : " + Status);
             Console.ReadKey();
         }
