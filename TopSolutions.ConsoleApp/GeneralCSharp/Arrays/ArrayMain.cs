@@ -22,13 +22,24 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Arrays
 
             //array of classes
 
-            Vehicle v1 = new() { Description = "Sedan", Make="Elantra", Name="Nissan", Year="2005"};
+            Vehicle v1 = new() { Description = "Sedan", Make="Elantra", Name="Nissan", Year="2005" };
+            Vehicle v2 = new() { Description ="Hatchback", Make ="Mazda", Name="Uzi", Year="2009"};
+            Vehicle v3 = new() { Description = "AWD", Make = "Toyota", Name = "Hylux", Year = "2011" };
+
             Person p2 = new () { Id=2, Age = 34, Name="Forbes Milton", Description="Salary man"};
             Person p3 = new() { Id = 10, Age = 41, Name = "Nelson Mandelson", Description = "Politician" };
-            object[] mixedTypes = new object[3];
+            Person p4 = new() { Id = 11, Age = 47,Name = "Milton Obote", Description= "Politician" };
+            Device d1 = new() { DeviceId = 1, DeviceDescription = "Fridge", DeviceName = "Coolie" };
+            Device d2 = new() { DeviceId = 2, DeviceDescription = "Watch", DeviceName = "Timer" };
+            object[] mixedTypes = new object[10];
             mixedTypes[0] = v1;
             mixedTypes[1] = p2;
             mixedTypes[2] = p3;
+            mixedTypes[3] = v2;
+            mixedTypes[4] = v3;
+            mixedTypes[5] = p4;
+            mixedTypes[6] = d1;
+            mixedTypes[7] = d2;
 
             foreach (var mx in mixedTypes) 
             { 
@@ -40,6 +51,10 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Arrays
                 else if(mx is Vehicle vehicle)
                 {
                     Console.WriteLine($"The vehicle is a {vehicle.Make} and year is {vehicle.Year}");
+                }
+                else if(mx is Device device)
+                {
+                    Console.WriteLine($"The device is a {device.DeviceDescription} and is called {device.DeviceName}");
                 }
             }
 
