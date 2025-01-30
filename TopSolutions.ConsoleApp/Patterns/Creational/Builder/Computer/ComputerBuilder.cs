@@ -13,6 +13,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Builder.Computer
         public abstract void SetRAM();
         public abstract void SetHardDrive();
         public abstract void SetManufacturer();
+        public abstract void SetMicrosoftApps();
         public virtual void SetGraphicsCard() { } // Optional
         public virtual void SetSoundCard() { }    // Optional
         public Computer GetComputer() => Computer;

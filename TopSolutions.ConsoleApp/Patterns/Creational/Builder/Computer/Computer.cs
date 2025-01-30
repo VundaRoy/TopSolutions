@@ -14,6 +14,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Builder.Computer
         public string GraphicsCard { get; set; }
         public string SoundCard { get; set; }
         public string Manufacturer { get; set; }
+        public string MicrosoftApps { get; set; }
         public void DisplaySpecifications()
         {
             Console.WriteLine($"CPU: {CPU}");
@@ -22,6 +23,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Builder.Computer
             Console.WriteLine($"Graphics Card: {GraphicsCard ?? "Not present"}");
             Console.WriteLine($"Sound Card: {SoundCard ?? "Not present"}");
             Console.WriteLine($"Maker: {Manufacturer}");
+            Console.WriteLine($"Apps Installed: {MicrosoftApps}");
         }
     }
 }

@@ -16,6 +16,8 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Builder.Computer
             builder.SetGraphicsCard();
             builder.SetSoundCard();
             builder.SetManufacturer();
+            builder.SetMicrosoftApps();
+            
         }
     }
 }

@@ -32,5 +32,9 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Builder.Computer
         {
             Computer.SoundCard = "7.1 Surround Sound Card";
         }
+        public override void SetMicrosoftApps()
+        {
+            Computer.MicrosoftApps = "Word, Excel and Access";
+        }
     }
 }
