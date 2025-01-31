@@ -13,6 +13,8 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Singleton.Basic
         {
 
             one.DoOnewayRun();
+            one.InternalCall();
+            
             RunAny();
         }
 

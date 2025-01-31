@@ -15,8 +15,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Singleton.Basic
 
             get
             {
-                if (_oneTime == null)
-                    _oneTime = new OneWay();
+                _oneTime ??= new OneWay();
                 return _oneTime;
 
             }
@@ -25,6 +24,15 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Singleton.Basic
         public void DoOnewayRun(string extraText = null)
         {
             Console.WriteLine("Faye runaway " + extraText);
+        }
+        private void PrivateMethodCall()
+        {
+            Console.WriteLine("invoke own private");
+        }
+        internal void InternalCall()
+        {
+            Console.WriteLine("some intern called");
+            PrivateMethodCall();
         }
     }
 

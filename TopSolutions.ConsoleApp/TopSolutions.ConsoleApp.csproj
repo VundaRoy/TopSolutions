@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.Patterns.Creational.Builder.Computer.BuilderComputerMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.Patterns.Creational.Singleton.Basic.SingleTonMain</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
