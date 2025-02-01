@@ -15,17 +15,15 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.FactoryDesign
 
         public bool GetValidIngredients(List<string> listOfIngredients)
         {
+            var nonCompliantIngredients = new List<string> { "onion", "garlic", "turnips", "leek", "shallots", "mushrooms", "meat", "seafood", "egg" };
+
             foreach (var item in listOfIngredients)
             {
                 Console.WriteLine(item);
-                //validate for onion and garlic
-                if (item != null)
+                if (item != null && nonCompliantIngredients.Contains(item, StringComparer.OrdinalIgnoreCase))
                 {
-                    if (item.Equals("onion", StringComparison.OrdinalIgnoreCase) || item.Equals("garlic", StringComparison.OrdinalIgnoreCase))
-                    {
-                        Console.WriteLine("Not sattvic compliant. Ingredient contains " + item);
-                        return false;
-                    }
+                    Console.WriteLine("Not sattvic compliant. Ingredient contains " + item);
+                    return false;
                 }
 
             }
