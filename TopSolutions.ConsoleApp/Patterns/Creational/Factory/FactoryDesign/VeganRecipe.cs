@@ -15,11 +15,11 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.FactoryDesign
 
         public bool GetValidIngredients(List<string> listOfIngredients)
         {
-            var nonCompliantIngredients = new List<string> { "honey", "milk", "cheese", "dairy", "lard", "meat", "seafood", "egg" };
+            var nonCompliantIngredients = new List<string> { "honey", "milk", "cheese", "butter", "ghee", "yoghurt", "condensed milk", "gelatin", "dairy", "lard", "meat", "seafood", "egg" };
 
             foreach (var item in listOfIngredients)
-            {               
-                Console.WriteLine(item);               
+            {
+                Console.WriteLine(item);
                 if (item != null && nonCompliantIngredients.Contains(item, StringComparer.OrdinalIgnoreCase))
                 {
                     Console.WriteLine("Not vegan compliant. Ingredient contains " + item);

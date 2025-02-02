@@ -8,30 +8,28 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.FactoryDesign
 {
     public class FactoryDesignMain
     {
+        const string VEGAN = "Vegan";
+        const string SATTVIC = "Sattvic";
+
         static void Main(string[] args)
         {
             IVegetarianRecipe vegetarianRecipe = VegetarianRecipeFactory.GetRecipe("Sattvic");
             //validate sattvic recipe ingredients
 
             List<string> ingredients1 = new() { "dal", "ghee", "carrot", "dhaniya", "taro" };
-            Console.WriteLine("Ingredients 1 is sattvic ? :" + vegetarianRecipe.GetValidIngredients(ingredients1).ToString());
+            VerifyIngredients(vegetarianRecipe, ingredients1, SATTVIC, "ingredients1");
+            //VerifyIngredients(vegetarianRecipe, ingredients1, VEGAN, "ingredients1");
+
             List<string> ingredients2 = new() { "dal", "ghee", "carrot", "dhaniya", "garlic", "tomato", "corn" };
-            List<string> ingredients3 = new() { "dal", "carrot", "dhaniya", "tomato", "corn" };
-            Console.WriteLine("Ingredients 2 is sattvic ? :" + vegetarianRecipe.GetValidIngredients(ingredients2).ToString());
-            //validate vegan
-            IVegetarianRecipe vegetarianRecipe1 = VegetarianRecipeFactory.GetRecipe("Vegan");
-            Console.WriteLine("Ingredients 1 is vegan compliant ? " + vegetarianRecipe1.GetValidIngredients(ingredients1).ToString());
-            vegetarianRecipe.PrepareIngredients();
-            vegetarianRecipe1.PrepareIngredients();
-            //validate both vegan and sattvic
-            IVegetarianRecipe sattvicVegan = VegetarianRecipeFactory.GetRecipe("Vegan");
-            Console.WriteLine("Ingredients 3 is vegan compliant ? " + IsValidFoodType(sattvicVegan, ingredients3));
-            sattvicVegan = VegetarianRecipeFactory.GetRecipe("Sattvic");
-            Console.WriteLine("Ingredients 3 is sattvic compliant ? " + IsValidFoodType(sattvicVegan, ingredients3));
+            //VerifyIngredients(vegetarianRecipe, ingredients2, SATTVIC, "ingredients2");
+            VerifyIngredients(vegetarianRecipe, ingredients2, VEGAN, "ingredients2");
+
         }
-        static bool IsValidFoodType(IVegetarianRecipe vegetarianRecipe, List<string> ingredients)
+        static void VerifyIngredients(IVegetarianRecipe vegetarianRecipe, List<string> ingredients, string FoodType, string ListName)
         {
-            return vegetarianRecipe.GetValidIngredients(ingredients);
+            Console.WriteLine($"Verifying if the ingredients are {FoodType} compliant");
+            Console.WriteLine($"You entered these ingredients {string.Join(", ", ingredients)} for {ListName}");
+            Console.WriteLine($"The {ListName} compliancy with {FoodType} is {vegetarianRecipe.GetValidIngredients(ingredients)}");
         }
     }
 }
