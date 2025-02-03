@@ -11,7 +11,7 @@
             string Name = null;
             string Designation = null;
             string Salary = null;
-            List<Employee> listEmployee = new List<Employee>();
+            List<Employee> listEmployee = new();
             for (int i = 0; i < employeesArray.GetLength(0); i++)
             {
                 for (int j = 0; j < employeesArray.GetLength(1); j++)
