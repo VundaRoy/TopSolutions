@@ -16,6 +16,11 @@
             samsungRemoteControl.SwitchOn();
             samsungRemoteControl.SetChannel(202);
             samsungRemoteControl.SwitchOff();
+            Console.WriteLine("Panasonic");
+            AbstractRemoteControl panasonicRemoteControl = new PanasonicRemoteControl(new PanasonicLedTv());
+            panasonicRemoteControl.SwitchOn();
+            panasonicRemoteControl.SwitchOff();
+            panasonicRemoteControl.SetChannel(309);
             Console.ReadKey();
         }
     }
