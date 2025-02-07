@@ -21,6 +21,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.Basic
             User Pam = new ConcreteUser("Pam");
             User Anurag = new ConcreteUser("Anurag");
             User John = new ConcreteUser("John");
+            User Kramer = new ConcreteUser("Kramer");
             //Registering the users with the Mediator i.e. Facebook Group
             facebookMediator.RegisterUser(Ram);
             facebookMediator.RegisterUser(Dave);
@@ -30,6 +31,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.Basic
             facebookMediator.RegisterUser(Pam);
             facebookMediator.RegisterUser(Anurag);
             facebookMediator.RegisterUser(John);
+            facebookMediator.RegisterUser(Kramer);
             //One of the users Sending one Message in the Facebook Group
             Dave.Send("dotnettutorials.net - this website is very good to learn Design Pattern");
             Console.WriteLine();
