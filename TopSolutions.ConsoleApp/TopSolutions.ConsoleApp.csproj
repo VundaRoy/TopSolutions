@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.Patterns.Structural.Bridge.Simple.BridgeMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.ATC.ClientATCMain</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
