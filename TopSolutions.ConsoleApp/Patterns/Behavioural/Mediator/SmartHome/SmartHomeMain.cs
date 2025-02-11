@@ -14,8 +14,10 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.SmartHome
             var homeController = new HomeController();
             var window = new Window(homeController);
             var heater = new Heater(homeController);
+            var coffee = new CoffeeMaker(homeController);
             window.Open();  // This should notify the controller to turn off heater and lights
             window.Close();
+            coffee.TurnOn();
             Console.ReadKey();
         }
     }

@@ -20,6 +20,10 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.SmartHome
                 Console.WriteLine("Heater is off...");
                 Console.WriteLine("Lights are off...");
             }
+            if(sender is CoffeeMaker && eventInfo == "On")
+            {
+                Console.WriteLine("Coffee is about to be ready...");
+            }
             // Add more interactions as needed...
         }
     }
