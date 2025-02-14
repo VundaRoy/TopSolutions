@@ -10,6 +10,8 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.SmartHome
     {
         public CoffeeMaker(IHomeController controller) : base(controller)
         {
+            Console.WriteLine("Starting coffee machine... Please wait");
+            Console.WriteLine("Checking coffee beans...");
         }
         public void TurnOn()
         {
