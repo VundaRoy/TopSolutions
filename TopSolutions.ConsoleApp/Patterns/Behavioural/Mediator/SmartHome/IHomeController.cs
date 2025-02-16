@@ -9,5 +9,6 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.SmartHome
     public interface IHomeController
     {
         void Notify(Component sender, string eventInfo);
+        void LogEvents(string eventInfo);
     }
 }

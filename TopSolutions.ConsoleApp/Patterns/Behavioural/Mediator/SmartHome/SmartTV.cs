@@ -17,6 +17,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.SmartHome
         {
             Console.WriteLine("TV is on");
             _controller.Notify(this, "On");
+            _controller.LogEvents("Smart TV");
         }
         public void TurnOff()
         {

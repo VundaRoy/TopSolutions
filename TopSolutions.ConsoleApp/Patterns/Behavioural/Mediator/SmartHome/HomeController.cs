@@ -26,5 +26,9 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.SmartHome
             }
             // Add more interactions as needed...
         }
+        public void LogEvents(string eventInfo)
+        {
+            Console.WriteLine("Logging events for " + eventInfo + " on "+ DateTime.Now.ToString());
+        }
     }
 }
