@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.SmartHome.SmartHomeMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Security.Cryptography.CryptoMain</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
