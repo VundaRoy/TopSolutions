@@ -19,8 +19,6 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Security.Cryptography.Trial
         {
             byte[] encryptedBytes = null;
 
-            //byte[] saltBytes = GenerateRandomNumberForSaltOrIv(SaltSize);
-
             using (MemoryStream ms = new MemoryStream())
             {
                 using (RijndaelManaged AES = new RijndaelManaged())
@@ -48,8 +46,6 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Security.Cryptography.Trial
         internal byte[] Decrypt(byte[] bytesToBeDecrypted, byte[] passwordBytes)
         {
             byte[] decryptedBytes = null;
-
-            saltBytes = GenerateRandomNumberForSaltOrIv(SaltSize);
 
             using (MemoryStream ms = new MemoryStream())
             {
