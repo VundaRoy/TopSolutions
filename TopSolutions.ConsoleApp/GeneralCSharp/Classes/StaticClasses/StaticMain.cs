@@ -10,6 +10,8 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.StaticClasses
     {
         public static void Main(string[] args)
         {
+            var lazyS = MyStaticLazy.EncryptString("veryGood", "UIO#$");
+            var decl = MyStaticLazy.DecryptString(lazyS, "UIO#$");
             var enc = MyStatic.EncryptString("walterZinda", "CASI@");
             var dec = MyStatic.DecryptString(enc, "CASI@");
             //var anotherDec = MyStatic.DecryptString(enc, "CASI*9"); will fail
