@@ -50,6 +50,9 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Security.Cryptography.FullImplem
 
             using (MemoryStream ms = new MemoryStream())
             {
+                //write salt to beginning of stream
+                ms.Write(saltBytes, 0, saltBytes.Length);
+
                 using (RijndaelManaged AES = new RijndaelManaged())
                 {
                     AES.KeySize = 256;
@@ -76,8 +79,10 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Security.Cryptography.FullImplem
         {
             byte[] decryptedBytes = null;
 
-            using (MemoryStream ms = new MemoryStream())
+            using (MemoryStream ms = new MemoryStream(bytesToBeDecrypted))
             {
+                ms.Read(saltBytes, 0, SaltSize); // Read the salt from the beginning
+
                 using (RijndaelManaged AES = new RijndaelManaged())
                 {
                     AES.KeySize = 256;
@@ -89,12 +94,14 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Security.Cryptography.FullImplem
 
                     AES.Mode = CipherMode.CBC;
 
-                    using (var cs = new CryptoStream(ms, AES.CreateDecryptor(), CryptoStreamMode.Write))
+                    using (var cs = new CryptoStream(ms, AES.CreateDecryptor(), CryptoStreamMode.Read))
                     {
-                        cs.Write(bytesToBeDecrypted, 0, bytesToBeDecrypted.Length);
-                        cs.Close();
+                        using (MemoryStream msDecrypt = new MemoryStream())
+                        {
+                            cs.CopyTo(msDecrypt);
+                            decryptedBytes = msDecrypt.ToArray();
+                        }
                     }
-                    decryptedBytes = ms.ToArray();
                 }
             }
 
