@@ -5,15 +5,18 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.StaticClasses
+namespace TopSolutions.ConsoleApp.GeneralCSharp.Security.Cryptography.FullImplementation
 {
-    public static class MyStaticLazy
+    public class CryptoObject
     {
-        private const int SaltSize = 8;
-        
-        private static readonly Lazy<byte[]> LazySalt = new Lazy<byte[]>(() => GenerateRandomNumberForSaltOrIv(SaltSize));
-        private static byte[] saltBytes => LazySalt.Value;
-        public static string EncryptString(string stringToEncrypt, string secretKey)
+
+        private const int SaltSize = 16;
+        private byte[] saltBytes;
+        public CryptoObject()
+        {
+            saltBytes = GenerateRandomNumberForSaltOrIv(SaltSize);
+        }
+        public string EncryptString(string stringToEncrypt, string secretKey)
         {
 
             // Get the bytes of the string
@@ -29,7 +32,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.StaticClasses
 
             return result;
         }
-        public static string DecryptString(string stringToDecrypt, string secretKey)
+        public string DecryptString(string stringToDecrypt, string secretKey)
         {
             // Get the bytes of the string
             byte[] bytesToBeDecrypted = Convert.FromBase64String(stringToDecrypt);
@@ -42,15 +45,18 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.StaticClasses
 
             return result;
         }
-        private static byte[] AES_Encrypt(byte[] bytesToBeEncrypted, byte[] passwordBytes)
+        private byte[] AES_Encrypt(byte[] bytesToBeEncrypted, byte[] passwordBytes)
         {
             byte[] encryptedBytes = null;
-            
 
             using (MemoryStream ms = new MemoryStream())
             {
-                using (AesManaged AES = new AesManaged())
-                {
+                //write salt to beginning of stream
+                ms.Write(saltBytes, 0, saltBytes.Length);
+
+                using (RijndaelManaged AES = new RijndaelManaged())
+                {                    
+
                     AES.KeySize = 256;
                     AES.BlockSize = 128;
 
@@ -59,12 +65,11 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.StaticClasses
                     AES.IV = key.GetBytes(AES.BlockSize / 8);
 
                     AES.Mode = CipherMode.CBC;
-                    AES.Padding = PaddingMode.PKCS7;
 
                     using (var cs = new CryptoStream(ms, AES.CreateEncryptor(), CryptoStreamMode.Write))
                     {
                         cs.Write(bytesToBeEncrypted, 0, bytesToBeEncrypted.Length);
-                        cs.FlushFinalBlock();
+                        cs.Close();
                     }
                     encryptedBytes = ms.ToArray();
                 }
@@ -72,30 +77,34 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.StaticClasses
 
             return encryptedBytes;
         }
-        private static byte[] AES_Decrypt(byte[] bytesToBeDecrypted, byte[] passwordBytes)
+        private byte[] AES_Decrypt(byte[] bytesToBeDecrypted, byte[] passwordBytes)
         {
             byte[] decryptedBytes = null;
-          
-            using (MemoryStream ms = new MemoryStream())
+
+            using (MemoryStream ms = new MemoryStream(bytesToBeDecrypted))
             {
-                using (AesManaged AES = new AesManaged())
+                //byte[] salt = new byte[SaltSize];
+                ms.Read(saltBytes, 0, SaltSize); // Read the salt from the beginning
+
+                using (RijndaelManaged AES = new RijndaelManaged())
                 {
                     AES.KeySize = 256;
                     AES.BlockSize = 128;
-                    byte[] saltBytes = new byte[] { 1, 20, 3, 4, 5, 6, 7, 8 };
+
                     var key = new Rfc2898DeriveBytes(passwordBytes, saltBytes, 1000);
                     AES.Key = key.GetBytes(AES.KeySize / 8);
                     AES.IV = key.GetBytes(AES.BlockSize / 8);
 
                     AES.Mode = CipherMode.CBC;
-                    AES.Padding = PaddingMode.PKCS7;
 
-                    using (var cs = new CryptoStream(ms, AES.CreateDecryptor(), CryptoStreamMode.Write))
+                    using (var cs = new CryptoStream(ms, AES.CreateDecryptor(), CryptoStreamMode.Read))
                     {
-                        cs.Write(bytesToBeDecrypted, 0, bytesToBeDecrypted.Length);
-                        cs.FlushFinalBlock();
+                        using (MemoryStream msDecrypt = new MemoryStream())
+                        {
+                            cs.CopyTo(msDecrypt);
+                            decryptedBytes = msDecrypt.ToArray();
+                        }
                     }
-                    decryptedBytes = ms.ToArray();
                 }
             }
 
@@ -106,7 +115,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.StaticClasses
         /// </summary>
         /// <param name="length">The length of the random number.</param>
         /// <returns>The generated random number.</returns>
-        private static byte[] GenerateRandomNumberForSaltOrIv(int length)
+        private byte[] GenerateRandomNumberForSaltOrIv(int length)
         {
             using (RandomNumberGenerator rng = RandomNumberGenerator.Create())
             {
@@ -117,3 +126,4 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.StaticClasses
         }
     }
 }
+
