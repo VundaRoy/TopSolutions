@@ -5,18 +5,11 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TopSolutions.ConsoleApp.GeneralCSharp.Security.Cryptography.FullImplementation
+namespace TopSolutions.ConsoleApp.GeneralCSharp.Security.Cryptography.HardCoded
 {
-    public class CryptoObject
+    public static class HardSaltStatic
     {
-
-        private const int SaltSize = 16;
-        private byte[] saltBytes;
-        public CryptoObject()
-        {
-            saltBytes = GenerateRandomNumberForSaltOrIv(SaltSize);
-        }
-        public string EncryptString(string stringToEncrypt, string secretKey)
+        public static string EncryptString(string stringToEncrypt, string secretKey)
         {
 
             // Get the bytes of the string
@@ -32,7 +25,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Security.Cryptography.FullImplem
 
             return result;
         }
-        public string DecryptString(string stringToDecrypt, string secretKey)
+        public static string DecryptString(string stringToDecrypt, string secretKey)
         {
             // Get the bytes of the string
             byte[] bytesToBeDecrypted = Convert.FromBase64String(stringToDecrypt);
@@ -45,18 +38,18 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Security.Cryptography.FullImplem
 
             return result;
         }
-        private byte[] AES_Encrypt(byte[] bytesToBeEncrypted, byte[] passwordBytes)
+        private static byte[] AES_Encrypt(byte[] bytesToBeEncrypted, byte[] passwordBytes)
         {
             byte[] encryptedBytes = null;
 
+            // Set your salt here, change it to meet your flavor:
+            // The salt bytes must be at least 8 bytes.
+            byte[] saltBytes = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8 };
+
             using (MemoryStream ms = new MemoryStream())
             {
-                //write salt to beginning of stream
-                ms.Write(saltBytes, 0, saltBytes.Length);
-
                 using (RijndaelManaged AES = new RijndaelManaged())
-                {                    
-
+                {
                     AES.KeySize = 256;
                     AES.BlockSize = 128;
 
@@ -77,14 +70,16 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Security.Cryptography.FullImplem
 
             return encryptedBytes;
         }
-        private byte[] AES_Decrypt(byte[] bytesToBeDecrypted, byte[] passwordBytes)
+        private static byte[] AES_Decrypt(byte[] bytesToBeDecrypted, byte[] passwordBytes)
         {
             byte[] decryptedBytes = null;
 
-            using (MemoryStream ms = new MemoryStream(bytesToBeDecrypted))
-            {
-                ms.Read(saltBytes, 0, SaltSize); // Read the salt from the beginning
+            // Set your salt here, change it to meet your flavor:
+            // The salt bytes must be at least 8 bytes.
+            byte[] saltBytes = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8 };
 
+            using (MemoryStream ms = new MemoryStream())
+            {
                 using (RijndaelManaged AES = new RijndaelManaged())
                 {
                     AES.KeySize = 256;
@@ -96,33 +91,16 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Security.Cryptography.FullImplem
 
                     AES.Mode = CipherMode.CBC;
 
-                    using (var cs = new CryptoStream(ms, AES.CreateDecryptor(), CryptoStreamMode.Read))
+                    using (var cs = new CryptoStream(ms, AES.CreateDecryptor(), CryptoStreamMode.Write))
                     {
-                        using (MemoryStream msDecrypt = new MemoryStream())
-                        {
-                            cs.CopyTo(msDecrypt);
-                            decryptedBytes = msDecrypt.ToArray();
-                        }
+                        cs.Write(bytesToBeDecrypted, 0, bytesToBeDecrypted.Length);
+                        cs.Close();
                     }
+                    decryptedBytes = ms.ToArray();
                 }
             }
 
             return decryptedBytes;
         }
-        /// <summary>
-        /// Generates a random number for salt or IV.
-        /// </summary>
-        /// <param name="length">The length of the random number.</param>
-        /// <returns>The generated random number.</returns>
-        private byte[] GenerateRandomNumberForSaltOrIv(int length)
-        {
-            using (RandomNumberGenerator rng = RandomNumberGenerator.Create())
-            {
-                byte[] salt = new byte[length];
-                rng.GetBytes(salt);
-                return salt;
-            }
-        }
     }
 }
-
