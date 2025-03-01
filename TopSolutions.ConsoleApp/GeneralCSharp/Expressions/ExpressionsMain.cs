@@ -10,7 +10,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Expressions
     {
         static void Main(string[] args) 
         {
-            Employee employee = new("Yuni", "Ta");
+            Employee employee = new("Foren", "Sentu");
             Console.WriteLine(employee.GetFullName());
             employee.DisplayName();
         }

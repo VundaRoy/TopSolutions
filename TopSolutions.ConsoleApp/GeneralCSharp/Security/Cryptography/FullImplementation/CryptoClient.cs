@@ -9,25 +9,25 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Security.Cryptography.FullImplem
 {    
     public class CryptoClient
     {
-        private const string SecretKey = "Fleton&&8*";
+        private const string SecretKey = "2i89)99oO";
         public static void Main(string[] args)
         {
-            DecryptOld();
+            //DecryptOld();
             EncryptNew();
 
         }
 
         public static void DecryptOld()
         {
-            var val = HardSaltStatic.DecryptString("GJP/SgJIcTJanweKJryeMMO6sVU=", SecretKey);
-            var val1 = HardSaltStatic.DecryptString("C5oILR2V9a4NNO903KDadik=", SecretKey);
+            var val = HardSaltStatic.DecryptString("sEdENI8tzK2OCMu8(BLlmLvCA8M0CBnfuXqIUWbtO2K&UiK8fqSs=", SecretKey);
+            //var val1 = HardSaltStatic.DecryptString("C5oILR2V9a4NNO903KDadik=", SecretKey);
 
         }
 
         public static void EncryptNew()
         {
-            var GoogleMapScriptURL = CryptoStatic.EncryptString("keynoteaddress", SecretKey);
-            var GoogleMapScriptKey = CryptoStatic.EncryptString("AIzaSyCCASWnfOt5kbKNzKTo0_F63AaBLZ5ad6E", SecretKey);
+            var GoogleMapScriptURL = CryptoStatic.EncryptString("https:KhodnlthBoth.aspx", SecretKey);
+            var GoogleMapScriptKey = CryptoStatic.EncryptString("https://healIa.aspx", SecretKey);
 
         }
 
