@@ -17,8 +17,8 @@ namespace TopSolutions.ConsoleApp.OOP.Interface.Contract
                new Language { Name = "en", Description = "English", LanguageId = 1, NumberOfSpeakers = 1120000000, OfficialScript = "Latin" },
                new Language { Name = "fr", Description = "French", LanguageId = 2, NumberOfSpeakers = 540000000, OfficialScript = "Latin" },
                new Language { Name = "es", Description = "Spanish", LanguageId = 3, NumberOfSpeakers = 640000000, OfficialScript = "Latin" },
-               new Language { Name = "zh", Description = "Mandarin", LanguageId = 4, NumberOfSpeakers = 1340000000, OfficialScript = "Simplified Chinese" },
-               new Language { Name = "hi", Description = "Hindi", LanguageId = 5, NumberOfSpeakers = 850000000, OfficialScript = "Devanagari" }
+               new Language { Name = "zh", Description = "Mandarin", LanguageId = 4, NumberOfSpeakers = 1340000000, OfficialScript = "简体中文 (Simplified Chinese)" },
+               new Language { Name = "hi", Description = "Hindi", LanguageId = 5, NumberOfSpeakers = 850000000, OfficialScript = "देवनागरी (Devanagari)" }
 });
 
         }
@@ -29,6 +29,7 @@ namespace TopSolutions.ConsoleApp.OOP.Interface.Contract
             var res = _langInfo.GetLanguage(3, languages);
             Console.WriteLine($"Name is {res.Name} and description is {res.Description}");
 
+            var scriptList = languages.Select(lang => lang.OfficialScript).ToList();
         }
     }
 }
