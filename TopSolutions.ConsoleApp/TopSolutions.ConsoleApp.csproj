@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.OOP.Interface.Contract.LanguageMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.Patterns.Behavioural.ChainOfResponsibility.ATM.Client</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

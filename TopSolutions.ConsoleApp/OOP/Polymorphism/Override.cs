@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TopSolutions.ConsoleApp.OOP.Polymorphism
+﻿namespace TopSolutions.ConsoleApp.OOP.Polymorphism
 {
-    
+
     public class Source
     {
         public virtual void PrintSourceOfTruth(string variable)
