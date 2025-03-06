@@ -14,6 +14,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.Basic
         public void QuitGroup(User user)
         {
             UsersList.Remove(user);
+            Console.WriteLine($"{user.Name} has just left the chat");
             user.Mediator = this;
         }
 

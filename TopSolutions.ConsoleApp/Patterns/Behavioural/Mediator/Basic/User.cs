@@ -8,7 +8,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.Basic
 {
     public abstract class User
     {
-        protected string Name;
+        public string Name;
         //This Property is going to set and get the Mediator Instance
         //This Property value is going to be set when we register a user with the Mediator
         public IFacebookGroupMediator Mediator { get; set; }
