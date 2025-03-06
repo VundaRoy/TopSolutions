@@ -41,6 +41,9 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.Basic
             John.Send("It is what it is");
             Console.WriteLine();
             Pam.Receive("Yesterday was fine");
+            Anurag.Mediator.QuitGroup(Anurag);
+            John.Send("Who else is here?");
+            Anurag.Receive("Got it!");
             Console.Read();
         }
     }

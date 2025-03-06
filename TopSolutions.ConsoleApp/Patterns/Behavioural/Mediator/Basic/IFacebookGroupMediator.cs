@@ -11,5 +11,6 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.Basic
         void SendMessage(string msg, User user);
         //This method is used to register a user with the Facebook Group
         void RegisterUser(User user);
+        void QuitGroup(User user);
     }
 }

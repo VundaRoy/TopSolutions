@@ -10,6 +10,13 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.Basic
     {
         //The following variable is going to hold the list of objects to whom we want to communicate
         private List<User> UsersList = new List<User>();
+
+        public void QuitGroup(User user)
+        {
+            UsersList.Remove(user);
+            user.Mediator = this;
+        }
+
         //The following method simply registers the user with Mediator
         public void RegisterUser(User user)
         {
@@ -30,5 +37,6 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.Basic
                 }
             }
         }
+        
     }
 }
