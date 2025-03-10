@@ -32,5 +32,9 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Builder.Computer
         {
             Computer.RAM ="120 GB RAM";
         }
+        public override void SetSoundCard()
+        {
+            Computer.SoundCard = "Basic sound card";
+        }
     }
 }
