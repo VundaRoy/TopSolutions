@@ -26,14 +26,14 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Exceptions.Cascading
         }
         private void ThirdCall()
         {
-            try
-            {
+            //try
+            //{
                 var terminal = Rebooted(null);
-            }
-            catch (Exception ex) 
-            {
-                throw;
-            }
+            //}
+            //catch (Exception ex) 
+            //{
+            //    throw;
+            //}
         }
         private void AlternateThirdCall()
         {

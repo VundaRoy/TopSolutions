@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Action.ActionMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Exceptions.Cascading.CascadingException</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
