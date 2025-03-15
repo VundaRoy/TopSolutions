@@ -27,5 +27,9 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Extensions
         {
             return text + " when all lowered is " + text.ToLower();
         }
+        public static string FijianizeThis(this string text)
+        {
+            return text + " gaa sa yawa!";
+        }
     }
 }

@@ -23,6 +23,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Extensions
             s = "REMOVE all ITEMS now!!";
             result = s.LowerCaseTheLot();
             Console.WriteLine(result);
+            Console.WriteLine(s.FijianizeThis());
         }
 
     }
