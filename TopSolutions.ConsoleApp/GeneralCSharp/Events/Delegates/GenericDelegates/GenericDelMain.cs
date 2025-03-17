@@ -12,13 +12,13 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Events.Delegates.GenericDelegate
         {
             Func<int, float, double, double> obj1 = new(AddNumber1);
             double Result = obj1.Invoke(100, 125.45f, 456.789);
-            Console.WriteLine(Result);
+            Console.WriteLine($"Adding int, float and double makes : {Result}");
             Action<int, float, double> obj2 = new(AddNumber2);
             obj2.Invoke(50, 255.45f, 123.456);
             Predicate<string> obj3 = new(CheckLength);
             bool Status = obj3.Invoke("Pranayama");
             Console.WriteLine("Length is > 5 : " +Status);
-            Status = obj3.Invoke("Pranam");
+            Status = obj3.Invoke("Pran");
             Console.WriteLine("Length is > 5 : " + Status);
             Console.ReadKey();
         }
