@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Events.Delegates.GenericDelegates.GenericDelMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.ValueReference.Reference.EmployeeRefMain</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
