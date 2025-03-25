@@ -12,5 +12,9 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Generics
         {
             return value1.Equals(value2);
         }
+        public static bool AreTwoTypesEqual<T1, T2>(T1 value1, T2 value2)
+        {
+            return value1.Equals(value2);
+        }
     }
 }

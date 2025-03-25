@@ -16,6 +16,11 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Generics
             EvaluateAndPrint(isEqual, "ABC and ABC");
             isEqual = GenericCalculator.AreEqual<int>(122, 123);
             EvaluateAndPrint(isEqual, "122 and 123");
+            //two different types
+            isEqual = GenericCalculator.AreTwoTypesEqual<int, float>(22, 22f);
+            EvaluateAndPrint(isEqual, "22 and 22f");
+            isEqual = GenericCalculator.AreTwoTypesEqual<int, float>(22, 22);
+            EvaluateAndPrint(isEqual, "22 (int) and 22 (float)");
 
 
         }
