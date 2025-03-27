@@ -26,8 +26,12 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.FactoryDesign
             {
                 vegetarianRecipe = new VeganRecipe();
             }
+            else if(vegetarianType == "Jain")
+            {
+                vegetarianRecipe = new JainRecipe();
+            }
 
-            return vegetarianRecipe;
+                return vegetarianRecipe;
         }
     }
 }

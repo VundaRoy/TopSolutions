@@ -10,10 +10,13 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.FactoryDesign
     {
         const string VEGAN = "Vegan";
         const string SATTVIC = "Sattvic";
+        const string JAIN = "Jain";
 
         static void Main(string[] args)
         {
             IVegetarianRecipe vegetarianRecipe = VegetarianRecipeFactory.GetRecipe("Sattvic");
+            IVegetarianRecipe veganRecipe = VegetarianRecipeFactory.GetRecipe("Vegan");
+            IVegetarianRecipe jainRecipe = VegetarianRecipeFactory.GetRecipe("Jain");
             //validate sattvic recipe ingredients
 
             List<string> ingredients1 = new() { "dal", "ghee", "carrot", "dhaniya", "taro" };
@@ -22,7 +25,10 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.FactoryDesign
 
             List<string> ingredients2 = new() { "dal", "ghee", "carrot", "dhaniya", "garlic", "tomato", "corn" };
             //VerifyIngredients(vegetarianRecipe, ingredients2, SATTVIC, "ingredients2");
-            VerifyIngredients(vegetarianRecipe, ingredients2, VEGAN, "ingredients2");
+            VerifyIngredients(veganRecipe, ingredients2, VEGAN, "ingredients2");
+
+            List<string> ingredients3 = new() { "dal", "rice", "hing", "spinach", "taro" };
+            VerifyIngredients(jainRecipe, ingredients3, JAIN, "ingredients3");
 
         }
         static void VerifyIngredients(IVegetarianRecipe vegetarianRecipe, List<string> ingredients, string FoodType, string ListName)
