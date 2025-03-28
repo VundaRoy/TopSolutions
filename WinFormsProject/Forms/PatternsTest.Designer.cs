@@ -30,6 +30,7 @@
         {
             FactoryButton = new Button();
             label1 = new Label();
+            VegeRecipeButton = new Button();
             SuspendLayout();
             // 
             // FactoryButton
@@ -51,11 +52,23 @@
             label1.TabIndex = 1;
             label1.Text = "Cook label";
             // 
+            // VegeRecipeButton
+            // 
+            VegeRecipeButton.BackColor = Color.PaleGreen;
+            VegeRecipeButton.Location = new Point(92, 218);
+            VegeRecipeButton.Name = "VegeRecipeButton";
+            VegeRecipeButton.Size = new Size(136, 34);
+            VegeRecipeButton.TabIndex = 2;
+            VegeRecipeButton.Text = "Vege Recipe";
+            VegeRecipeButton.UseVisualStyleBackColor = false;
+            VegeRecipeButton.Click += VegeRecipeButton_Click;
+            // 
             // PatternsTest
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(VegeRecipeButton);
             Controls.Add(label1);
             Controls.Add(FactoryButton);
             Name = "PatternsTest";
@@ -68,5 +81,6 @@
 
         private Button FactoryButton;
         private Label label1;
+        private Button VegeRecipeButton;
     }
 }

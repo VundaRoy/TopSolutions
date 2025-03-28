@@ -22,11 +22,17 @@ namespace WinFormsProject.Forms
         {
             var cook = CookFactory.GetCookType("Asian");
             if (cook != null)
-            { 
+            {
                 //if(cook.Equals("Asian"))
-                    FactoryButton.BackColor = Color.Red;
+                FactoryButton.BackColor = Color.Red;
             }
             label1.Text = cook.GetProfile("");
+        }
+
+        private void VegeRecipeButton_Click(object sender, EventArgs e)
+        {
+            VegeRecipe vr = new VegeRecipe();
+            vr.Show();
         }
     }
 }
