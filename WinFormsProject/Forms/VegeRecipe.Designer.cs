@@ -31,7 +31,7 @@
             ValidateButton = new Button();
             CategoryCombo = new ComboBox();
             label1 = new Label();
-            label2 = new Label();
+            VerdictLabel = new Label();
             groupBox1 = new GroupBox();
             vegeListBox = new RichTextBox();
             vegeCombo = new ComboBox();
@@ -52,6 +52,7 @@
             ValidateButton.TabIndex = 0;
             ValidateButton.Text = "Validate";
             ValidateButton.UseVisualStyleBackColor = true;
+            ValidateButton.Click += ValidateButton_Click;
             // 
             // CategoryCombo
             // 
@@ -71,14 +72,14 @@
             label1.TabIndex = 2;
             label1.Text = "Category";
             // 
-            // label2
+            // VerdictLabel
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(50, 292);
-            label2.Name = "label2";
-            label2.Size = new Size(66, 25);
-            label2.TabIndex = 3;
-            label2.Text = "Verdict";
+            VerdictLabel.AutoSize = true;
+            VerdictLabel.Location = new Point(50, 292);
+            VerdictLabel.Name = "VerdictLabel";
+            VerdictLabel.Size = new Size(66, 25);
+            VerdictLabel.TabIndex = 3;
+            VerdictLabel.Text = "Verdict";
             // 
             // groupBox1
             // 
@@ -162,11 +163,11 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.ForestGreen;
+            BackColor = Color.MediumSeaGreen;
             ClientSize = new Size(1202, 754);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
-            Controls.Add(label2);
+            Controls.Add(VerdictLabel);
             Controls.Add(label1);
             Controls.Add(CategoryCombo);
             Controls.Add(ValidateButton);
@@ -183,7 +184,7 @@
         private Button ValidateButton;
         private ComboBox CategoryCombo;
         private Label label1;
-        private Label label2;
+        private Label VerdictLabel;
         private GroupBox groupBox1;
         private Button addVegeButton;
         private GroupBox groupBox2;
