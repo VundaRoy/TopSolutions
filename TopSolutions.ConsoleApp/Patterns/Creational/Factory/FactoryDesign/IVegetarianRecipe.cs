@@ -12,5 +12,6 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.FactoryDesign
         void PrepareIngredients();
         void CookIngredients();
         void PresentDish();
+        string GetValidationResults();
     }
 }

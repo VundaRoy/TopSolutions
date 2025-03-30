@@ -8,9 +8,15 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.FactoryDesign
 {
     public class VeganRecipe : IVegetarianRecipe
     {
+        string result;
         public void CookIngredients()
         {
             Console.WriteLine("Making vegan dish, simple as nature");
+        }
+
+        public string GetValidationResults()
+        {
+            return result;
         }
 
         public bool GetValidIngredients(List<string> listOfIngredients)
@@ -22,7 +28,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.FactoryDesign
                 Console.WriteLine(item);
                 if (item != null && nonCompliantIngredients.Contains(item, StringComparer.OrdinalIgnoreCase))
                 {
-                    Console.WriteLine("Not vegan compliant. Ingredient contains " + item);
+                    result = "Not vegan compliant. Ingredient contains " + item;
                     return false;
                 }
 

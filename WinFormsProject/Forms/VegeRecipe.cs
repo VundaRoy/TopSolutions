@@ -71,20 +71,24 @@ namespace WinFormsProject.Forms
         }
         private bool IsSelectionValid(string type, List<string> ingredients)
         {
+            bool isValid = false;
             if (type.Equals("Jain"))
             {
-                return jainRecipe.GetValidIngredients(ingredients);
+                isValid = jainRecipe.GetValidIngredients(ingredients);
+                resultLabel.Text = jainRecipe.GetValidationResults();
             }
             if (type.Equals("Sattvic"))
             {
-                return sattvicRecipe.GetValidIngredients(ingredients);
+                isValid = sattvicRecipe.GetValidIngredients(ingredients);
+                resultLabel.Text = sattvicRecipe.GetValidationResults();
             }
             if (type.Equals("Vegan"))
             {
-                return veganRecipe.GetValidIngredients(ingredients);
+                isValid = veganRecipe.GetValidIngredients(ingredients);
+                resultLabel.Text = veganRecipe.GetValidationResults();
             }
 
-            return false;
+            return isValid;
 
         }
 
@@ -97,6 +101,7 @@ namespace WinFormsProject.Forms
             vegeCombo.SelectedIndex = -1;
             otherCombo.SelectedIndex = -1;
             CategoryCombo.SelectedIndex = -1;
+            resultLabel.Text = "";
         }
     }
 }

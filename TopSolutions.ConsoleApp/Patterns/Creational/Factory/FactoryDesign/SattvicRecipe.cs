@@ -8,9 +8,15 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.FactoryDesign
 {
     public class SattvicRecipe : IVegetarianRecipe
     {
+        string result = "";
         public void CookIngredients()
         {
             Console.WriteLine("Cooking sattvic style. Temper with hing, mustard seed and oil");
+        }
+
+        public string GetValidationResults()
+        {
+            return result;
         }
 
         public bool GetValidIngredients(List<string> listOfIngredients)
@@ -22,7 +28,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.FactoryDesign
                 Console.WriteLine(item);
                 if (item != null && nonCompliantIngredients.Contains(item, StringComparer.OrdinalIgnoreCase))
                 {
-                    Console.WriteLine("Not sattvic compliant. Ingredient contains " + item);
+                    result = "Not sattvic compliant. Ingredient contains " + item;
                     return false;
                 }
 

@@ -41,6 +41,7 @@
             otherCombo = new ComboBox();
             addOtherButton = new Button();
             resetButton = new Button();
+            resultLabel = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -170,12 +171,24 @@
             resetButton.UseVisualStyleBackColor = true;
             resetButton.Click += resetButton_Click;
             // 
+            // resultLabel
+            // 
+            resultLabel.AutoSize = true;
+            resultLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            resultLabel.ForeColor = Color.Firebrick;
+            resultLabel.Location = new Point(60, 404);
+            resultLabel.Name = "resultLabel";
+            resultLabel.Size = new Size(74, 25);
+            resultLabel.TabIndex = 7;
+            resultLabel.Text = "Reason";
+            // 
             // VegeRecipe
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MediumSeaGreen;
             ClientSize = new Size(1202, 754);
+            Controls.Add(resultLabel);
             Controls.Add(resetButton);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
@@ -206,5 +219,6 @@
         private RichTextBox vegeListBox;
         private RichTextBox otherListBox;
         private Button resetButton;
+        private Label resultLabel;
     }
 }
