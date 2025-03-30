@@ -24,7 +24,7 @@ namespace WinFormsProject.Forms
             InitializeComponent();
             vegeList = new List<string>();
             otherList = new List<string>();
-            
+
         }
 
         private void addVegeButton_Click(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace WinFormsProject.Forms
             if (CategoryCombo.SelectedItem != null)
             {
                 //determine category
-                if(IsSelectionValid(CategoryCombo.SelectedItem.ToString(), combinedIngredients))
+                if (IsSelectionValid(CategoryCombo.SelectedItem.ToString(), combinedIngredients))
                 {
                     VerdictLabel.Text = "Valid ingredients, good to go!";
                 }
@@ -71,7 +71,7 @@ namespace WinFormsProject.Forms
         }
         private bool IsSelectionValid(string type, List<string> ingredients)
         {
-            if(type.Equals("Jain"))
+            if (type.Equals("Jain"))
             {
                 return jainRecipe.GetValidIngredients(ingredients);
             }
@@ -83,10 +83,20 @@ namespace WinFormsProject.Forms
             {
                 return veganRecipe.GetValidIngredients(ingredients);
             }
-               
-            return false;                       
+
+            return false;
 
         }
-        
+
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            vegeListBox.Clear();
+            otherListBox.Clear();
+            vegeList.Clear();
+            otherList.Clear();
+            vegeCombo.SelectedIndex = -1;
+            otherCombo.SelectedIndex = -1;
+            CategoryCombo.SelectedIndex = -1;
+        }
     }
 }

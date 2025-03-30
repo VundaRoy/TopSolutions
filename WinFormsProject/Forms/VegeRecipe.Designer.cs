@@ -40,6 +40,7 @@
             otherListBox = new RichTextBox();
             otherCombo = new ComboBox();
             addOtherButton = new Button();
+            resetButton = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -159,12 +160,23 @@
             addOtherButton.UseVisualStyleBackColor = true;
             addOtherButton.Click += addOtherButton_Click;
             // 
+            // resetButton
+            // 
+            resetButton.Location = new Point(425, 428);
+            resetButton.Name = "resetButton";
+            resetButton.Size = new Size(112, 34);
+            resetButton.TabIndex = 6;
+            resetButton.Text = "Reset";
+            resetButton.UseVisualStyleBackColor = true;
+            resetButton.Click += resetButton_Click;
+            // 
             // VegeRecipe
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MediumSeaGreen;
             ClientSize = new Size(1202, 754);
+            Controls.Add(resetButton);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(VerdictLabel);
@@ -193,5 +205,6 @@
         private Button addOtherButton;
         private RichTextBox vegeListBox;
         private RichTextBox otherListBox;
+        private Button resetButton;
     }
 }
