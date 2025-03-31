@@ -15,26 +15,34 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Params
 
             //multiple
             SumUp(1300, 30, 67, 80, 90);
+            //more multiple
+            //multiple
+            SumUp(1300, 30, 67, 8, 22, 344, 55, 6, 88, 60, 20, 11);
+            //none
+            SumUp(1300, 30);
             //null param
             SumUpThird(2000, 40, null);
 
             //multiple
-            SumUpThird(1300, 30, new int[] {12,45,67,55});
+            SumUpThird(1300, 30, new int[] { 12, 45, 67, 55 });
 
         }
 
         public static void SumUp(int deposit, int fees, params object[] others)
         {
             int totalCost = deposit + fees;
-            foreach (int item in others) 
+            if (others.Length > 0)
             {
-                totalCost += item;
-            
+                foreach (int item in others)
+                {
+                    totalCost += item;
+
+                }
             }
             Console.WriteLine("total cost : " + totalCost);
         }
         //Method overloading
-        public static void SumUpThird(int deposit, int fees, int[] others= null)
+        public static void SumUpThird(int deposit, int fees, int[] others = null)
         {
             int totalCost = deposit + fees;
             if (others != null)
