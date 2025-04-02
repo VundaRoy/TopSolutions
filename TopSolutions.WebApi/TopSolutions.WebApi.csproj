@@ -1,36 +1,48 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Content Remove="View\Create.cshtml" />
-  </ItemGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<WarningLevel>3</WarningLevel>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="EntityFramework" Version="6.5.1" />
-    <PackageReference Include="Fluent.Infrastructure" Version="2.0.0-beta-01" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-  </ItemGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<WarningLevel>3</WarningLevel>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Contract\" />
-  </ItemGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DebugType>full</DebugType>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <UpToDateCheckInput Remove="View\Create.cshtml" />
-  </ItemGroup>
+	<ItemGroup>
+		<Content Remove="View\Create.cshtml" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="View\Create.cshtml" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="EntityFramework" Version="6.5.1" />
+		<PackageReference Include="Fluent.Infrastructure" Version="2.0.0-beta-01" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Include="View\Staff\Create.cshtml" />
-  </ItemGroup>
+	<ItemGroup>
+		<Folder Include="Contract\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<UpToDateCheckInput Remove="View\Create.cshtml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<_ContentIncludedByDefault Remove="View\Create.cshtml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="View\Staff\Create.cshtml" />
+	</ItemGroup>
 
 </Project>
