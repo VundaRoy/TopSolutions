@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommandConnect.Console.DotNetC_.Files
+namespace CommandConnect.ConsoleApps.DotNetC_.Files
 {
     public class EditProgramFiles
     {
