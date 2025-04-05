@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CommandConnect.Console.DotNetC_.Files.ClienteleMain</StartupObject>
+    <StartupObject>CommandConnect.ConsoleApps.DotNetC_.Concepts.Generalized.MainGeneral</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -61,6 +61,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleApps\DotNetC#\Concepts\Generalized\BMW.cs" />
+    <Compile Include="ConsoleApps\DotNetC#\Concepts\Generalized\ICar.cs" />
+    <Compile Include="ConsoleApps\DotNetC#\Concepts\Generalized\Innova.cs" />
+    <Compile Include="ConsoleApps\DotNetC#\Concepts\Generalized\MainGeneral.cs" />
     <Compile Include="ConsoleApps\DotNetC#\Files\EditProgramFiles.cs" />
     <Compile Include="ConsoleApps\DotNetC#\Files\FileMain.cs" />
     <Compile Include="ConsoleApps\DotNetC#\Files\ClienteleMain.cs" />
@@ -81,6 +85,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ConsoleApps\DotNetC#\Concepts\Specialized\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
