@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.SOLID.DIP.ConstructorInjection.DriverClient</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.SOLID.DIP.PropertyDI.PropertyDIMain</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
