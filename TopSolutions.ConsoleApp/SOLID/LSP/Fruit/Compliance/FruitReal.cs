@@ -13,22 +13,4 @@ namespace TopSolutions.ConsoleApp.SOLID.LSP.Fruit.Compliance
             //Apple apple = new Orange(); not allowed
         }
     }
-    public interface IFruit
-    {
-        string GetColor();
-    }
-    public class Apple : IFruit
-    {
-        public string GetColor()
-        {
-            return "Red";
-        }
-    }
-    public class Orange : IFruit
-    {
-        public string GetColor()
-        {
-            return "Orange";
-        }
-    }
 }
