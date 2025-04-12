@@ -10,19 +10,31 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Template.House
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Build a Concrete House\n");
-            HouseTemplate houseTemplate = new ConcreteHouse();
-            //Call the Template Method to Build the Concrete House
-            houseTemplate.BuildHouse();
-            Console.WriteLine();
-            Console.WriteLine("Build a Wooden House\n");
-            houseTemplate = new WoodenHouse();
-            //Call the Template Method to Build the Wooden House
-            houseTemplate.BuildHouse();
-            houseTemplate = new GreenHouse();
-            houseTemplate.BuildHouse();
-            Console.WriteLine("Build green house");
-            Console.Read();
+            Console.WriteLine("Enter type : g = green, c = concrete, w = wooden");
+            string houseType = Console.ReadLine();
+            DetermineHouseType(houseType);
+        }
+
+        static void DetermineHouseType(string houseType)
+        {
+            HouseTemplate houseTemplate;
+            switch (houseType)
+            {
+                case "w":
+                    houseTemplate = new WoodenHouse();
+                    houseTemplate.BuildHouse();
+                    break;
+                case "g":
+                    houseTemplate = new GreenHouse();
+                    houseTemplate.BuildHouse();
+                    break;
+                case "c":
+                    houseTemplate = new ConcreteHouse();
+                    houseTemplate.BuildHouse();
+                    break;
+            }
+
+
         }
     }
 }
