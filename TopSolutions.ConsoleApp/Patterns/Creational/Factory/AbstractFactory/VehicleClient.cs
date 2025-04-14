@@ -28,6 +28,11 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.AbstractFactory
             //sportsVehicleFactory.CreateCar() will create and return Sports Car
             ICar sportsCar = sportsVehicleFactory.CreateCar();
             sportsCar.GetDetails();
+           
+            //luxury
+            IVehicleFactory luxuryVehicleFactory = new LuxuryVehicleFactory();
+            ICar luxuryCar = luxuryVehicleFactory.CreateCar();  //only car is created not bike, violates ISP
+            luxuryCar.GetDetails();
             Console.ReadKey();
         }
     }
