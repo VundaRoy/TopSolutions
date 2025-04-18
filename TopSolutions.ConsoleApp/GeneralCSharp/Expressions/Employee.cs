@@ -18,5 +18,8 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Expressions
         public string GetFullName() =>  $"{FirstName} {LastName}";
         public void DisplayName() => Console.WriteLine($"Full name is {GetFullName()}");
 
+        public int GetLastNameLength() => LastName.Length;
+        public int GetFirstNameLength() => FirstName.Length;
+
     }
 }

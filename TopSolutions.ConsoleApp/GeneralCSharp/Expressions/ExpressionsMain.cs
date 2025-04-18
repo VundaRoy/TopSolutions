@@ -10,9 +10,11 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Expressions
     {
         static void Main(string[] args) 
         {
-            Employee employee = new("Foren", "Sentu");
+            Employee employee = new("Nuvvu", "IlaaCheyali");
             Console.WriteLine(employee.GetFullName());
             employee.DisplayName();
+            Console.WriteLine($"The first name has {employee.GetFirstNameLength()} characters");
+            Console.WriteLine($"The last name has {employee.GetLastNameLength()} characters");
         }
     }
 }
