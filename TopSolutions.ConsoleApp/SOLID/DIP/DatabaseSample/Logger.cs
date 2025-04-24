@@ -9,10 +9,12 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.DatabaseSample
     public class Logger
     {
         private readonly IDataService _dataService;
+        private readonly ILoggingService _loggingService;
 
-        public Logger(IDataService dataService)
+        public Logger(IDataService dataService, ILoggingService loggingService)
         {
             _dataService = dataService;
+            _loggingService = loggingService;
         }
 
         public void Log(string message)
@@ -22,6 +24,10 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.DatabaseSample
         public void RollbackTransaction(string transId)
         {
             _dataService.RollBack(transId);
+        }
+        public void WriteToLog(string message)
+        {
+            _loggingService.WriteToSeriLog(message);
         }
     }
 }

@@ -10,8 +10,9 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.DatabaseSample
     {
         public static void Main(string[] args)
         {
-            var logger = new Logger(new DatabaseService());
+            var logger = new Logger(new DatabaseService(), new LoggingService());            
             logger.Log("Hello, no errors");
+            logger.WriteToLog("Logged at " + DateTime.Now);
             var comms = new Comms(new  DatabaseService());
             comms.SendComms("Welcome to the channel");
             logger.RollbackTransaction("1123");
