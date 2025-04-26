@@ -29,5 +29,9 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.DatabaseSample
         {
             _loggingService.WriteToSeriLog(message);
         }
+        public void ArchiveLogs()
+        {
+            _loggingService.ArchiveSeriLog();
+        }
     }
 }

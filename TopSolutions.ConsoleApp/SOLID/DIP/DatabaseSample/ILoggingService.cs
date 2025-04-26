@@ -9,5 +9,6 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.DatabaseSample
     public interface ILoggingService
     {
         void WriteToSeriLog(string message);
+        void ArchiveSeriLog();
     }
 }
