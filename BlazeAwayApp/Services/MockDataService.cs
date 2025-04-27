@@ -74,8 +74,31 @@ namespace BlazeAwayApp.Services
                 CountryId = _countries[1].CountryId,
                 IsOnHoliday = false
             };
+            var e3 = new Employee
+            {
+                MaritalStatus = MaritalStatus.Married,
+                BirthDate = new DateTime(1982, 3, 19),
+                City = "Brussels",
+                Email = "franque@bethanyspieshop.com",
+                EmployeeId = 2,
+                FirstName = "Franque",
+                LastName = "Mussels",
+                Gender = Gender.Male,
+                PhoneNumber = "33999909923",
+                Smoker = false,
+                Street = "Nouveau Rue",
+                Zip = "2000",
+                JobCategory = _jobCategories[1],
+                JobCategoryId = _jobCategories[1].JobCategoryId,
+                Comment = "Il y a un peux",
+                ExitDate = null,
+                JoinedDate = new DateTime(2017, 12, 24),
+                Country = _countries[6],
+                CountryId = _countries[6].CountryId,
+                IsOnHoliday = false
+            };
 
-            return [e1, e2];
+            return [e1, e2, e3];
         }
         private static List<JobCategory> InitializeMockJobCategories() => [
                 new JobCategory{JobCategoryId = 1, JobCategoryName = "Pie research"},
