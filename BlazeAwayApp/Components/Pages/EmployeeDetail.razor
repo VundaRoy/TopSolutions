@@ -1,6 +1,6 @@
 ﻿@page "/employeedetail/{EmployeeId:int}"
-
-@rendermode InteractiveServer
+@attribute [StreamRendering(true)]
+@* @rendermode InteractiveServer *@
 
 <section class="employee-detail">
     <h1 class="page-title">
