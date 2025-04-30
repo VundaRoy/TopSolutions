@@ -8,6 +8,23 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.IEnumerator
 {
     public class EnumeratorMain
     {
+        List<string> Month;
+        public EnumeratorMain()
+        {
+            Month = new()
+            {
+                "Chaitra",
+                "Vaishakka",
+                "Jyaishta",
+                "Ashadha",
+                "Shravana",
+                "Kartika",
+                "Margashira",
+                "Pausha",
+                "Magha",
+                "Phalguna"
+            };
+        }
         static void EnumeratorMethodOne(IEnumerator<string> i)
         {
             while (i.MoveNext())
@@ -29,28 +46,16 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.IEnumerator
         }
         static void Main(string[] args)
         {
-            List<string> Month = new()
-            {
-                "Chaitra",
-                "Vaishakka",
-                "Jyaishta",
-                "Ashadha",
-                "Shravana",
-                "Kartika",
-                "Margashira",
-                "Pausha",
-                "Magha",
-                "Phalguna"
-            };
+           
             //Create IEnumerator of string.
-
-            IEnumerator<string> iEnumeratorOfString = Month.GetEnumerator();//to convert list into IEnumerator we can invoke the GetEnumerator method
+            EnumeratorMain main = new EnumeratorMain();
+            IEnumerator<string> iEnumeratorOfString = main.Month.GetEnumerator();//to convert list into IEnumerator we can invoke the GetEnumerator method
 
             while (iEnumeratorOfString.MoveNext())
             {
                 Console.WriteLine(iEnumeratorOfString.Current);
             }
-             iEnumeratorOfString = Month.GetEnumerator();
+             iEnumeratorOfString = main.Month.GetEnumerator();
             EnumeratorMethodOne(iEnumeratorOfString);
         }
     }
