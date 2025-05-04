@@ -10,8 +10,27 @@ namespace TopSolutions.ConsoleApp.OOP.Encapsulation
     {
         static void Main(string[] args)
         {
-            MillStaff millStaff = new MillStaff();
-            millStaff.StaffName = "Lord Mayor";
+            List<SugarMill> mills = new List<SugarMill>();
+            MillStaff millStaff = new()
+            {
+                StaffName = "Sir Galuinadi"
+            };
+            millStaff.SetStaffType(2);
+            Console.WriteLine(millStaff.GetStaffType());
+            
+            SugarMill sugarMill = new()
+            {
+                MillName = "Rarawai",
+                Location = "Ba"
+            };
+            mills.Add(sugarMill);
+            sugarMill = new()
+            {
+                MillName = "Lautoka",
+                Location = "Lautoka"
+            };
+            mills.Add(sugarMill);
+
 
         }
     }

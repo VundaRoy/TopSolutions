@@ -8,8 +8,8 @@ namespace TopSolutions.ConsoleApp.OOP.Encapsulation
 {
     public class SugarMill
     {
-        private string MillName {  get; set; }  
-        private string Location { get; set; }
+        public string MillName {  get; set; }  
+        public string Location { get; set; }
 
 
     }

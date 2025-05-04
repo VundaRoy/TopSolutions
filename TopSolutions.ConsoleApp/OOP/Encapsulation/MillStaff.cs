@@ -16,6 +16,13 @@ namespace TopSolutions.ConsoleApp.OOP.Encapsulation
             get { return staffType; }
             set { staffType = value; }
         }
-
+        public int GetStaffType()
+        {
+            return StaffType;
+        }
+        public void SetStaffType(int value)
+        {
+            StaffType = value;
+        }
     }
 }
