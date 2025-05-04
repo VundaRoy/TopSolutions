@@ -11,6 +11,8 @@ namespace TopSolutions.ConsoleApp.OOP.InehritanceTypes.MultiLevel
     {
         static void Main(string[] args)
         {
+            List<MicrosoftEmployee> microEmployees = new List<MicrosoftEmployee>();
+            MultiLevelMain multiLevelMain = new MultiLevelMain();
             AmazonContractor amazonContractor = new()
             {
                 IsManager = true,
@@ -27,19 +29,29 @@ namespace TopSolutions.ConsoleApp.OOP.InehritanceTypes.MultiLevel
                 LastName = "Dole"
             };
             //using hierarchy
-            MicrosoftEmployee ms = new()
+            MicrosoftEmployee ms = multiLevelMain.CreateMicrosoftEmployee("Lewis","Clark","East Coast","Tech writer");
+            microEmployees.Add(ms);
+            ms = multiLevelMain.CreateMicrosoftEmployee("Manitoba", "Prairie", "Central", "Engineer");
+            microEmployees.Add(ms);
+            ms = multiLevelMain.CreateMicrosoftEmployee("Halifax", "Nova", "Acadia", "Senior Engineer");
+            microEmployees.Add(ms);
+            foreach (MicrosoftEmployee employee in microEmployees)
             {
-                FirstName = "Brent",
-                LastName = "Sommers",
-                Division = "Redmond",
-                Role = "Evangelist"
-            };
-            OracleEmployee oracleEmployee = new()
-            {
-                FirstName = "Juzman",
-                LastName = "Arolla",
-                DatabaseVersion = "6.7"
-            };
+                Console.WriteLine($"{employee.FirstName}");
+            }
+            OracleEmployee ora1 = multiLevelMain.CreateOracleEmployee("Carlos", "Guzman", "5.7");
+
+           
         }
+
+        OracleEmployee CreateOracleEmployee(string first, string last, string version)
+        {
+            return new() { FirstName = first, LastName = last, DatabaseVersion = version };
+        }
+        MicrosoftEmployee CreateMicrosoftEmployee(string first, string last, string division, string role) 
+        { 
+            return new() { FirstName = first, LastName = last, Division = division, Role = role }; 
+        }
+        
     }
 }
