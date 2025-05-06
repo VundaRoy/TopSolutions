@@ -23,15 +23,22 @@ namespace TopSolutions.ConsoleApp.OOP.Encapsulation
                 MillName = "Rarawai",
                 Location = "Ba"
             };
+            sugarMill.SetMillManager("Galuinadi");
+            
             mills.Add(sugarMill);
             sugarMill = new()
             {
                 MillName = "Lautoka",
-                Location = "Lautoka"
+                Location = "Lautoka",
+                
             };
+            sugarMill.SetMillManager("Pramod");
             mills.Add(sugarMill);
 
-
+            foreach(SugarMill s in mills)
+            {
+               Console.WriteLine( s.GetMillManager());
+            }
         }
     }
 }
