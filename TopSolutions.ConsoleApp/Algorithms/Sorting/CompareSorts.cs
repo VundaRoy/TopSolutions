@@ -11,7 +11,7 @@ namespace TopSolutions.ConsoleApp.Algorithms.Sorting
     {
         public static void Main(string[] args)
         {
-            int[] array = new int[] { 1, 2, 30, 41, 5, 6, 7, 8, 9,101,112,1002,111,152,112,101,16,18,11,1522,1599,1255,11,105,114,163,32,56,668,95 };
+            int[] array = new int[] { 555,1234,5,112334,55,334,3,4,1,999,1233,95 };
             SortingAlgos sortAlgos = new();
             SortTimer sortTimer = new();
 
