@@ -26,7 +26,7 @@
 
         public static void Main(string[] args) 
         { 
-          Overload ov = new Overload(); 
+          Overload ov = new(); 
             ov.StationName("A");
             var station = ov.StationName('C');
             Console.WriteLine(station);
