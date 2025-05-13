@@ -21,6 +21,9 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Arrays
             string resultString = string.Join(", ", res);
             Console.WriteLine($"Sliced between {start} and {end} is " +
                 $"{resultString}");
+            res = LastThreeNumbers(arr);
+            resultString = string.Join(", ", res);
+            Console.WriteLine($"The last 3 numbers are {resultString}");
         }
 
         static int[] SliceBetween(int start, int end, int[] arrayInt)
@@ -33,6 +36,14 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Arrays
             }
 
             return arrayInt[start..end];
+        }
+        static int[] LastThreeNumbers(int[] ints)
+        {
+            if(ints.Length >= 3)
+            {
+                return ints[^3..];
+            }
+            return ints;
         }
     }
 }
