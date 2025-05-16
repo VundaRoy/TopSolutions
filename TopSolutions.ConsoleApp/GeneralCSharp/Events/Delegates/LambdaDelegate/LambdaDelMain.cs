@@ -34,9 +34,33 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Events.Delegates.LambdaDelegate
                 AnnualGiftVoucher = false,
                 PurchaseLevel = 2
             };
+            Customer customer4 = new()
+            {
+                CustomerNumber = 1,
+                CustomerName = "Jerry",
+                AnnualGiftVoucher = false,
+                PurchaseLevel = 3
+            };
+            Customer customer5 = new()
+            {
+                CustomerNumber = 1,
+                CustomerName = "Seinfeld",
+                AnnualGiftVoucher = false,
+                PurchaseLevel = 3
+            };
+            Customer customer6 = new()
+            {
+                CustomerNumber = 1,
+                CustomerName = "Manchu",
+                AnnualGiftVoucher = false,
+                PurchaseLevel = 4
+            };
             customerList.Add(customer1);
             customerList.Add(customer2);
             customerList.Add(customer3);
+            customerList.Add(customer4);
+            customerList.Add(customer5);
+            customerList.Add(customer6);
         }
         public static void RewardCustomer(List<Customer> cust, CustomerEligibility IsCustomerEligible)
         {
