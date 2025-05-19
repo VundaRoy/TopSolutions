@@ -78,6 +78,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Events.Delegates.LambdaDelegate
             LambdaDelMain func = new LambdaDelMain();
             RewardCustomer(func.customerList, x => x.PurchaseLevel > 2);
             RewardCustomer(func.customerList, x => x.PurchaseLevel < 2);
+            RewardCustomer(func.customerList, y => y.CustomerName[..1] == "S" && y.PurchaseLevel > 3);
         }
     }
 }
