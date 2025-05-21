@@ -54,5 +54,17 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Arrays
             }
             return ints;
         }
+        static int[] SkipNthNumber(int[] ints, int nthValue)
+        {
+            if (ints.Length > nthValue)
+            {
+                return ints[nthValue..];
+            }
+            return ints;
+        }
+        static int[] GetLastNumber(int[] ints)
+        {           
+            return ints[^1..];
+        }
     }
 }
