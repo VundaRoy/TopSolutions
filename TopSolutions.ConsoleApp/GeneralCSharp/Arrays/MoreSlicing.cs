@@ -29,6 +29,12 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Arrays
             {
                 Console.WriteLine($"The word {word} between 2 and 4 is {SliceStringBetween(2, 4, word)}");
             }
+            //Get last number
+            Console.WriteLine($"The last number for the array i {GetLastNumber(arr)}.");
+            //Skip the nth number
+            Console.WriteLine("Enter the nth number to skip");
+            var num = Console.ReadLine();
+            Console.WriteLine($"The skipped number of {SkipNthNumber(arr,Convert.ToInt32(num))}");
         }
 
         static int[] SliceBetween(int start, int end, int[] arrayInt)
