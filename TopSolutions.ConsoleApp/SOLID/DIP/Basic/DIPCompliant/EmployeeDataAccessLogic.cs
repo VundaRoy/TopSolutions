@@ -54,5 +54,10 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant
         {
             Console.WriteLine("The updated employee with id of " + id + " has a name of " +employee.Name);
         }
+
+        public void CreateEmployee()
+        {
+            Console.WriteLine("Employee is created ");
+        }
     }
 }

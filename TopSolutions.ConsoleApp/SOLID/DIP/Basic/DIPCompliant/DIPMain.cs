@@ -29,6 +29,8 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant
             //Register a Barbudan
             employeeBusinessLogic.RegisterStudentWithConsulate(2002, Countries.Barbuda.ToString());
             employeeBusinessLogic.NotifyEmployee(2002);
+            //create new employee
+            employeeBusinessLogic.CreateNewEmloyee();
         }
         
         static void PrintEmployeeDetails(Employee emp) 

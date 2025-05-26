@@ -40,5 +40,9 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant
         {
             _IOverseasEmployee.RegisterWithConsulate(studentId, country);
         }
+        public void CreateNewEmloyee()
+        {
+            _IEmployeeDataAccessLogic.CreateEmployee();
+        }
     }
 }

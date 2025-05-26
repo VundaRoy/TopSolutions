@@ -11,5 +11,6 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant.Contract
         Employee GetEmployeeDetails(int id);
         void UpdateEmployee(int id, Employee employee);
         void NotifyEmployee(int id);
+        void CreateEmployee();
     }
 }
