@@ -12,6 +12,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Arrays
         public static void Main(string[] args)
         {
             int[] arr = { 1, 2, 12, 22, 90, 6, 77, 122, 9, 23, 112 };
+            Console.WriteLine(string.Join(", ", arr));
             Console.WriteLine("Start slice: ");
             var start = Console.ReadLine();
             Console.WriteLine("End slice: ");
