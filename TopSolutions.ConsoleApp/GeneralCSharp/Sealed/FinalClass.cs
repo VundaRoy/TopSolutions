@@ -13,7 +13,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Sealed
             base.Paint();
             Console.WriteLine("Finally the paint");
         }
-        
+
         //cannot override because it is sealed
         //public override void ColorMeShocked()
         //{

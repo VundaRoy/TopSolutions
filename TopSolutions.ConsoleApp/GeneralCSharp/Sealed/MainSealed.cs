@@ -13,6 +13,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Sealed
             SubClass subClass = new SubClass();
             subClass.Paint();
             subClass.ColorMeShocked();
+            subClass.Verify();
 
             FinalClass finalClass = new();
             finalClass.Paint();

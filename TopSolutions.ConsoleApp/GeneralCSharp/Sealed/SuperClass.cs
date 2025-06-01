@@ -16,5 +16,9 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Sealed
         {
             Console.WriteLine("Shocked look super");
         }
+        public void Verify()
+        {
+            Console.WriteLine("Certified correct");
+        }
     }
 }
