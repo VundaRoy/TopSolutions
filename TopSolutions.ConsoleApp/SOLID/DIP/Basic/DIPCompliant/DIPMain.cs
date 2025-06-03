@@ -31,6 +31,7 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant
             employeeBusinessLogic.NotifyEmployee(2002);
             //create new employee
             employeeBusinessLogic.CreateNewEmloyee();
+            employeeBusinessLogic.CheckEmployeeVisaStatus(staff01.ID);
         }
         
         static void PrintEmployeeDetails(Employee emp) 

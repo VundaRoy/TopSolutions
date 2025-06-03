@@ -59,5 +59,10 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant
         {
             Console.WriteLine("Employee is created ");
         }
+
+        public void CheckVisaStatus(int EmployeeID)
+        {
+            Console.WriteLine($"The overseas employee with ID of {EmployeeID} has had Visa checked");
+        }
     }
 }

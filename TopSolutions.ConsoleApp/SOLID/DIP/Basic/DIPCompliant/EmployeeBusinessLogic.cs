@@ -44,5 +44,9 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant
         {
             _IEmployeeDataAccessLogic.CreateEmployee();
         }
+        public void CheckEmployeeVisaStatus(int EmpID)
+        {
+            _IOverseasEmployee.CheckVisaStatus(EmpID);
+        }
     }
 }

@@ -11,5 +11,6 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant.Contract
         bool IsAForeignCountry(string country);
         double ProcessForeignPay(int EmployeeID, string country, double pay);
         void RegisterWithConsulate(int EmployeeID, string Country);
+        void CheckVisaStatus(int EmployeeID);
     }
 }
