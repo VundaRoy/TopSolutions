@@ -37,11 +37,11 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Events.Delegates.Multicast
         static void Main(string[] args)
         {
             MulticastDelegateMain main = new MulticastDelegateMain();
-            MathDelegate addDel = new MathDelegate(Add);
-            MathDelegate subDel = new MathDelegate(Sub);
-            MathDelegate multDel = new MathDelegate(main.Mul);
-            MathDelegate divDel = new MathDelegate(main.Div);
-            MathDelegate powDel = new MathDelegate(main.XpowerY);
+            MathDelegate addDel = new(Add);
+            MathDelegate subDel = new(Sub);
+            MathDelegate multDel = new(main.Mul);
+            MathDelegate divDel = new(main.Div);
+            MathDelegate powDel = new(main.XpowerY);
 
             MathDelegate deln = addDel + subDel + multDel + divDel + powDel;
             Delegate[] InvocationList = deln.GetInvocationList();
