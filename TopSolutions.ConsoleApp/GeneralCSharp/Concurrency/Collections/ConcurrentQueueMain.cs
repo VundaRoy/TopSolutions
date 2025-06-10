@@ -42,7 +42,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.Collections
         }
         private static void GetOrders(string custName, Queue<string> MobileOrders)
         {
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 5; i++)
             {
                 //Thread.Sleep(100);
                 string order = string.Format($"{custName} Needs {i + 3} Mobiles");
