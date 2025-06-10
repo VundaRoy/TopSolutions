@@ -18,7 +18,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Basics.Loops.Continue
                     Console.ReadKey();
                     continue;
                 }
-                Console.WriteLine($"I : {i}");
+                Console.WriteLine($"i : {i}");
             }
 
             Console.ReadKey();

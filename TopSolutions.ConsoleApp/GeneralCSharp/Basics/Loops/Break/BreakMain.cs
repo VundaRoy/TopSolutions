@@ -10,19 +10,20 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Basics.Loops.Break
     {
         static void Main(string[] args)
         {
-            for (int i = 1; i <= 10; i++)
+            int i=0,  j = 0;
+            for (i = 1; i <= 10; i++)
             {
-                for (int j = 1; j <= 10; j++)
+                for (j = 1; j <= 10; j++)
                 {
-                    Console.WriteLine($"I : {i} J : {j}");
+                    Console.WriteLine($"i : {i} j : {j}");
                     if (j > 3)
                     {
                         break;
                     }
                 }
-                Console.WriteLine("Out of inner for-loop");
+                Console.WriteLine($"Out of inner for-loop where i is {i} and j is {j}");
             }
-            Console.WriteLine("Out of all loops");
+            Console.WriteLine("Out of all loops.");
             Console.ReadKey();
         }
     }
