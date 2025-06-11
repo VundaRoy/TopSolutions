@@ -8,12 +8,12 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.Semaphores
 {
     public class SemaphoreSample
     {
-        public static Semaphore semaphore = new Semaphore(2, 3);
+        private static readonly Semaphore semaphore = new(4, 6);
         static void Main(string[] args)
         {
-            for (int i = 1; i <= 10; i++)
+            for (int i = 1; i <= 20; i++)
             {
-                Thread threadObject = new Thread(DoSomeTask)
+                Thread threadObject = new(DoSomeTask)
                 {
                     Name = "Thread " + i
                 };
@@ -30,7 +30,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.Semaphores
                 semaphore.WaitOne();
                 //Decrease the Initial Count Variable by 1
                 Console.WriteLine("Success: " + Thread.CurrentThread.Name + " is Doing its work");
-                Thread.Sleep(5000);
+                Thread.Sleep(2000);
                 Console.WriteLine(Thread.CurrentThread.Name + " Exit.");
             }
             finally
