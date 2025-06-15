@@ -9,8 +9,10 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.Partial
     public partial class Student : IStudentLocal
     {
         private string _nationalID;
-        public string FirstName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string LastName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        private string _firstName;
+        private string _lastName;
+        public string FirstName { get => _firstName; set => _firstName = value; }
+        public string LastName { get => _lastName; set => _lastName = value; }
         public string NationalID { get => _nationalID; set => _nationalID = value; }
 
         public void ApplyHecsAid()
@@ -32,5 +34,9 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.Partial
     }
     public class Demo : DemoBaseMain
     {
+        public void TestCreateStudentDetails(string studentID)
+        {
+            Console.WriteLine($"The student {studentID} is being created...");
+        }
     }
 }
