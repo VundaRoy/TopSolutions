@@ -8,6 +8,7 @@
             s.LocalRegistration();
             s.OverseasRegister();
             s.ApplyHecsAid();
+            s.RegisterSubject("forbes123");
             Student foreignStudent1 = new();
             foreignStudent1.ApplyOverseasScholarship();
             //NZ file
