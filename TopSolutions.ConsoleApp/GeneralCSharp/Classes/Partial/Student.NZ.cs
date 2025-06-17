@@ -12,5 +12,9 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.Partial
         {
             Console.WriteLine("Registering NZ campus");
         }
+        //public void ApplyHecsAid()   //Student already defines member
+        //{
+        //    Console.WriteLine("Do something");
+        //}
     }
 }

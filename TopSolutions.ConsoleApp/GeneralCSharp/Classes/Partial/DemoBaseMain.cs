@@ -13,10 +13,11 @@
             foreignStudent1.ApplyOverseasScholarship();
             foreignStudent1.RegisterSubject("am123");
             //NZ file
-            Student nz = new Student();
+            Student nz = new();
             nz.RegisterNZCampus();
             nz.ApplyHecsAid();
-            Demo demo = new Demo();
+            nz.RegisterSubject("nzStd112");
+            Demo demo = new();
             demo.TestCreateStudentDetails("freitag");
         }
     }
