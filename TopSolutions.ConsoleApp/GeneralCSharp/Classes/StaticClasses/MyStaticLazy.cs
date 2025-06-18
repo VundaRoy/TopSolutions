@@ -11,8 +11,8 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.StaticClasses
     {
         private const int SaltSize = 8;
         
-        private static readonly Lazy<byte[]> LazySalt = new Lazy<byte[]>(() => GenerateRandomNumberForSaltOrIv(SaltSize));
-        private static byte[] saltBytes => LazySalt.Value;
+        private static readonly Lazy<byte[]> LazySalt = new Lazy<byte[]>(() => GenerateRandomSalt(SaltSize));
+        private static byte[] SaltBytes => LazySalt.Value;
         public static string EncryptString(string stringToEncrypt, string secretKey)
         {
 
@@ -23,7 +23,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.StaticClasses
             // Hash the password with SHA256
             passwordBytes = SHA256.Create().ComputeHash(passwordBytes);
 
-            byte[] bytesEncrypted = AES_Encrypt(bytesToBeEncrypted, passwordBytes);
+            byte[] bytesEncrypted = Rijndael_Encrypt(bytesToBeEncrypted, passwordBytes);
 
             string result = Convert.ToBase64String(bytesEncrypted);
 
@@ -36,13 +36,13 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.StaticClasses
             byte[] passwordBytes = Encoding.UTF8.GetBytes(secretKey);
             passwordBytes = SHA256.Create().ComputeHash(passwordBytes);
 
-            byte[] bytesDecrypted = AES_Decrypt(bytesToBeDecrypted, passwordBytes);
+            byte[] bytesDecrypted = Rijndael_Decrypt(bytesToBeDecrypted, passwordBytes);
 
             string result = Encoding.UTF8.GetString(bytesDecrypted);
 
             return result;
         }
-        private static byte[] AES_Encrypt(byte[] bytesToBeEncrypted, byte[] passwordBytes)
+        private static byte[] Rijndael_Encrypt(byte[] bytesToBeEncrypted, byte[] passwordBytes)
         {
             byte[] encryptedBytes = null;
             
@@ -54,7 +54,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.StaticClasses
                     AES.KeySize = 256;
                     AES.BlockSize = 128;
 
-                    var key = new Rfc2898DeriveBytes(passwordBytes, saltBytes, 1000);
+                    var key = new Rfc2898DeriveBytes(passwordBytes, SaltBytes, 1000);
                     AES.Key = key.GetBytes(AES.KeySize / 8);
                     AES.IV = key.GetBytes(AES.BlockSize / 8);
 
@@ -72,7 +72,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.StaticClasses
 
             return encryptedBytes;
         }
-        private static byte[] AES_Decrypt(byte[] bytesToBeDecrypted, byte[] passwordBytes)
+        private static byte[] Rijndael_Decrypt(byte[] bytesToBeDecrypted, byte[] passwordBytes)
         {
             byte[] decryptedBytes = null;
           
@@ -106,7 +106,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.StaticClasses
         /// </summary>
         /// <param name="length">The length of the random number.</param>
         /// <returns>The generated random number.</returns>
-        private static byte[] GenerateRandomNumberForSaltOrIv(int length)
+        private static byte[] GenerateRandomSalt(int length)
         {
             using (RandomNumberGenerator rng = RandomNumberGenerator.Create())
             {
