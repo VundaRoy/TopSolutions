@@ -14,6 +14,7 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.DatabaseSample
             logger.Log("Hello, no errors");
             logger.WriteToLog("Logged at " + DateTime.Now);
             logger.ArchiveLogs();
+            logger.RollbackTransaction("myId12");
             var comms = new Comms(new  DatabaseService());
             comms.SendComms("Welcome to the channel");
             logger.RollbackTransaction("1123");
