@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace TopSolutions.ConsoleApp.SOLID.LSP.Basic.Comply
 {
-    public class Rectangle : Shape
+    public class Rectangle : IShape
     {
         public double Width { get; set; }
         public double Height { get; set; }
-        public override double GetArea()
+        public double GetArea()
         {
             return Width * Height;
         }

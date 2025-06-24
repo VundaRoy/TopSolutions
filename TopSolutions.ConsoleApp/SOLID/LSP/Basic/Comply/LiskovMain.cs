@@ -13,12 +13,12 @@ namespace TopSolutions.ConsoleApp.SOLID.LSP.Basic.Comply
             var rect = new Rectangle { Width = 2, Height = 3 };
             rect.GetArea();  // This works fine
             rect.ChangeDimensions(rect, 4, 5);  // This works fine
-            var square = new Square { Side = 2 };
+            var square = new Square { Side = 7 };
             //square.GetArea();  // This also works fine
             // This will not work
             //square.ChangeDimensions(square, 4, 5);  
             Console.WriteLine("Square area is : " + square.GetArea());
-            var circle = new Circle { Radius = 3 };
+            var circle = new Circle { Radius = 8 };
             Console.WriteLine("Circle with radius of 3 has area of :" + circle.GetArea(), 2);
             var triangle = new Triangle { Base=12, Height=56};
 

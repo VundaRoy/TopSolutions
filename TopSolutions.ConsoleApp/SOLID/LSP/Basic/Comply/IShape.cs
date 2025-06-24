@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace TopSolutions.ConsoleApp.SOLID.LSP.Basic.Comply
 {
-    public abstract class Shape
+    public interface IShape
     {
-        public abstract double GetArea();
+        public double GetArea();
     }
 }
