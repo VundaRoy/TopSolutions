@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CommandConnect.ConsoleApps.DotNetC_.Concepts.Specialized.MainSpecial</StartupObject>
+    <StartupObject>CommandConnect.ConsoleApps.DotNetCSharp.Files.FileStreamCreateMain</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -61,16 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsoleApps\DotNetC#\Concepts\Generalized\BMW.cs" />
-    <Compile Include="ConsoleApps\DotNetC#\Concepts\Generalized\ICar.cs" />
-    <Compile Include="ConsoleApps\DotNetC#\Concepts\Generalized\Innova.cs" />
-    <Compile Include="ConsoleApps\DotNetC#\Concepts\Generalized\MainGeneral.cs" />
-    <Compile Include="ConsoleApps\DotNetC#\Concepts\Specialized\Cuboid.cs" />
-    <Compile Include="ConsoleApps\DotNetC#\Concepts\Specialized\MainSpecial.cs" />
-    <Compile Include="ConsoleApps\DotNetC#\Concepts\Specialized\Rectangle.cs" />
-    <Compile Include="ConsoleApps\DotNetC#\Files\EditProgramFiles.cs" />
-    <Compile Include="ConsoleApps\DotNetC#\Files\FileMain.cs" />
-    <Compile Include="ConsoleApps\DotNetC#\Files\ClienteleMain.cs" />
+    <Compile Include="ConsoleApps\DotNetCSharp\Files\FileStreamCreateMain.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -89,6 +80,8 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ConsoleApps\DotNetCSharp\Concepts\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
