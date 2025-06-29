@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CommandConnect.ConsoleApps.DotNetCSharp.Files.FileStreamAppendMain</StartupObject>
+    <StartupObject>CommandConnect.ConsoleApps.DotNetCSharp.Files.FileStreamInputWriteMain</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="ConsoleApps\DotNetCSharp\Files\FileStreamAppendMain.cs" />
     <Compile Include="ConsoleApps\DotNetCSharp\Files\FileStreamCreateMain.cs" />
+    <Compile Include="ConsoleApps\DotNetCSharp\Files\FileStreamInputWriteMain.cs" />
     <Compile Include="ConsoleApps\DotNetCSharp\Files\FileStreamWriteMain.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
