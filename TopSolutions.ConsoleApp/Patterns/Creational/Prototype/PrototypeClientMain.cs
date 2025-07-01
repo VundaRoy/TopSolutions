@@ -43,6 +43,24 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Prototype
             emp3.ShowDetails();
             emp4.ShowDetails();
 
+            //Create clone of temp emp4
+            Employee con1 = emp4.GetClone();
+            con1.Name = "Shardu";
+            con1.Department = "Network";
+            //emp4.ShowDetails();
+            con1.ShowDetails();
+            //Create contract
+            Employee con2 = new ContractEmployee()
+            {
+                Name = "Bosque",
+                Department = "New Projects",
+                Type = "Contract",
+                Wage = 12200
+
+            };
+            con2.ShowDetails();
+
+
             Console.Read();
         }
     }
