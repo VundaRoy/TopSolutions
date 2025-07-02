@@ -21,6 +21,12 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.MultipleDb
             DataProcessor mySqlDataProcessor = new(mySqlReader);
             mySqlDataProcessor.ProcessAndDisplayData("SELECT * FROM Orders");
             mySqlDataProcessor.StoreProcessedData("New Order Details");
+
+            Console.WriteLine("\n--- Using MS SQL Server Data Reader ---");
+            IDataReader sqlDataReader = new SqlServerDataReader();
+            DataProcessor sqlServerDataProc = new(sqlDataReader);
+            sqlServerDataProc.ProcessAndDisplayData("SELECT * from allOrds");
+            sqlServerDataProc.StoreProcessedData("New SQL server selection from all Ords");
         }
     }
 }
