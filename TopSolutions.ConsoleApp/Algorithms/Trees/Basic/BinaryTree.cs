@@ -41,7 +41,7 @@ namespace TopSolutions.ConsoleApp.Algorithms.Trees.Basic
         }
         private void InOrderRec(TreeNode root)
         {
-            if(Root != null)
+            if(root != null)
             {
                 InOrderRec(root.Left);
                 Console.Write(root.Value + " ");
