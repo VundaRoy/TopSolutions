@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.Threads.ThreadMain2</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.Threads.CallBack.CallBackMain</StartupObject>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
