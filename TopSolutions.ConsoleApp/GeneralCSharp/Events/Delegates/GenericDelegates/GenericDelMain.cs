@@ -8,6 +8,9 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Events.Delegates.GenericDelegate
 {
     public class GenericDelMain
     {
+
+        delegate bool PredicateStringInt(string input, int length);
+
         static void Main(string[] args)
         {
             //Func
@@ -23,6 +26,10 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Events.Delegates.GenericDelegate
             Console.WriteLine("Length is > 5 : " +Status);
             Status = obj3.Invoke("Pran");
             Console.WriteLine("Length is > 5 : " + Status);
+            //Check with conditions
+            PredicateStringInt obj4 = new(CheckLengthConditional);
+            Status = obj4.Invoke("Deochand", 3);
+            Console.WriteLine("Length is > 3 : " + Status);
             Console.ReadKey();
         
         }
@@ -34,6 +41,12 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Events.Delegates.GenericDelegate
         public static bool CheckLength(string name)
         {
             if (name.Length > 5)
+                return true;
+            return false;
+        }
+        public static bool CheckLengthConditional(string name, int stringLength)
+        {
+            if (name.Length > stringLength)
                 return true;
             return false;
         }
