@@ -31,6 +31,9 @@
 
 	<ItemGroup>
 		<Folder Include="Contract\" />
+		<Folder Include="Model\" />
+		<Folder Include="Service\" />
+		<Folder Include="View\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -39,10 +42,6 @@
 
 	<ItemGroup>
 		<_ContentIncludedByDefault Remove="View\Create.cshtml" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<None Include="View\Staff\Create.cshtml" />
 	</ItemGroup>
 
 </Project>
