@@ -1,4 +1,8 @@
+using TopSolutions.WebApi.Service;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddHttpClient<WeatherService>();
 
 // Add services to the container.
 builder.Services.AddRazorPages();

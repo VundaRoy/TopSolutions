@@ -31,9 +31,6 @@
 
 	<ItemGroup>
 		<Folder Include="Contract\" />
-		<Folder Include="Model\" />
-		<Folder Include="Service\" />
-		<Folder Include="View\" />
 	</ItemGroup>
 
 	<ItemGroup>
