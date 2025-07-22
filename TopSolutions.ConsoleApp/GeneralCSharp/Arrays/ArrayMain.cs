@@ -15,20 +15,47 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Arrays
             p1[1] = new Person() { Id = 2, Name = "Job", Age = 55, Description = "Gen x" };
             p1[2] = new Person() { Id = 3, Name = "Bob Jane", Age = 89, Description = "Silent" };
 
-            foreach (Person p in p1) 
-            { 
+            foreach (Person p in p1)
+            {
                 Console.WriteLine(p.Name);
             }
 
             //array of classes
 
-            Vehicle v1 = new() { Description = "Sedan", Make="Elantra", Name="Nissan", Year="2005" };
-            Vehicle v2 = new() { Description ="Hatchback", Make ="Mazda", Name="Uzi", Year="2009"};
+            object[] mixedTypes = PopulateArray();
+            PrintList(mixedTypes);
+
+        }
+
+        private static void PrintList(object[] mixedTypes)
+        {
+            foreach (var mx in mixedTypes)
+            {
+                // Console.WriteLine(mx);
+                if (mx is Person person)
+                {
+                    Console.WriteLine($"The person is {person.Name} who is aged {person.Age}");
+                }
+                else if (mx is Vehicle vehicle)
+                {
+                    Console.WriteLine($"The vehicle is a {vehicle.Make} and year is {vehicle.Year}");
+                }
+                else if (mx is Device device)
+                {
+                    Console.WriteLine($"The device is a {device.DeviceDescription} and is called {device.DeviceName}");
+                }
+            }
+        }
+
+        private static object[] PopulateArray()
+        {
+            Vehicle v1 = new() { Description = "Sedan", Make = "Elantra", Name = "Nissan", Year = "2005" };
+            Vehicle v2 = new() { Description = "Hatchback", Make = "Mazda", Name = "Uzi", Year = "2009" };
             Vehicle v3 = new() { Description = "AWD", Make = "Toyota", Name = "Hylux", Year = "2011" };
 
-            Person p2 = new () { Id=2, Age = 34, Name="Forbes Milton", Description="Salary man"};
+            Person p2 = new() { Id = 2, Age = 34, Name = "Forbes Milton", Description = "Salary man" };
             Person p3 = new() { Id = 10, Age = 41, Name = "Nelson Mandelson", Description = "Politician" };
-            Person p4 = new() { Id = 11, Age = 47,Name = "Milton Obote", Description= "Politician" };
+            Person p4 = new() { Id = 11, Age = 47, Name = "Milton Obote", Description = "Politician" };
             Device d1 = new() { DeviceId = 1, DeviceDescription = "Fridge", DeviceName = "Coolie" };
             Device d2 = new() { DeviceId = 2, DeviceDescription = "Watch", DeviceName = "Timer" };
             object[] mixedTypes = new object[10];
@@ -40,24 +67,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Arrays
             mixedTypes[5] = p4;
             mixedTypes[6] = d1;
             mixedTypes[7] = d2;
-
-            foreach (var mx in mixedTypes) 
-            { 
-               // Console.WriteLine(mx);
-                if (mx is Person person)
-                {
-                    Console.WriteLine($"The person is {person.Name} who is aged {person.Age}");
-                }
-                else if(mx is Vehicle vehicle)
-                {
-                    Console.WriteLine($"The vehicle is a {vehicle.Make} and year is {vehicle.Year}");
-                }
-                else if(mx is Device device)
-                {
-                    Console.WriteLine($"The device is a {device.DeviceDescription} and is called {device.DeviceName}");
-                }
-            }
-
+            return mixedTypes;
         }
     }
 }
