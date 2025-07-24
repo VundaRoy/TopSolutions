@@ -11,10 +11,10 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Func
 
         public static void Main(string[] args)
         {
-            Func<int, double, float, string> combined = CombineThree;
+            //Func<int, double, float, string> combined = CombineThree;
             string result = CombineThree(334, 66.7, 56.809f);
             Console.WriteLine(result);
-            Func<string, string, char, string> comb1 = CombineThree;
+            //Func<string, string, char, string> comb1 = CombineThree;
             result = CombineThree("entebbe", "international", 'a' + 'b');
             Console.WriteLine(result);   
         }

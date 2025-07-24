@@ -12,11 +12,11 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Func
         {
             var funcCalculator = new Calculator();
 
-            Func<int, int, int> add = funcCalculator.Add;
+            Func<int, int, double> add = funcCalculator.Add;
             Func<int, int, int> subtract = funcCalculator.Subtract;
-            Func<int, int, int> multiply = funcCalculator.Multiply;
+            Func<int, int, double> multiply = funcCalculator.Multiply;
             Func<int, int, int> divide = funcCalculator.Divide;
-            Console.WriteLine($"Addition result: {add(4, 2)}");
+            Console.WriteLine($"Addition result: {add(410000, 255220)}");
             Console.WriteLine($"Subtraction result: {subtract(4, 2)}");
 
             //Func with multiple additions
@@ -27,7 +27,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Func
             Console.WriteLine(areEqual(2000, 3000));
 
             //func with areas
-            Console.WriteLine("Rectangle of width 3 and length 5 is " + ((Func<double, double, double>)((x,y) => x * y))(3, 5));
+            Console.WriteLine($"Rectangle of width 3 and length 5 is {((Func<double, double, double>)((x,y) => x * y))(3, 5) } ");
             Func<double, double> GetCircleArea = (x) => 3.14 * Math.Pow(x,2);
             Console.WriteLine("Circle area of radius 3 is " + GetCircleArea(3));
             Console.WriteLine("Circle area of radius 30.5 is " + GetCircleArea(30.5));
