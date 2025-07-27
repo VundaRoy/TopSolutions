@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.Polly.WhileSample;
 
 namespace TopSolutions.ConsoleApp.GeneralCSharp.Events.Delegates.GenericDelegates
 {
@@ -24,8 +25,12 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Events.Delegates.GenericDelegate
             Predicate<string> obj3 = new(CheckLength);
             Console.WriteLine("Enter a text to see if it is greater than 5 ");
             var str = Console.ReadLine();
-            Console.WriteLine(obj3.Invoke(str) == true ? $"{str} is longer than 5" : $"{str} is shorter than 5.");           
-            var Status = obj3.Invoke("Pran");
+            while (!string.IsNullOrEmpty(str)) 
+            {
+                Console.WriteLine(obj3.Invoke(str) == true ? $"{str} is longer than 5" : $"{str} is shorter than 5.");
+                break;
+            }
+                var Status = obj3.Invoke("Pran");
             PredicateStringInt obj4 = new(CheckLengthConditional);
             Status = obj4.Invoke("Deochand", 3);
             Console.WriteLine("Length is > 3 : " + Status);
