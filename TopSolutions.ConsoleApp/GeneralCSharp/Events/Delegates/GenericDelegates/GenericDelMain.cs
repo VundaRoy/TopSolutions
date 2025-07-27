@@ -22,11 +22,10 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Events.Delegates.GenericDelegate
             obj2.Invoke(50, 255.45f, 123.456);
             //use Predicate
             Predicate<string> obj3 = new(CheckLength);
-            bool Status = obj3.Invoke("Pranayama");
-            Console.WriteLine("Length is > 5 : " +Status);
-            Status = obj3.Invoke("Pran");
-            Console.WriteLine("Length is > 5 : " + Status);
-            //Check with conditions
+            Console.WriteLine("Enter a text to see if it is greater than 5 ");
+            var str = Console.ReadLine();
+            Console.WriteLine(obj3.Invoke(str) == true ? $"{str} is longer than 5" : $"{str} is shorter than 5.");           
+            var Status = obj3.Invoke("Pran");
             PredicateStringInt obj4 = new(CheckLengthConditional);
             Status = obj4.Invoke("Deochand", 3);
             Console.WriteLine("Length is > 3 : " + Status);
