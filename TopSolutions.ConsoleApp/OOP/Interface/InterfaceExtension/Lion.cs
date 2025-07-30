@@ -6,26 +6,25 @@ using System.Threading.Tasks;
 
 namespace TopSolutions.ConsoleApp.OOP.Interface.InterfaceExtension
 {
-    public class DomesticCat : IFelidae
+    public class Lion : IFelidae
     {
         public void BreastFeed()
         {
-            Console.WriteLine("Female Cats breastfeed kittens");
+            Console.WriteLine("Lions breastfeed cubs");
         }
 
         public void ConsumesMeat()
         {
-            Console.WriteLine("All cats east meat almost exclusively");
+            Console.WriteLine("Lions eats meat mostly");
         }
 
         public void HasRetractileClaws()
         {
-            Console.WriteLine("All cats have retractile claws and soft fur");
-        }
+            Console.WriteLine("Claws are retractile but large");        }
 
         public void MakesSound()
         {
-            Console.WriteLine("Meows and purrs");
+            Console.WriteLine("Lions roar and occasionally purrs");
         }
     }
 }

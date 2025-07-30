@@ -9,5 +9,6 @@ namespace TopSolutions.ConsoleApp.OOP.Interface.InterfaceExtension
     public interface IMammalia
     {
         void BreastFeed();
+        void MakesSound();
     }
 }
