@@ -13,22 +13,22 @@ namespace TopSolutions.ConsoleApp.OOP.Interface.InterfaceExtension
         {
             DomesticCat cat = new();
             //Call using reflection
-            InvokeAllMethods(cat);
+            InvokeAllParameterlessMethods(cat);
 
             Lion lion = new Lion();
-            InvokeAllMethods(lion);
+            InvokeAllParameterlessMethods(lion);
 
             lion.MarksTerritory("Serengeti");
         }
 
-        public static void InvokeAllMethods(Object animal)
+        public static void InvokeAllParameterlessMethods(Object animal)
         {
             if (animal == null) throw new ArgumentNullException(nameof(animal));
 
             Type typeOfAnimal = animal.GetType();
 
             MethodInfo[] methods = typeOfAnimal.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
-
+            Console.WriteLine($"Invoking parameterless methods for {animal}");
             foreach (var method in methods)
             {
                 if (method.GetParameters().Length == 0) // Only invoke parameterless methods
