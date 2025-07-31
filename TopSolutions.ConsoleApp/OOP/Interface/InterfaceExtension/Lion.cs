@@ -26,5 +26,10 @@ namespace TopSolutions.ConsoleApp.OOP.Interface.InterfaceExtension
         {
             Console.WriteLine("Lions roar and occasionally purrs");
         }
+
+        public void MarksTerritory(string territory)
+        {
+            Console.WriteLine($"Marking {territory}");
+        }
     }
 }

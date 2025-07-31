@@ -18,6 +18,7 @@ namespace TopSolutions.ConsoleApp.OOP.Interface.InterfaceExtension
             Lion lion = new Lion();
             InvokeAllMethods(lion);
 
+            lion.MarksTerritory("Serengeti");
         }
 
         public static void InvokeAllMethods(Object animal)
