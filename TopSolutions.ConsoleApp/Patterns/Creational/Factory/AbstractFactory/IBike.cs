@@ -12,5 +12,6 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.AbstractFactory
     public interface IBike
     {
         void GetDetails();
+        void RegisterBike();
     }
 }

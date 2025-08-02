@@ -12,5 +12,10 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.AbstractFactory
         {
             Console.WriteLine("Fetching RegularBike Details..");
         }
+
+        public void RegisterBike()
+        {
+            Console.WriteLine("Register regular bike");
+        }
     }
 }

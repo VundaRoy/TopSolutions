@@ -10,7 +10,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.AbstractFactory
     {
         public IBike CreateBike()
         {
-            throw new NotImplementedException();
+            return new SportsBike();
         }
 
         public ICar CreateCar()

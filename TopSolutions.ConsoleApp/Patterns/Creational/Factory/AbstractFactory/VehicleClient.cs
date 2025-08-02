@@ -25,6 +25,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.AbstractFactory
             //sportsVehicleFactory.CreateBike() will create and return Sports Bike
             IBike sportsBike = sportsVehicleFactory.CreateBike();
             sportsBike.GetDetails();
+            sportsBike.RegisterBike();
             //sportsVehicleFactory.CreateCar() will create and return Sports Car
             ICar sportsCar = sportsVehicleFactory.CreateCar();
             sportsCar.GetDetails();
