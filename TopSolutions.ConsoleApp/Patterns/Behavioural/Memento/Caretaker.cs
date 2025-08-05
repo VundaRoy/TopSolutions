@@ -9,7 +9,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Memento
     public class Caretaker
     {
         //This variable is going to hold the List of Mementos that are used by the Originator.
-        private List<Memento> LedTvList = new List<Memento>();
+        private List<Memento> LedTvList = new();
         //This Method will add the memento i.e. the internal state of the Originator into the Caretaker i.e. Store Room 
         public void AddMemento(Memento m)
         {
