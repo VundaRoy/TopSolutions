@@ -4,12 +4,12 @@
     {
         //Properties of the LED TV
         public string Size { get; set; }
-        public string Price { get; set; }
+        public double Price { get; set; }
         public bool USBSupport { get; set; }
         public bool HDMISupport { get; set; }
         public bool VGASupport { get; set; }
         //Initializing the Properties using Constructor
-        public LEDTV(string Size, string Price, bool USBSupport, bool HDMISupport, bool VGASupport)
+        public LEDTV(string Size, double Price, bool USBSupport, bool HDMISupport, bool VGASupport)
         {
             this.Size = Size;
             this.Price = Price;
