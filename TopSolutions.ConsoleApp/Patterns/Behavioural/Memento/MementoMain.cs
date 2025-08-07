@@ -15,14 +15,14 @@
             //Second Create a snapshot or memento of the current internal state of the originator
             Memento memento = originator.CreateMemento();
             //Third, store the memento or snapshot in the store room i.e. Caretaker
-            caretaker.AddMemento(memento);
+            CreateMemento(originator, caretaker);
             //Changing the Originator Current State to 46-Inch
             originator.LedTV = new LEDTV("46-Inch", 2800, true, true, false);
             //Again storing the Internal State (Memento) of the Originator in the Caretaker i.e. Store Room
             //Create the memento or snapshot of the current internal state of the originator
             memento = originator.CreateMemento();
             //Store the memento in the Caretaker
-            caretaker.AddMemento(memento);
+            CreateMemento(originator, caretaker);
             //Again, Changing the Originator Current State to 50-Inch
             originator.LedTV = new LEDTV("50-Inch", 1950, true, false, false);
             //The Current State of the Originator is now 50-Inch Led TV
@@ -36,9 +36,18 @@
             Console.WriteLine("\nOriginator Current State : " + originator.GetDetails());
             //Brand new LED plus TV
             originator.LedTV = new LEDTV("100-Inch", 2100, true, true, true);
-            originator.CreateMemento();
+            CreateMemento(originator, caretaker);
             Console.WriteLine("\nOriginator new state is : " + originator.GetDetails());
+            originator.SetMemento(caretaker.GetMemento(2));
+            Console.WriteLine("\nOriginator GetDetails 2 is : " + originator.GetDetails());
             Console.ReadKey();
+        }
+
+        private static Memento CreateMemento(Originator originator, Caretaker caretaker)
+        {
+            Memento memento = originator.CreateMemento();
+            caretaker.AddMemento(memento);
+            return memento;
         }
     }
 }
