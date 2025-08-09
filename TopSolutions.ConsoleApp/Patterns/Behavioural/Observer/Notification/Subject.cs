@@ -12,10 +12,10 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Observer.Notification
         private List<IObserver> observers = new List<IObserver>();
         //The following properties are going to store the Product Information
         private string ProductName { get; set; }
-        private int ProductPrice { get; set; }
+        private double ProductPrice { get; set; }
         private string Availability { get; set; }
         // Initializing the Product information using the constructor
-        public Subject(string productName, int productPrice, string availability)
+        public Subject(string productName, double productPrice, string availability)
         {
             ProductName = productName;
             ProductPrice = productPrice;
@@ -36,14 +36,16 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Observer.Notification
         // The observer will register with the Product using the following method
         public void RegisterObserver(IObserver observer)
         {
-            Console.WriteLine("Observer Added : " + ((Observer)observer).UserName);
+            Console.WriteLine("Observer Added : " + ((Observer)observer).UserName 
+                           + " whose address is : " + ((Observer)observer).Address);
             observers.Add(observer);
         }
 
         // The observer will unregister from the Product using the following method
         public void RemoveObserver(IObserver observer)
         {
-            Console.WriteLine("Observer Removed : " + ((Observer)observer).UserName);
+            Console.WriteLine("Observer Removed : " + ((Observer)observer).UserName 
+                           + " whose address is : " +((Observer)observer).Address );
             observers.Remove(observer);
         }
         // The following Method will be sent notifications to all observers

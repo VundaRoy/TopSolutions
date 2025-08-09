@@ -10,10 +10,12 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Observer.Notification
     {
         //The following Property is going to hold the observer's name
         public string UserName { get; set; }
+        public string Address { get; set; }
         //Creating the Observer
-        public Observer(string userName)
+        public Observer(string userName, string address)
         {
             UserName = userName;
+            Address = address;
         }
         //Registering the Observer with the Subject
         public void AddSubscriber(ISubject subject)
