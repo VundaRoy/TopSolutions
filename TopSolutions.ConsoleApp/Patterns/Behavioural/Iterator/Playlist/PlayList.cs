@@ -9,7 +9,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Iterator.Playlist
 {
     public class Playlist : IAggregate<Song>
     {
-        private List<Song> _songs = new List<Song>();
+        private List<Song> _songs = new();
         public void AddSong(Song song)
         {
             _songs.Add(song);

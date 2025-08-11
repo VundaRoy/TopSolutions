@@ -12,9 +12,10 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Iterator.Playlist
         static void Main()
         {
             var myPlaylist = new Playlist();
-            myPlaylist.AddSong(new Song("Title 1", "Artist 1"));
-            myPlaylist.AddSong(new Song("Title 2", "Artist 2"));
-            myPlaylist.AddSong(new Song("Title 3", "Artist 3"));
+            myPlaylist.AddSong(new Song("Podave Irukkaa", "SP Bala"));
+            myPlaylist.AddSong(new Song("Song Song Blue", "Neil Diamond"));
+            myPlaylist.AddSong(new Song("Rising Sun", "Animals"));
+            myPlaylist.AddSong(new Song("Saajan Sasural", "Jagjit Singh"));
             IIterator<Song> iterator = myPlaylist.CreateIterator();
             while (iterator.HasNext())
             {
