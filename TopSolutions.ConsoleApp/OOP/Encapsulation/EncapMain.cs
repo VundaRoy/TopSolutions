@@ -8,37 +8,40 @@ namespace TopSolutions.ConsoleApp.OOP.Encapsulation
 {
     public class EncapMain
     {
+        static List<string> SugarMillManagers;
+        static List<SugarMill> SugarMills;
+        
         static void Main(string[] args)
         {
-            List<SugarMill> mills = new List<SugarMill>();
-            MillStaff millStaff = new()
-            {
-                StaffName = "Sir Galuinadi"
-            };
-            millStaff.SetStaffType(2);
-            Console.WriteLine(millStaff.GetStaffType());
-            
-            SugarMill sugarMill = new()
-            {
-                MillName = "Rarawai",
-                Location = "Ba"
-            };
-            sugarMill.SetMillManager("Galuinadi");
-            
-            mills.Add(sugarMill);
-            sugarMill = new()
-            {
-                MillName = "Lautoka",
-                Location = "Lautoka",
-                
-            };
-            sugarMill.SetMillManager("Pramod");
-            mills.Add(sugarMill);
+            //Setup managers
+            EncapMain encapMain = new EncapMain();
+            encapMain.SetupMillManagers();
+            //Setup sugar mills 
+            encapMain.SetupMills();
+            SugarMills[0].SetMillManager(SugarMillManagers[0]);
+            SugarMills[1].SetMillManager(SugarMillManagers[1]);
 
-            foreach(SugarMill s in mills)
+            Console.WriteLine($"The manager for {SugarMills[0].MillName} is {SugarMills[0].GetMillManager()}");
+            Console.WriteLine($"The manager for {SugarMills[1].MillName} is {SugarMills[1].GetMillManager()}");
+        }
+        private void SetupMillManagers()
+        {
+            List<string> names = new () { "Galuinadi", "Pramod", "Barrack" };
+            SugarMillManagers = new List<string>();
+            foreach(string manager in names)
             {
-               Console.WriteLine( s.GetMillManager());
+                SugarMillManagers.Add(manager);
             }
+        }
+        private void SetupMills()
+        {
+            SugarMills = new();
+            var sugar1 = new SugarMill() { Location = "Raki Raki", MillName = "Penang" };
+            SugarMills.Add(sugar1);
+            sugar1 = new SugarMill() { Location = "Ba", MillName = "Rarawai" };
+            SugarMills.Add(sugar1);
+            sugar1 = new SugarMill() { Location = "Lautoka", MillName = "Lautoka" };
+            
         }
     }
 }
