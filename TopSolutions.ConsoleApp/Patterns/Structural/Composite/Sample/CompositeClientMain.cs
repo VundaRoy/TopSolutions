@@ -2,30 +2,25 @@
 {
     public class CompositeClientMain
     {
+        static Component Pranaya, Rohit, Anurag, Priyanka, Sambit, Kausalya, Karthik, Govardhan;
         static void Main(string[] args)
         {
             // The client code works with all of the components (Both Leaf and Composite) via the base interface i.e. Component.
             // Component means the class that implements the Component abstract class
             // In our example Leaf and Composite classes implement the Component abstract class
             //Creating Leaf Objects or you can say child objects
-            Component Pranaya = new Leaf("Pranaya", "12 Anderi West Mumbai", 22000);
-            Component Rohit = new Leaf("Rohit", "2F 223 Manikkar rd North Bhiwandi", 33000);
-            Component Anurag = new Leaf("Anurag", "1112/23 Jyothish str East Pune", 42000);
-            Component Priyanka = new Leaf("Priyanka", "Haridwar city", 52000);
-            Component Sambit = new Leaf("Sambit", "RB Patel stadium", 28000);
-            Component Kausalya = new Leaf("Kausalya", "Secundarabad road Hyderabad", 58000);
-            Component Karthik = new Leaf("Karthik", "Jhanvi street Chennai", 48000);
-            Component Govardhan = new Leaf("Govardhan", "Tumkur district Karnataka", 41000);
+            
+            CreateComponentObjects( Pranaya,  Rohit,  Anurag,  Priyanka,  Sambit,  Kausalya,  Karthik,  Govardhan);
             //Creating Composite Objects
-            Composite ITDepartment = new Composite("ITDepartment", "New Ward South");
-            Composite HRDepartment = new Composite("HRDepartment", "Raiwind East");
-            Composite Directors = new Composite("Directors", "Gulbarga");
-            Composite Company = new Composite("Company", "Central Zone");
+            CreateCompositeObjects(out Composite ITDepartment, out Composite HRDepartment,
+                out Composite Directors, out Composite Company);
             //Creating Tree Structure i.e. Adding Child Components inside the Composite Component
             //Adding Pranaya, Rohit, and Anurag to ITDepartment Composite Object
-            ITDepartment.AddComponent(Pranaya);
-            ITDepartment.AddComponent(Rohit);
-            ITDepartment.AddComponent(Anurag);
+
+            //create list of IT people
+            List<Component> iTTeam = new();
+            iTTeam.Add(Pranaya);iTTeam.Add(Rohit);iTTeam.Add(Anurag);
+            CreateITDepartment(iTTeam, ITDepartment);
             //Adding Priyanka and Sambit in HRDepartment Composite Object
             HRDepartment.AddComponent(Priyanka);
             HRDepartment.AddComponent(Sambit);
@@ -55,6 +50,34 @@
             Console.WriteLine($"\nSalary of Employee Anurag: ");
             Anurag.GetSalary();
             Console.Read();
+        }
+
+        private static void CreateITDepartment(List<Component> teamList, Composite ITDepartment)
+        {
+            foreach (Composite t in teamList)
+            {
+                ITDepartment.AddComponent(t);
+            }
+        }
+
+        private static void CreateCompositeObjects(out Composite ITDepartment, out Composite HRDepartment, out Composite Directors, out Composite Company)
+        {
+            ITDepartment = new Composite("ITDepartment", "New Ward South");
+            HRDepartment = new Composite("HRDepartment", "Raiwind East");
+            Directors = new Composite("Directors", "Gulbarga");
+            Company = new Composite("Company", "Central Zone");
+        }
+
+        private static void CreateComponentObjects( Component Pranaya,  Component Rohit,  Component Anurag,  Component Priyanka,  Component Sambit,  Component Kausalya,  Component Karthik,  Component Govardhan)
+        {
+            Pranaya = new Leaf("Pranaya", "12 Anderi West Mumbai", 22000);
+            Rohit = new Leaf("Rohit", "2F 223 Manikkar rd North Bhiwandi", 33000);
+            Anurag = new Leaf("Anurag", "1112/23 Jyothish str East Pune", 42000);
+            Priyanka = new Leaf("Priyanka", "Haridwar city", 52000);
+            Sambit = new Leaf("Sambit", "RB Patel stadium", 28000);
+            Kausalya = new Leaf("Kausalya", "Secundarabad road Hyderabad", 58000);
+            Karthik = new Leaf("Karthik", "Jhanvi street Chennai", 48000);
+            Govardhan = new Leaf("Govardhan", "Tumkur district Karnataka", 41000);
         }
     }
 }
