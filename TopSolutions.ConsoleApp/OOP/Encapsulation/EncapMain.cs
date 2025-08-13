@@ -18,15 +18,18 @@ namespace TopSolutions.ConsoleApp.OOP.Encapsulation
             encapMain.SetupMillManagers();
             //Setup sugar mills 
             encapMain.SetupMills();
-            SugarMills[0].SetMillManager(SugarMillManagers[0]);
-            SugarMills[1].SetMillManager(SugarMillManagers[1]);
-
-            Console.WriteLine($"The manager for {SugarMills[0].MillName} is {SugarMills[0].GetMillManager()}");
-            Console.WriteLine($"The manager for {SugarMills[1].MillName} is {SugarMills[1].GetMillManager()}");
+            //Assign managers to mills
+            encapMain.AssignManagersToMills();
+            //Show all mills and their managers
+            for(int i = 0; i < SugarMills.Count; i++)
+            {
+                Console.WriteLine($"The manager for {SugarMills[i].MillName} is {SugarMills[i].GetMillManager()}");
+            }
+            
         }
         private void SetupMillManagers()
         {
-            List<string> names = new () { "Galuinadi", "Pramod", "Barrack" };
+            List<string> names = new () { "Galuinadi", "Pramod", "Barrack", "Gonelevu", "RamLakhan","Sivathamby P" };
             SugarMillManagers = new List<string>();
             foreach(string manager in names)
             {
@@ -41,7 +44,22 @@ namespace TopSolutions.ConsoleApp.OOP.Encapsulation
             sugar1 = new SugarMill() { Location = "Ba", MillName = "Rarawai" };
             SugarMills.Add(sugar1);
             sugar1 = new SugarMill() { Location = "Lautoka", MillName = "Lautoka" };
-            
+            SugarMills.Add(sugar1);
+            sugar1 = new SugarMill() { Location = "Labasa", MillName = "Labasa" };
+            SugarMills.Add(sugar1);
+            sugar1 = new SugarMill() { Location = "Sigatoka", MillName = "Sigatoka" };
+            SugarMills.Add(sugar1);
+            sugar1 = new SugarMill() { Location = "Seaqaqa", MillName = "Seaqaqa" };
+            SugarMills.Add(sugar1);
+        }
+        private void AssignManagersToMills()
+        {
+            int i = 0;
+            foreach(var mill in SugarMills)
+            {
+                mill.SetMillManager(SugarMillManagers[i]);
+                i++;
+            }
         }
     }
 }
