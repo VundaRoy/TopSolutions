@@ -11,9 +11,9 @@ namespace TopSolutions.ConsoleApp.OOP.InehritanceTypes.MultiLevel
     {
         static void Main(string[] args)
         {
-            List<MicrosoftEmployee> microEmployees = new List<MicrosoftEmployee>();
-            MultiLevelMain multiLevelMain = new MultiLevelMain();
-            AmazonContractor amazonContractor = new()
+            List<MicrosoftEmployee> microEmployees = new();
+            MultiLevelMain multiLevelMain = new();
+            _ = new AmazonContractor()
             {
                 IsManager = true,
                 AmazonId = 12,
@@ -22,35 +22,37 @@ namespace TopSolutions.ConsoleApp.OOP.InehritanceTypes.MultiLevel
                 FirstName = "Terence",
                 LastName = "Hill",
             };
-            AmazonEmployee basicTemplateEmployee = new()
+            _ = new AmazonEmployee()
             {
                 IsManager = false,
                 FirstName = "Bob",
-                LastName = "Dole"
+                LastName = "Dole",
+                Age = 28,
             };
+
             //using hierarchy
-            MicrosoftEmployee ms = multiLevelMain.CreateMicrosoftEmployee("Lewis","Clark","East Coast","Tech writer");
+            MicrosoftEmployee ms = multiLevelMain.CreateMicrosoftEmployee("Lewis","Clark","East Coast","Tech writer", 45);
             microEmployees.Add(ms);
-            ms = multiLevelMain.CreateMicrosoftEmployee("Manitoba", "Prairie", "Central", "Engineer");
+            ms = multiLevelMain.CreateMicrosoftEmployee("Manitoba", "Prairie", "Central", "Engineer", 34);
             microEmployees.Add(ms);
-            ms = multiLevelMain.CreateMicrosoftEmployee("Halifax", "Nova", "Acadia", "Senior Engineer");
+            ms = multiLevelMain.CreateMicrosoftEmployee("Halifax", "Nova", "Acadia", "Senior Engineer", 35);
             microEmployees.Add(ms);
             foreach (MicrosoftEmployee employee in microEmployees)
             {
                 Console.WriteLine($"{employee.FirstName}");
             }
-            OracleEmployee ora1 = multiLevelMain.CreateOracleEmployee("Carlos", "Guzman", "5.7");
-
+            OracleEmployee ora1 = multiLevelMain.CreateOracleEmployee("Carlos", "Guzman", "5.7", 30);
+            Console.WriteLine($"Oracle employee {ora1.FirstName} is aged {ora1.Age}");
            
         }
 
-        OracleEmployee CreateOracleEmployee(string first, string last, string version)
+        OracleEmployee CreateOracleEmployee(string first, string last, string version, int age)
         {
-            return new() { FirstName = first, LastName = last, DatabaseVersion = version };
+            return new() { FirstName = first, LastName = last, DatabaseVersion = version, Age = age  };
         }
-        MicrosoftEmployee CreateMicrosoftEmployee(string first, string last, string division, string role) 
+        MicrosoftEmployee CreateMicrosoftEmployee(string first, string last, string division, string role, int age) 
         { 
-            return new() { FirstName = first, LastName = last, Division = division, Role = role }; 
+            return new() { FirstName = first, LastName = last, Division = division, Role = role, Age = age}; 
         }
         
     }

@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.OOP.Encapsulation.EncapMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.OOP.InehritanceTypes.MultiLevel.MultiLevelMain</StartupObject>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
