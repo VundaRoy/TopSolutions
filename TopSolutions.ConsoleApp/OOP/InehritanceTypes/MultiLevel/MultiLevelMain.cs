@@ -31,6 +31,8 @@ namespace TopSolutions.ConsoleApp.OOP.InehritanceTypes.MultiLevel
             };
 
             //using hierarchy
+            AmazonEmployee ae = multiLevelMain.CreateAmazonEmployee("Chaim", "Wently", false, "Rochester");
+            Console.WriteLine($"Amazonian {ae.FirstName} is from division {ae.Division}"); 
             MicrosoftEmployee ms = multiLevelMain.CreateMicrosoftEmployee("Lewis","Clark","East Coast","Tech writer", 45);
             microEmployees.Add(ms);
             ms = multiLevelMain.CreateMicrosoftEmployee("Manitoba", "Prairie", "Central", "Engineer", 34);
@@ -53,6 +55,10 @@ namespace TopSolutions.ConsoleApp.OOP.InehritanceTypes.MultiLevel
         MicrosoftEmployee CreateMicrosoftEmployee(string first, string last, string division, string role, int age) 
         { 
             return new() { FirstName = first, LastName = last, Division = division, Role = role, Age = age}; 
+        }
+        AmazonEmployee CreateAmazonEmployee(string first, string division, bool isManager, string region)
+        {
+            return new() { FirstName = first, Division = division, IsManager  = isManager, Region = region };
         }
         
     }
