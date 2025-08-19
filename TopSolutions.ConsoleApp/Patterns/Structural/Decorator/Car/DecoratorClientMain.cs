@@ -18,20 +18,20 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Decorator.Car
             //Adding Diesel Engine to the bmwCar1
             //Create an instance DieselCarDecorator class and 
             //pass existing bmwCar1 as an argument to the Constructor which we want to decorate
-            DieselCarDecorator carWithDieselEngine = new DieselCarDecorator(bmwCar1);
+            DieselCarDecorator carWithDieselEngine = new(bmwCar1);
             //Calling the ManufactureCar method on the carWithDieselEngine object will add Diesel Engine to the bmwCar1 car
             carWithDieselEngine.ManufactureCar();
             Console.WriteLine();
             //The Process is the same for adding Petrol Engine to the existing Car
             ICar bmwCar2 = new BMWCar();
-            PetrolCarDecorator carWithPetrolEngine = new PetrolCarDecorator(bmwCar2);
+            PetrolCarDecorator carWithPetrolEngine = new(bmwCar2);
             carWithPetrolEngine.ManufactureCar();
             ICar bmwcar3 = new BMWCar();
-            HybridCarDecorator carHyrbrid = new HybridCarDecorator(bmwcar3);
+            HybridCarDecorator carHyrbrid = new(bmwcar3);
             carHyrbrid.ManufactureCar();
             //Electric
             ICar bmwElectric = new BMWCar();
-            ElectricCarDecorator bmwElec = new ElectricCarDecorator(bmwElectric);
+            ElectricCarDecorator bmwElec = new(bmwElectric);
             bmwElec.ManufactureCar();
             Console.ReadKey();
         }
