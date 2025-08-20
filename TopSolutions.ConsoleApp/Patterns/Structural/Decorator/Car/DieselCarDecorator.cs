@@ -23,7 +23,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Decorator.Car
             AddEngine(car);
             return car;
         }
-        public void AddEngine(ICar car)
+        public override void AddEngine(ICar car)
         {
             if (car is BMWCar BMWCar)
             {
@@ -31,5 +31,6 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Decorator.Car
                 Console.WriteLine("DieselCarDecorator added Diesel Engine to the Car : " + car);
             }
         }
+
     }
 }

@@ -32,5 +32,6 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Decorator.Car
             //and how to add an Engine
             return car.ManufactureCar();
         }
+        public abstract void AddEngine(ICar car);
     }
 }

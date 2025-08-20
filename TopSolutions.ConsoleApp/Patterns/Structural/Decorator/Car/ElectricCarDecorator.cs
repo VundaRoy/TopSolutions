@@ -17,7 +17,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Decorator.Car
             AddEngine(car);
             return base.ManufactureCar();
         }
-        public void AddEngine(ICar car)
+        public override void AddEngine(ICar car)
         {
             if (car is BMWCar BMWCar)
             {
