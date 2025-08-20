@@ -10,47 +10,26 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Flyweight.Circles
     {
         static void Main(string[] args)
         {
-            //Creating Circle Objects with Red Color
-            Console.WriteLine("\n Red color Circles ");
-            for (int i = 0; i < 3; i++)
-            {
-                Circle circle = (Circle)ShapeFactory.GetShape("circle");
-                circle.SetColor("Red");
-                circle.Draw();
-            }
-            //Creating Circle Objects with Green Color
-            Console.WriteLine("\n Green color Circles ");
-            for (int i = 0; i < 3; i++)
-            {
-                Circle circle = (Circle)ShapeFactory.GetShape("circle");
-                circle.SetColor("Green");
-                circle.Draw();
-            }
-            //Creating Circle Objects with Blue Color
-            Console.WriteLine("\n Blue color Circles");
-            for (int i = 0; i < 3; ++i)
-            {
-                Circle circle = (Circle)ShapeFactory.GetShape("circle");
-                circle.SetColor("Green");
-                circle.Draw();
-            }
-            //Creating Circle Objects with Orange Color
-            Console.WriteLine("\n Orange color Circles");
-            for (int i = 0; i < 3; ++i)
-            {
-                Circle circle = (Circle)ShapeFactory.GetShape("circle");
-                circle.SetColor("Orange");
-                circle.Draw();
-            }
-            //Creating Circle Objects with Black Color
-            Console.WriteLine("\n Black color Circles");
-            for (int i = 0; i < 3; ++i)
-            {
-                Circle circle = (Circle)ShapeFactory.GetShape("circle");
-                circle.SetColor("Black");
-                circle.Draw();
-            }
+            //Creating Circle Objects with designated Color
+            
+            DrawCircle("red");
+            DrawCircle("green");
+            DrawCircle("blue");
+            DrawCircle("black");
+            DrawCircle("orange");
+            
             Console.ReadKey();
+        }
+
+        private static void DrawCircle(string color)
+        {
+            Console.WriteLine($"{color} color Circles ");
+            for (int i = 0; i < 3; i++)
+            {
+                Circle circle = (Circle)ShapeFactory.GetShape("circle");
+                circle.SetColor(color);
+                circle.Draw();
+            }
         }
     }
 }
