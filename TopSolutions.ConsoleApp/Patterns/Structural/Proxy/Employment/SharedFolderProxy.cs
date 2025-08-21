@@ -19,12 +19,12 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Proxy.Employment
             if (employee.Role.ToUpper() == "CEO" || employee.Role.ToUpper() == "MANAGER")
             {
                 folder = new SharedFolder();
-                Console.WriteLine("Shared Folder Proxy makes call to the RealFolder 'PerformRWOperations method'");
+                Console.WriteLine($"Shared Folder Proxy makes call to the RealFolder 'PerformRWOperations method' for {employee.Username} who is a {employee.Role}");
                 folder.PerformRWOperations();
             }
             else
             {
-                Console.WriteLine("Shared Folder proxy says 'You don't have permission to access this folder'");
+                Console.WriteLine($"Shared Folder proxy says {employee.Username}'You don't have permission to access this folder'");
             }
         }
     }

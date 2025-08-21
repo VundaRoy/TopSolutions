@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.Patterns.Structural.Flyweight.Circles.FlyweightCircleMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.Patterns.Structural.Proxy.Employment.ProxyMainEmployee</StartupObject>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
