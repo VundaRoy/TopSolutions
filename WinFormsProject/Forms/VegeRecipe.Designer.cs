@@ -106,7 +106,7 @@
             // vegeCombo
             // 
             vegeCombo.FormattingEnabled = true;
-            vegeCombo.Items.AddRange(new object[] { "Onion", "Garlic", "Potatoes", "Tomatoes", "Cabbage", "Corn", "Taro", "Tapioca", "Arvi", "Celery", "Kale", "Carrot" });
+            vegeCombo.Items.AddRange(new object[] { "Onion", "Garlic", "Potatoes", "Tomatoes", "Cabbage", "Corn", "Taro", "Tapioca", "Arvi", "Celery", "Kale", "Carrot", "Yam", "Asparagus", "Okra" });
             vegeCombo.Location = new Point(85, 74);
             vegeCombo.Name = "vegeCombo";
             vegeCombo.Size = new Size(165, 33);
@@ -144,6 +144,7 @@
             // 
             // otherCombo
             // 
+            otherCombo.AutoCompleteCustomSource.AddRange(new string[] { "Ghee", "Peanut oil", "Butter", "Jam", "Pepper", "Salt", "Sugar", "Jaggery", "Methi", "Caraway seeds" });
             otherCombo.FormattingEnabled = true;
             otherCombo.Items.AddRange(new object[] { "Rice", "Dal", "Vege Oil", "Ghee", "Butter", "Milk", "Cheese", "Honey", "Lemon", "Hing", "Cloves", "Mustard seed", "Salt", "Sugar", "Pepper" });
             otherCombo.Location = new Point(83, 75);

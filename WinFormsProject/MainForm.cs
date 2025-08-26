@@ -63,6 +63,6 @@ namespace WinFormsProject
         private void containerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MainForm.ActiveForm.BackColor = Color.Gainsboro;
-        }
+        }       
     }
 }
