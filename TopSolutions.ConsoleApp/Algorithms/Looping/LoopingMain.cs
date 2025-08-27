@@ -14,15 +14,19 @@ namespace TopSolutions.ConsoleApp.Algorithms.Looping
         {
             LoopingMain lm = new LoopingMain();
             lm.InitArray(100);
-            //foreach
-            Console.WriteLine("foreach");
-            StopStart(lm.ForEachLoop);
             //for
             Console.WriteLine("for");
             StopStart(lm.ForLoop);
+            //do
+            Console.WriteLine("do");
+            StopStart(lm.WhileLoop);
+            //foreach
+            Console.WriteLine("foreach");
+            StopStart(lm.ForEachLoop);           
             //while
             Console.WriteLine("while");
             StopStart(lm.WhileLoop);
+            
         }
         private static Stopwatch StopStart(Action process)
         {
@@ -57,6 +61,15 @@ namespace TopSolutions.ConsoleApp.Algorithms.Looping
                 Thread.Sleep(100);
                 i++;
             }
+        }
+        private void DoLoop()
+        {
+            int i = 0;
+            do 
+            {
+                Thread.Sleep(100);
+                i++;
+            } while(i < ArrayOfInts.Length);
         }
         private void InitArray(int size)
         {
