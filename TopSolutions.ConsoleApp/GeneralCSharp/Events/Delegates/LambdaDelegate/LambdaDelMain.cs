@@ -10,6 +10,16 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Events.Delegates.LambdaDelegate
     public class LambdaDelMain
     {
         public List<Customer> customerList;
+
+        public static void Main(string[] args)
+        {
+            LambdaDelMain funky = new();
+            RewardCustomer(funky.customerList, x => x.PurchaseLevel > 2);
+            RewardCustomer(funky.customerList, y => y.CustomerName[..1] == "S" && y.PurchaseLevel > 3);
+            RewardCustomer(funky.customerList, y => (y.CustomerName[..1] == "S" && y.PurchaseLevel > 3 
+                                                       || y.CustomerName[..1] == "J" && y.PurchaseLevel > 2));
+            EnticeCustomer(funky.customerList, y => y.PurchaseLevel < 2);
+        }
         public LambdaDelMain()
         {
             customerList = new List<Customer>();
@@ -84,12 +94,6 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Events.Delegates.LambdaDelegate
                 }
             }
         }
-        public static void Main(string[] args)
-        {
-            LambdaDelMain func = new();
-            RewardCustomer(func.customerList, x => x.PurchaseLevel > 2);
-            RewardCustomer(func.customerList, y => y.CustomerName[..1] == "S" && y.PurchaseLevel > 3);
-            EnticeCustomer(func.customerList, y => y.PurchaseLevel < 2);
-        }
+       
     }
 }

@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Extensions.ExtensionMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Events.Delegates.LambdaDelegate.LambdaDelMain</StartupObject>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
