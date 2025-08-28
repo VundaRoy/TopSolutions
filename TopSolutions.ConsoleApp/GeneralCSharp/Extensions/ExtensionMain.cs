@@ -24,6 +24,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Extensions
             result = s.LowerCaseTheLot();
             Console.WriteLine(result);
             Console.WriteLine(s.FijianizeThis());
+            Console.WriteLine(s.ChennaiyizeThis());
         }
 
     }

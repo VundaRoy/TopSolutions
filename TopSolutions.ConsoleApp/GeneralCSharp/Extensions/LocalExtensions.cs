@@ -31,5 +31,9 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Extensions
         {
             return text + " gaa sa yawa!";
         }
+        public static string ChennaiyizeThis(this string text)
+        {
+            return text + " Daa!";
+        }
     }
 }
