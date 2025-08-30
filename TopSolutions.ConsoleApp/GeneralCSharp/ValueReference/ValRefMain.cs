@@ -30,23 +30,23 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.ValueReference
             NulliFyPerson(person);
             Console.WriteLine($"After nullify person is {person.Name}");
             //After nullifying with ref passed
-            NulliFyPersonWithRef(ref person);
-            Console.WriteLine($"After nullify person is {person.Name}");
+            NulliFyPersonWithRef(ref person);           
+            Console.WriteLine($"After nullify person is {(person is null ? "null" : person.Name)}");
 
         }
         static void UpdateNumber(int aNumber) 
         {
-          aNumber = aNumber + 10;
+          aNumber += 10;
         }
         static void UpdatePersonWithTitle(Person person) 
         { 
             person.Name = "Mr " + person.Name;
         }
-        static void NulliFyPerson(Person person)
+        static void NulliFyPerson(Person? person)
         {
             person =null;
         }
-        static void NulliFyPersonWithRef(ref Person person)
+        static void NulliFyPersonWithRef(ref Person? person)
         {
             person = null;
         }
