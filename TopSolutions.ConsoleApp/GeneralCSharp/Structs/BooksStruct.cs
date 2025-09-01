@@ -12,11 +12,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Structs
         private string description;
         private string author;
         private string subject;
-        //no constructor for struct
-        //public BooksStruct()
-        //{
-            
-        //}
+        
         public void getBookInfo(string t, string d, string a, string s)
         {
             title = t.Trim();
@@ -24,12 +20,12 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Structs
             author = a.Trim();
             subject = s.Trim();
         }
-        public void displayBook()
+        public void DisplayBook()
         {
-            Console.WriteLine("Title : {0}", title);
-            Console.WriteLine("Author : {0}", author);
-            Console.WriteLine("Subject : {0}", subject);
-            Console.WriteLine("Description :{0}", description);
+            Console.WriteLine($"Title : {title}");
+            Console.WriteLine($"Author : {author}");
+            Console.WriteLine($"Subject : {subject}");
+            Console.WriteLine($"Description :{description}");
         }
     }
 }
