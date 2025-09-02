@@ -30,7 +30,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Arrays
         }
         static string GetSliceRange(int start, int end, string arrayString)
         {
-            if (arrayString.Length < end) { return "Wrong entries for start and end";  }
+            if (arrayString.Length < end) { return $"Wrong entries for start({start}) and end({end})";  }
             return arrayString.Substring(start, end);
         }
     }
