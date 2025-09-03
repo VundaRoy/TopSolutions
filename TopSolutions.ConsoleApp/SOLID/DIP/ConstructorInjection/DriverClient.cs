@@ -11,7 +11,20 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.ConstructorInjection
         public static void Main(string[] args)
         {
             ICar ford = new Ford();
-            Driver driver = new Driver(ford);
+            WhateverCar(ford);
+            //BMW
+            ICar bmw = new BMW();
+            WhateverCar(bmw);
+            //Audi
+            ICar audi = new Audi();
+            WhateverCar(audi);
+            //ford again
+            WhateverCar(ford);
+        }
+
+        private static void WhateverCar(ICar whatever)
+        {
+            Driver driver = new(whatever);
             driver.RunCar();
         }
     }
