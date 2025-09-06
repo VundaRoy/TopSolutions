@@ -20,6 +20,9 @@ namespace TopSolutions.ConsoleApp.SOLID.OCP.Basic
             Translate sanskrit = new TranslateSanskrit();
             string sanskritWord = sanskrit.GetMeaning("Budhi");
             Console.WriteLine(sanskritWord);
+            Translate guwen = new TranslateGuwen();
+            var guwenWord = guwen.GetMeaning("Zhegezi");
+            Console.WriteLine(guwenWord);
             
         }
     }

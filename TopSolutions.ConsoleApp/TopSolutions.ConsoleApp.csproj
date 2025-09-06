@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Constructors.Outsider</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.SOLID.OCP.Basic.OcpMainBasic</StartupObject>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
