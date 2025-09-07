@@ -12,25 +12,24 @@ namespace TopSolutions.ConsoleApp.Algorithms.Looping
         int[] ArrayOfInts;
         public static void Main(string[] args)
         {
-            LoopingMain lm = new LoopingMain();
+            LoopingMain lm = new();
             lm.InitArray(100);
-            //for
-            Console.WriteLine("for");
+            //for            
             StopStart(lm.ForLoop);
             //do
-            Console.WriteLine("do");
             StopStart(lm.WhileLoop);
             //foreach
-            Console.WriteLine("foreach");
             StopStart(lm.ForEachLoop);           
             //while
-            Console.WriteLine("while");
             StopStart(lm.WhileLoop);
+            //Do
+            StopStart(lm.DoLoop);
             
         }
         private static Stopwatch StopStart(Action process)
         {
             var methodName = process.Method.Name;
+            WriteLoopingLabel(methodName);
             Stopwatch stopwatch = new();
 
             stopwatch.Start();
@@ -78,6 +77,10 @@ namespace TopSolutions.ConsoleApp.Algorithms.Looping
             {
                 ArrayOfInts[i] = i;
             }
+        }
+        private static void WriteLoopingLabel(string label)
+        {
+            Console.WriteLine($"Starting the {label} method");
         }
     }     
 }
