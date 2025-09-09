@@ -5,8 +5,6 @@ VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopSolutions.ConsoleApp", "TopSolutions.ConsoleApp\TopSolutions.ConsoleApp.csproj", "{0E847493-14E9-4664-8E07-F98958DF79DB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopSolutions.WebApi", "TopSolutions.WebApi\TopSolutions.WebApi.csproj", "{86C8B742-5381-4C25-A365-97791CF8D011}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReWrite", "ReWrite\ReWrite.csproj", "{3A23EA8A-C0F2-4977-BBEF-8E058AE06BBD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cornucopia", "Cornucopia\Cornucopia.csproj", "{278F361D-4886-46A6-81BE-A8E1367FAD07}"
@@ -31,10 +29,6 @@ Global
 		{0E847493-14E9-4664-8E07-F98958DF79DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E847493-14E9-4664-8E07-F98958DF79DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E847493-14E9-4664-8E07-F98958DF79DB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{86C8B742-5381-4C25-A365-97791CF8D011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{86C8B742-5381-4C25-A365-97791CF8D011}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{86C8B742-5381-4C25-A365-97791CF8D011}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{86C8B742-5381-4C25-A365-97791CF8D011}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3A23EA8A-C0F2-4977-BBEF-8E058AE06BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3A23EA8A-C0F2-4977-BBEF-8E058AE06BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A23EA8A-C0F2-4977-BBEF-8E058AE06BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
