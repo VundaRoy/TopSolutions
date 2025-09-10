@@ -9,10 +9,10 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Security.Cryptography.HardCoded
 {
     public class HardCodeClient
     {
-        private const string SecretKey = "a5!Iyasdf8LKJHa1234sas";
+        private const string SecretKey = "lPWamXZt91BdKB0oPq1zW";
         public static void Main(string[] args)
         {
-            var url = HardSaltStatic.DecryptString("CyfI3Riw5+XxfBc/MocV3UO081Hc+Hdmpp4tIakUq20WFWI+Gv9yPuWcuswsIPUzIs1axG74HBL1CJPg=", SecretKey);
+            var url = HardSaltStatic.DecryptString("4vkvUw63royoMlK", SecretKey);
            
         }
         
