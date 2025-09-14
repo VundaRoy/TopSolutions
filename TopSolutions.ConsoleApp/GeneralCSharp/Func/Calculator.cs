@@ -12,5 +12,6 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Func
         public int Subtract(int a, int b) => a - b;
         public double Multiply(int a, int b) => a * b;
         public int Divide(int a, int b) => a / b;
+        public double PowerOf(int a, int b) => Math.Pow(a, b);
     }
 }

@@ -16,8 +16,10 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Func
             Func<int, int, int> subtract = funcCalculator.Subtract;
             Func<int, int, double> multiply = funcCalculator.Multiply;
             Func<int, int, int> divide = funcCalculator.Divide;
+            Func<int, int, double> powerOf = funcCalculator.PowerOf;
             Console.WriteLine($"Addition result: {add(410000, 255220)}");
             Console.WriteLine($"Subtraction result: {subtract(4, 2)}");
+            Console.WriteLine($"10 to the power of 3 is {powerOf(10, 3)}");
 
             //Func with multiple additions
             Func<int, int, int, int> addTwoNumbers = (x, y, z) => x + y + z ;
