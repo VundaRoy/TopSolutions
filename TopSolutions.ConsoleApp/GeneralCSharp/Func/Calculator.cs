@@ -14,5 +14,6 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Func
         public double Divide(int a, int b) => a / b;
         public double PowerOf(int a, int b) => Math.Pow(a, b);
         public double SquareRoot(int a) => Math.Sqrt(a);
+        public double Rounded(double a) => Math.Round(a);
     }
 }

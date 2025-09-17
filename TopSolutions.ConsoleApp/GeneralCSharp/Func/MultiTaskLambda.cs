@@ -10,6 +10,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Func
     {
         static List<Func<int, int, double>> opsList;
         static List<Func<int, double>> opsListOne;
+        static List<Func<double, double>> opsListDouble;
         static void Main(string[] args)
         {
             var funcCalculator = new Calculator();
@@ -22,6 +23,9 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Func
             mt.ReturnAllFunctionsResults(opsList, Convert.ToInt32(first), Convert.ToInt32(second));
             mt.ReturnAllFunctionsResultsOneParam(opsListOne, Convert.ToInt32(first));
             mt.ReturnAllFunctionsResultsOneParam(opsListOne, Convert.ToInt32(second));
+            Console.WriteLine("Enter number to round up ");
+            var round = Console.ReadLine();
+            mt.ReturnDoubleFunctionResult(opsListDouble, Convert.ToDouble(round));
 
         }
 
@@ -43,6 +47,9 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Func
             opsListOne = new List<Func<int, double>>();
             Func<int, double> squareRootOf = funcCalculator.SquareRoot;
             opsListOne.Add(squareRootOf);
+            opsListDouble = new List<Func<double, double>>();
+            Func<double, double> round = funcCalculator.Rounded;
+            opsListDouble.Add(round);
 
         }
 
@@ -55,12 +62,21 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Func
             }          
 
         }
-        //Get back all combinations of two integers by math functions
+        //Get back all combinations of one integer by math functions
         private void ReturnAllFunctionsResultsOneParam(List<Func<int, double>> opList, int first)
         {
             foreach (var op in opList)
             {
                 Console.WriteLine($"{op.Method.Name} result: {op(first)}");
+            }
+
+        }
+        //Get back all combinations of one integer by math functions
+        private void ReturnDoubleFunctionResult(List<Func<double, double>> opList, double round)
+        {
+            foreach (var op in opList)
+            {
+                Console.WriteLine($"{op.Method.Name} result: {op(round)}");
             }
 
         }
