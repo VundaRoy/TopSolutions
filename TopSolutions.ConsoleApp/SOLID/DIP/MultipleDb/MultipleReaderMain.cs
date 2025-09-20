@@ -27,6 +27,13 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.MultipleDb
             DataProcessor sqlServerDataProc = new(sqlDataReader);
             sqlServerDataProc.ProcessAndDisplayData("SELECT * from allOrds");
             sqlServerDataProc.StoreProcessedData("New SQL server selection from all Ords");
+
+            Console.WriteLine("\n--- Using Ingres Server Data Reader ---");
+            IDataReader ingresDataReader = new IngresDataReader();
+            DataProcessor ingresServerDataProc = new(ingresDataReader);
+            ingresServerDataProc.ProcessAndDisplayData("Select * from entityDb");
+            ingresServerDataProc.StoreProcessedData("New entity from ingres db");
+
         }
     }
 }
