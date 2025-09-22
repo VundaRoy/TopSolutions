@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headless Weather App</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white rounded-xl shadow-2xl p-8 w-full max-w-2xl mx-auto flex flex-col items-center space-y-6">
+
+        <h1 class="text-4xl font-extrabold text-gray-800 tracking-tight">Weather Dashboard</h1>
+
+        <p class="text-gray-500 text-center">Select a city to get the current weather conditions from your API.</p>
+
+        <!-- Dropdown for city selection -->
+        <div class="relative inline-block text-left w-full md:w-auto">
+            <select id="city-selector" class="block w-full rounded-full border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-3 text-lg text-gray-700 transition duration-150 ease-in-out">
+                <option value="" disabled selected>Select a city...</option>
+                <option value="New York">New York</option>
+                <option value="London">London</option>
+                <option value="Tokyo">Tokyo</option>
+                <option value="Sydney">Sydney</option>
+                <option value="Paris">Paris</option>
+            </select>
+        </div>
+
+        <!-- Weather display section -->
+        <div id="weather-display" class="w-full text-center mt-6 hidden">
+            <div class="flex flex-col items-center">
+                <img id="weather-icon" src="" alt="Weather Icon" class="w-24 h-24 mb-2">
+                <h2 id="city-name" class="text-3xl font-bold text-gray-900 mb-1"></h2>
+                <p id="weather-description" class="text-gray-600 capitalize"></p>
+                <div class="flex items-center space-x-4 mt-4">
+                    <p class="text-5xl font-extrabold text-gray-800">
+                        <span id="temperature"></span>°C
+                    </p>
+                    <div class="flex flex-col text-left text-gray-600 text-sm">
+                        <p>Feels Like: <span id="feels-like"></span>°C</p>
+                        <p>Humidity: <span id="humidity"></span>%</p>
+                        <p>Wind: <span id="wind-speed"></span> m/s</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Message/Loading section -->
+        <div id="status-message" class="text-center text-gray-500 font-medium">
+            <p>Please select a city to view the weather report.</p>
+        </div>
+
+    </div>
+
+    <script>
+        // Define the base URL for your API.
+        // IMPORTANT: You need to replace this with the correct URL where your ASP.NET Core API is running.
+        // It's typically something like "https://localhost:7048" or "http://localhost:5000".
+        const API_BASE_URL = 'http://localhost:5000';
+
+        const citySelector = document.getElementById('city-selector');
+        const weatherDisplay = document.getElementById('weather-display');
+        const statusMessage = document.getElementById('status-message');
+
+        const cityNameElem = document.getElementById('city-name');
+        const weatherDescElem = document.getElementById('weather-description');
+        const temperatureElem = document.getElementById('temperature');
+        const feelsLikeElem = document.getElementById('feels-like');
+        const humidityElem = document.getElementById('humidity');
+        const windSpeedElem = document.getElementById('wind-speed');
+        const weatherIconElem = document.getElementById('weather-icon');
+
+        citySelector.addEventListener('change', fetchWeather);
+
+        async function fetchWeather(event) {
+            const city = event.target.value;
+            if (!city) {
+                return;
+            }
+
+            // Show loading state
+            statusMessage.textContent = `Fetching weather for ${city}...`;
+            weatherDisplay.classList.add('hidden');
+
+            const endpoint = `${API_BASE_URL}/weather/${city}`;
+
+            try {
+                const response = await fetch(endpoint);
+                const data = await response.json();
+
+                if (response.ok) {
+                    // Update the UI with the fetched data
+                    cityNameElem.textContent = data.city;
+                    weatherDescElem.textContent = data.description;
+                    temperatureElem.textContent = data.temperature.toFixed(1);
+                    feelsLikeElem.textContent = data.feelsLike.toFixed(1);
+                    humidityElem.textContent = data.humidity;
+                    windSpeedElem.textContent = data.windSpeed.toFixed(1);
+                    weatherIconElem.src = data.iconUrl;
+
+                    // Show the weather display and hide the status message
+                    weatherDisplay.classList.remove('hidden');
+                    statusMessage.classList.add('hidden');
+                } else {
+                    // Handle API errors
+                    statusMessage.textContent = `Error: ${data.error || 'Failed to fetch weather data.'}`;
+                    weatherDisplay.classList.add('hidden');
+                    statusMessage.classList.remove('hidden');
+                }
+            } catch (error) {
+                // Handle network errors
+                console.error('Network error:', error);
+                statusMessage.textContent = 'A network error occurred. Please check your API URL and CORS settings.';
+                weatherDisplay.classList.add('hidden');
+                statusMessage.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
