@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TopSolutions.ConsoleApp.GeneralCSharp.Basics.Access
 {
-    internal class ClassInternal
+    internal class ClassAccess
     {
         public void OpenSesame()
         {
@@ -35,7 +35,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Basics.Access
 
         public static void Main()
         {
-            ClassInternal ci = new ClassInternal();
+            ClassAccess ci = new ClassAccess();
             ci.OpenSesame();
             ClassPublic cp = new ClassPublic();
             cp.OpenSesame();
