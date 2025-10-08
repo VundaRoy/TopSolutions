@@ -18,6 +18,16 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Basics.Access
             {
                 Console.WriteLine("Accessing from InnerClass: ");
             }
+            public void ShowPublicEnum()
+            {
+                Season season = Season.Winter; // Accessible everywhere
+                Console.WriteLine("Inner public Season: " + season);
+            }
+            public void ShowPrivateEnum()
+            {
+                Day day = Day.Monday; // Accessible within OuterClass
+                Console.WriteLine("Inner private Day: " + day);
+            }
         }
         private string outerField = "Outer Field";
         public void Display()
@@ -38,7 +48,8 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Basics.Access
             outer.Display();
             OuterClass.InnerClass inner = new();
             inner.Show();
-            inner.Show();
+            inner.ShowPublicEnum();
+            inner.ShowPrivateEnum();
         }
     }
 }
