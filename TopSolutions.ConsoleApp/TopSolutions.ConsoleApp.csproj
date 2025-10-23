@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Basics.Equals.EqualMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Basics.ReferenceType.MainReferenceType</StartupObject>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
