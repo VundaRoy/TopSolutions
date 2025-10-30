@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.OOP.Inheritance.MoreInheritance.LivingMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.OOP.Inheritance.MultiLevel.BearMain</StartupObject>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
