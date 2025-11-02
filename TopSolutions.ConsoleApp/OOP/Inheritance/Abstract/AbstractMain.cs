@@ -16,6 +16,10 @@ namespace TopSolutions.ConsoleApp.OOP.Inheritance.Abstract
             saasStaff.CalculateBonus();
             //Display SaaS Company staff info
             saasStaff.DisplaySaasInfo();
+            //Promote SaaS Company staff
+            saasStaff.Promote("Senior Developer", 5000);
+            //Terminate SaaS Company staff
+            saasStaff.Terminate();
         }
     }
 }

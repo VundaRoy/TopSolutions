@@ -21,5 +21,17 @@ namespace TopSolutions.ConsoleApp.OOP.Inheritance.Abstract
             Console.WriteLine("Displaying SaaS Company staff information...");
             base.DisplayInfo();
         }
+        //Promote SaaS Company staff
+        public override void Promote(string newPosition, decimal salaryIncrease)
+        {
+            Console.WriteLine("Promoting SaaS Company staff...");
+            base.Promote(newPosition, salaryIncrease);
+        }
+        //sealed override of terminate staff method
+        public sealed override void Terminate()
+        {
+            Console.WriteLine("Terminating SaaS Company staff...");
+            base.Terminate();
+        }
     }
 }

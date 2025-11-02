@@ -19,5 +19,18 @@ namespace TopSolutions.ConsoleApp.OOP.Inheritance.Abstract
         {
             Console.WriteLine($"Name: {Name}, Position: {Position}, Salary: {Salary}");
         }
+        //virtual method to promote staff
+        public virtual void Promote(string newPosition, decimal salaryIncrease)
+        {
+            Position = newPosition;
+            Salary += salaryIncrease;
+            Console.WriteLine($"{Name} has been promoted to {Position} with a new salary of {Salary}");
+        }
+        //virtual terminate staff method
+        public virtual void Terminate()
+        {
+            Console.WriteLine($"{Name} has been terminated from the company.");
+        }
+
     }
 }
