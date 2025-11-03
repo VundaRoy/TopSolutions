@@ -28,6 +28,12 @@ namespace TopSolutions.ConsoleApp.OOP.Inheritance.Abstract
             etoroTrader.Promote("Senior Trader", 7000);
             //Terminate eToro Trader - this will call the sealed method from SaasCompany
             etoroTrader.Terminate();
+            //Create instance of EToroLite
+            EToroLite etoroLiteTrader = new EToroLite();
+            //Calculate bonus for eToro Lite Trader
+            etoroLiteTrader.CalculateBonus();
+            //terminate eToro Lite Trader - this will call the sealed method from SaasCompany
+            etoroLiteTrader.Terminate();
         }
     }
 }
