@@ -10,6 +10,15 @@ namespace TopSolutions.ConsoleApp.OOP.Inheritance.Abstract
     {
         public static void Main()
         {
+            //Create instance of AbstractMain to run methods
+            AbstractMain abstractMain = new AbstractMain();
+            //Run SaaS related operations
+            abstractMain.RunSaasRelatedOperations();
+            //Run HR related operations
+            abstractMain.RunHRRelatedOperations();
+        }
+        public void RunSaasRelatedOperations()
+        {
             //Create instance of SaasCompany
             SaasCompany saasStaff = new SaasCompany();
             //Calculate bonus for SaaS Company staff
@@ -20,20 +29,17 @@ namespace TopSolutions.ConsoleApp.OOP.Inheritance.Abstract
             saasStaff.Promote("Senior Developer", 5000);
             //Terminate SaaS Company staff
             saasStaff.Terminate();
-            //Create instance of EToroTraders
-            EToroTraders etoroTrader = new EToroTraders();
-            //Calculate bonus for eToro Trader
-            etoroTrader.CalculateBonus();
-            //Promote eToro Trader
-            etoroTrader.Promote("Senior Trader", 7000);
-            //Terminate eToro Trader - this will call the sealed method from SaasCompany
-            etoroTrader.Terminate();
-            //Create instance of EToroLite
-            EToroLite etoroLiteTrader = new EToroLite();
-            //Calculate bonus for eToro Lite Trader
-            etoroLiteTrader.CalculateBonus();
-            //terminate eToro Lite Trader - this will call the sealed method from SaasCompany
-            etoroLiteTrader.Terminate();
+        }
+        public void RunHRRelatedOperations()
+        {
+            //Create instance of HRcompany
+            HRcompany hrStaff = new HRcompany();
+            //Calculate bonus for HR Company staff
+            hrStaff.CalculateBonus();
+            //Promote HR Company staff
+            hrStaff.Promote("HR Manager", 4000);
+            //Terminate HR Company staff
+            hrStaff.Terminate();
         }
     }
 }
