@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TopSolutions.ConsoleApp.GeneralCSharp.IEnumerable
+namespace TopSolutions.ConsoleApp.GeneralCSharp.Collections.IEnumerable
 {
     public class EnumerableMain
     {
@@ -26,7 +26,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.IEnumerable
                 "December"
             };
             //create IEnumerable of string
-            IEnumerable<string> iEnumerableOfString = (IEnumerable<string>)Month;
+            IEnumerable<string> iEnumerableOfString = Month;
             foreach (string AllMonths in iEnumerableOfString)
             {
                 Console.WriteLine(AllMonths);

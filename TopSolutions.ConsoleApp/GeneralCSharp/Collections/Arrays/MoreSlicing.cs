@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TopSolutions.ConsoleApp.GeneralCSharp.Arrays
+namespace TopSolutions.ConsoleApp.GeneralCSharp.Collections.Arrays
 {
     public class MoreSlicing
     {
