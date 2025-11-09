@@ -68,14 +68,14 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Collections.Generics
                 Console.WriteLine(items.Dequeue());
             }
         }
-        public Queue<T> GenericTCreateQueueExample<T>(T[] items)
+        public Queue<T> GenericTCreateQueueExample<T>(T[] items, string typeOf = "")
         {
             Queue<T> queue = new Queue<T>();
             foreach (var item in items)
             {
                 queue.Enqueue(item);
             }
-            Console.WriteLine("Generic T Create Queue Example:");
+            Console.WriteLine($"Generic T Create Queue Example {typeOf}:");
             while (queue.Count > 0)
             {
                 Console.WriteLine(queue.Dequeue());

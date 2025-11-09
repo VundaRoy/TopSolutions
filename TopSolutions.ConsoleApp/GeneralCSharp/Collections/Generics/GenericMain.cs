@@ -26,7 +26,15 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Collections.Generics
             var q1 = genericCollection.GenericTCreateQueueExample(ints);
             genericCollection.GenericTQueueExample(q1);
 
+            //create string[] items
+            string[] strings = new string[] { "X", "Y", "Z" };
+            var q2 = genericCollection.GenericTCreateQueueExample(strings, "for string");
+            genericCollection.GenericTQueueExample(q2);
+            //create double[] items
 
+            double[] doubles = new double[] { 1.5, 2.5, 3.5 };
+            var q3 = genericCollection.GenericTCreateQueueExample(doubles, "for double");
+            genericCollection.GenericTQueueExample(q3);
         }
     }
 }
