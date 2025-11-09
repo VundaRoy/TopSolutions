@@ -60,5 +60,27 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Collections.Generics
                 Console.WriteLine(item);
             }
         }
+        public void GenericTQueueExample<T>(Queue<T> items)
+        {
+            Console.WriteLine("Generic T Queue Example:");
+            while (items.Count > 0)
+            {
+                Console.WriteLine(items.Dequeue());
+            }
+        }
+        public Queue<T> GenericTCreateQueueExample<T>(T[] items)
+        {
+            Queue<T> queue = new Queue<T>();
+            foreach (var item in items)
+            {
+                queue.Enqueue(item);
+            }
+            Console.WriteLine("Generic T Create Queue Example:");
+            while (queue.Count > 0)
+            {
+                Console.WriteLine(queue.Dequeue());
+            }
+            return queue;
+        }
     }
 }
