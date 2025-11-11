@@ -52,9 +52,9 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Collections.Generics
             }
         }
         //Generic T List Example
-        public void GenericTListExample<T>(List<T> items)
+        public void GenericTListExample<T>(List<T> items, string description= "")
         {
-            Console.WriteLine("Generic T List Example:");
+            Console.WriteLine($"Generic T List Example of type {description}:");
             foreach (var item in items)
             {
                 Console.WriteLine(item);
@@ -82,5 +82,20 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Collections.Generics
             }
             return queue;
         }
+        public List<T> GenericTCreateListExample<T>(T[] items, string typeOf = "")
+        {
+            List<T> list = new List<T>();
+            foreach (var item in items)
+            {
+                list.Add(item);
+            }
+            Console.WriteLine($"Generic T Create List Example {typeOf}:");
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);
+            }
+            return list;
+        }
+
     }
 }

@@ -35,6 +35,10 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Collections.Generics
             double[] doubles = new double[] { 1.5, 2.5, 3.5 };
             var q3 = genericCollection.GenericTCreateQueueExample(doubles, "for double");
             genericCollection.GenericTQueueExample(q3);
+            //Create list of chars using GenericTCreateListExample
+            var charListCreated = genericCollection.GenericTCreateListExample(charList.ToArray(), "for char");
+            genericCollection.GenericTListExample(charListCreated, "char");
+
         }
     }
 }
