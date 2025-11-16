@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.Retry.RetryAsync</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.Asynchronous.TaskUsage.TaskAsyncMain</StartupObject>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
