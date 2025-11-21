@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.Asynchronous.ValueTask.ValueTaskMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.AutoMapping.EmployeeSample.AutoMapperMain</StartupObject>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
@@ -23,6 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="15.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.0" />
     <PackageReference Include="NPOI.Excel" Version="2.1.1" />
     <PackageReference Include="Polly" Version="8.4.2" />
   </ItemGroup>
