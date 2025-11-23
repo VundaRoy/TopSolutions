@@ -12,12 +12,18 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Sealed
         {
             SubClass subClass = new SubClass();
             subClass.Paint();
-            subClass.ColorMeShocked();
+            subClass.ColorMeShocked(); // can be called but not overridden
             subClass.Verify();
 
             FinalClass finalClass = new();
             finalClass.Paint();
-            finalClass.ColorMeShocked();
+            finalClass.ColorMeShocked(); // cannot override because it is sealed
+           
+            FinalClass finalClass2 = new();
+            finalClass2.ColorMeShocked();
+            //calling superclass method from final class without overriding
+            FinalClass finalClass3 = new();
+            finalClass3.Verify();
         }
     }
 }
