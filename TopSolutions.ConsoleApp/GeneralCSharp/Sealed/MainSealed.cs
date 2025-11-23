@@ -24,6 +24,11 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Sealed
             //calling superclass method from final class without overriding
             FinalClass finalClass3 = new();
             finalClass3.Verify();
+            //subclass2 call
+            SubClass2 subClass2 = new();
+            subClass2.Paint();
+            subClass2.ColorMeShocked(); // can be called and overridden
+
         }
     }
 }
