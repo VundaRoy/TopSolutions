@@ -21,6 +21,11 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Singleton.OneConfig
                 return _instance;
             }
         }
-        
+        public string ConfigValue { get; set; }
+        // Private constructor to prevent instantiation from outside
+        private OneConfigToRule()
+        {
+            ConfigValue = "DefaultConfig";
+        }
     }
 }

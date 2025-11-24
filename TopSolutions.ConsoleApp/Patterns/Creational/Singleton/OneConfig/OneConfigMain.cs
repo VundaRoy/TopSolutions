@@ -10,11 +10,11 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Singleton.OneConfig
     {
         public static void Main(string[] args)
         {
-            OneConfigToRule config1 = OneConfigToRule.Instance;
-            OneConfigToRule config2 = OneConfigToRule.Instance;
+            OneConfigToRule config1 = OneConfigToRule.Instance; // Get the singleton instance
+            OneConfigToRule config2 = OneConfigToRule.Instance; // Get the singleton instance again
             if (config1 == config2)
             {
-                Console.WriteLine("Both config1 and config2 reference the same instance.");
+                Console.WriteLine($"Both config1 and config2 reference the same instance. And the value is {config1.ConfigValue}"); 
             }
             else
             {
