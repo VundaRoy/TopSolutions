@@ -22,6 +22,12 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.CreditCards
             Console.WriteLine("Credit Limit: " + masterCard.GetCreditLimit());
             Console.WriteLine("Annual Charge: " + masterCard.GetAnnualCharge());
             Console.WriteLine();
+            //Create Amex credit card
+            ICreditCard amexCard = CreditCardFactory.GetCreditCard("AMEX");
+            Console.WriteLine("Card Type: " + amexCard.GetCardType());
+            Console.WriteLine("Credit Limit: " + amexCard.GetCreditLimit());
+            Console.WriteLine("Annual Charge: " + amexCard.GetAnnualCharge());
+            Console.WriteLine();
         }
     }
 }
