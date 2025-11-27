@@ -20,7 +20,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.CreditCards
                 case "MASTER":
                     return new MasterCreditCard();
                 default:
-                    throw new ArgumentException("Invalid card type");
+                    return new DefaultCreditCard();
             }
         }
     }
