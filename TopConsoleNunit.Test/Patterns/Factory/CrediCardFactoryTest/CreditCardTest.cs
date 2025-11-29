@@ -37,4 +37,34 @@ public class CreditCardTest
         //Assert
         Assert.IsFalse(creditCard.GetCardType().Equals("AMEX Credit Card"));
     }
+    [Test]
+    public void VisaCreditCardTest_GivenVisa()
+    {
+                //Arrange
+        var cardType = "Visa";
+        //Act
+        var creditCard = CreditCardFactory.GetCreditCard(cardType);
+        //Assert
+        Assert.IsTrue(creditCard.GetCardType().Equals("VISA Credit Card"));
+    }
+    [Test]
+    public void MasterCreditCardTest_GivenMaster()
+    {
+        //Arrange
+        var cardType = "Master";
+        //Act
+        var creditCard = CreditCardFactory.GetCreditCard(cardType);
+        //Assert
+        Assert.IsTrue(creditCard.GetCardType().Equals("MASTER Credit Card"));
+    }
+    [Test]
+    public void InvalidCreditCardTest_GivenInvalid()
+    {
+        //Arrange
+        var cardType = "Invalid";
+        //Act
+        var creditCard = CreditCardFactory.GetCreditCard(cardType);
+        //Assert
+        Assert.IsTrue(creditCard.GetCardType().Equals("Default Credit Card"));
+    }
 }
