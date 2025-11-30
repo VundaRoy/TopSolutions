@@ -18,20 +18,25 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.FactoryDesign
         private static IVegetarianRecipe GetSpecificRecipe(string vegetarianType)
         {
             IVegetarianRecipe vegetarianRecipe = null;
-            if (vegetarianType == "Sattvic")
-            {
-                vegetarianRecipe = new SattvicRecipe();
-            }
-            else if (vegetarianType == "Vegan")
-            {
-                vegetarianRecipe = new VeganRecipe();
-            }
-            else if(vegetarianType == "Jain")
-            {
-                vegetarianRecipe = new JainRecipe();
+            
+            //convert to switch case 
+            switch(vegetarianType){
+                
+                case "Sattvic":
+                    vegetarianRecipe = new SattvicRecipe();
+                    break;
+                case "Vegan":
+                    vegetarianRecipe = new VeganRecipe();
+                    break;
+                case "Jain":
+                    vegetarianRecipe = new JainRecipe();
+                    break;
+                default:
+                    throw new ArgumentException("Invalid vegetarian type");
             }
 
-                return vegetarianRecipe;
+
+            return vegetarianRecipe;
         }
     }
 }
