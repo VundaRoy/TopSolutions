@@ -10,15 +10,87 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.FluentInterfaceDesign.Airp
     {
         public static void Main(string[] args)
         {
-            FluentAirport airport = new FluentAirport();
-            airport.AirportId("MAA")
-                .City("Chennai")
+            //Get list of Oceania airports
+            List<FluentAirport> oceaniaAirports = CreateOceaniaAirports();
+
+            //Display details of each airport
+            foreach (var airport in oceaniaAirports)
+            {
+                airport.ShowDetails();
+                Console.WriteLine();
+            }
+            //Get list of Asia airports 
+            List<FluentAirport> asiaAirports = CreateAsiaAirports();
+            //Display details of each airport
+            foreach (var airport in asiaAirports)
+            {
+                airport.ShowDetails();
+                Console.WriteLine();
+            }
+        }
+        //Create List of Oceania airports
+        public static List<FluentAirport> CreateOceaniaAirports()
+        {
+            List<FluentAirport> oceaniaAirports = new List<FluentAirport>();
+            FluentAirport airport1 = new FluentAirport()
+                .AirportId("SYD")
+                .City("Sydney")
+                .Country("Australia");
+            oceaniaAirports.Add(airport1);
+            FluentAirport airport2 = new FluentAirport()
+                .AirportId("AKL")
+                .City("Auckland")
+                .Country("New Zealand");
+            oceaniaAirports.Add(airport2);
+            FluentAirport airport3 = new FluentAirport()
+                .AirportId("NOU")
+                .City("Noumea")
+                .Country("New Caledonia");
+            oceaniaAirports.Add(airport3);
+            FluentAirport airport4 = new FluentAirport()
+                .AirportId("POM")
+                .City("Port Moresby")
+                .Country("Papua New Guinea");
+
+            FluentAirport airport5 = new FluentAirport()
+                .AirportId("NAN")
+                .City("Nadi")
+                .Country("Fiji");
+            oceaniaAirports.Add(airport5);
+            return oceaniaAirports;
+
+        }
+        //Generate list of airports in Asia
+        public static List<FluentAirport> CreateAsiaAirports()
+        {
+            List<FluentAirport> asiaAirports = new List<FluentAirport>();
+            FluentAirport airport1 = new FluentAirport()
+                .AirportId("DEL")
+                .City("Delhi")
                 .Country("India");
-            airport.ShowDetails();
-            airport.AirportId("SNG")
-                .City("Singapore")
-                .Country("Singapore");
-            airport.ShowDetails();
+            asiaAirports.Add(airport1);
+            FluentAirport airport2 = new FluentAirport()
+                .AirportId("BKK")
+                .City("Bangkok")
+                .Country("Thailand");
+            asiaAirports.Add(airport2);
+            FluentAirport airport3 = new FluentAirport()
+                .AirportId("KUL")
+                .City("Kuala Lumpur")
+                .Country("Malaysia");
+            asiaAirports.Add(airport3);
+            FluentAirport airport4 = new FluentAirport()
+                .AirportId("HKG")
+                .City("Hong Kong")
+                .Country("China");
+            asiaAirports.Add(airport4);
+            FluentAirport airport5 = new FluentAirport()
+                .AirportId("JKT")
+                .City("Jakarta")
+                .Country("Indonesia");
+            asiaAirports.Add(airport5);
+            return asiaAirports;
+
         }
     }
 }
