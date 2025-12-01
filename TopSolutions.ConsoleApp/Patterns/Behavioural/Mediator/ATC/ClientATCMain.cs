@@ -24,7 +24,9 @@
                 new Airplane("FL456", controlTower),
                 new Airplane("FJ522", controlTower),
                 new Airplane("CA100", controlTower),
-                new Airplane("MH105", controlTower)
+                new Airplane("MH105", controlTower),
+                new Airplane("BA200", controlTower),
+                new Airplane("AF330", controlTower)
             };
         }
     }
