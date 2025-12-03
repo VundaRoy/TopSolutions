@@ -9,27 +9,49 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Iterator.RadioChannels
 {
     public class RadioIteratorMain
     {
+        
         static void Main()
         {
-            RadioStation myStation = new RadioStation();
-            myStation.AddChannel(new Channel(89.1, "Classic Rock"));
-            myStation.AddChannel(new Channel(102.2, "Pop Hits"));
-            myStation.AddChannel(new Channel(98.7, "News Channel"));
-            IIterator<Channel> iterator1 = myStation.GetIterator();
+            RadioStation newsStations = CreateNewsChannelsList();
+            IIterator<Channel> iterator1 = newsStations.GetIterator();
             GoForward(iterator1);
             GoBackward(iterator1);
-
-            RadioStation hipHopStations = new RadioStation();
-            hipHopStations.AddChannel(new Channel(95.6, "Papi Mami"));
-            hipHopStations.AddChannel(new Channel(99.8, "Yo Bro FM"));
-            hipHopStations.AddChannel(new Channel(102.3, "Jayzee channel"));
+            RadioStation hipHopStations = CreateHipHopChannelsList();
             IIterator<Channel> iterator2 = hipHopStations.GetIterator();
             GoForward(iterator2);
             GoBackward(iterator2);
+            //Classic hits
+            RadioStation classicHits = CreateClassicHitsList();
+            IIterator<Channel> iterator3 = classicHits.GetIterator();
+            GoForward(iterator3);
+            GoBackward(iterator3);
 
             Console.ReadKey();
         }
 
+        private static RadioStation CreateHipHopChannelsList()
+        {
+            RadioStation hipHopStations = new ();
+            hipHopStations.AddChannel(new Channel(95.6, "Papi Mami"));
+            hipHopStations.AddChannel(new Channel(99.8, "Yo Bro FM"));
+            hipHopStations.AddChannel(new Channel(102.3, "Jayzee channel"));
+            return hipHopStations;
+        }
+        private static RadioStation CreateNewsChannelsList()
+        {
+            RadioStation newsChannels = new ();
+            newsChannels.AddChannel(new Channel(101.5, "CBS"));
+            newsChannels.AddChannel(new Channel(105.3, "NBC"));
+            newsChannels.AddChannel(new Channel(109.3, "ABC"));
+            return newsChannels;
+        }
+        private static RadioStation CreateClassicHitsList()
+        {
+            RadioStation classicHist  = new RadioStation();
+            classicHist.AddChannel(new Channel(107.2, "4RO"));
+            classicHist.AddChannel(new Channel(102.8, "JAZ6"));
+            return classicHist;
+        }
         private static void GoBackward(IIterator<Channel> iterator1)
         {
             Console.WriteLine("Backward:");
@@ -46,6 +68,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Iterator.RadioChannels
             {
                 Console.WriteLine(iterator.Next().Name);
             }
-        }
+        }        
+       
     }
 }
