@@ -12,6 +12,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.ChainOfResponsibility.ATM
     public class ATM
     {
         private TwoThousandHandler twoThousandHandler = new();
+        private OneThousandHandler oneThousandHandler = new();
         private FiveHundredHandler fiveHundredHandler = new();
         private TwoHundredHandler twoHundredHandler = new();
         private HundredHandler hundredHandler = new();
@@ -20,7 +21,8 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.ChainOfResponsibility.ATM
         {
             // Prepare the chain of Handlers
             // Here, we need to set the next handler of each handler
-            twoThousandHandler.SetNextHandler(fiveHundredHandler);
+            twoThousandHandler.SetNextHandler(oneThousandHandler);
+            oneThousandHandler.SetNextHandler(fiveHundredHandler);
             fiveHundredHandler.SetNextHandler(twoHundredHandler);
             twoHundredHandler.SetNextHandler(hundredHandler);
             hundredHandler.SetNextHandler(fiftyHandler);
