@@ -10,6 +10,38 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Prototype
     {
         static void Main(string[] args)
         {
+            //Prototype Pattern Demonstration
+            var contractorStruct = new EmployeeStruct()
+            {
+                Name = "John",
+                Department = "Finance",
+                Type = "Contract",
+                Wage = 15000
+            };
+            var contractor = GetEmployee(contractorStruct.Type, contractorStruct);
+            contractor.ShowDetails();
+
+            var permanentStruct = new EmployeeStruct()
+            {
+                Name = "Alice",
+                Department = "IT",
+                Type = "Permanent",
+                Salary = 120000
+            };
+            var permanent = GetEmployee(permanentStruct.Type, permanentStruct);
+            permanent.ShowDetails();
+
+            var temporaryStruct = new EmployeeStruct()
+            {
+                Name = "Bob",
+                Department = "HR",
+                Type = "Temporary",
+                FixedAmount = 80000
+            };
+            var temporary = GetEmployee(temporaryStruct.Type, temporaryStruct);
+            temporary.ShowDetails();
+            Console.WriteLine("--------------------------------------------------");
+
             // Creating an Instance of Permanent Employee Class
             Employee emp1 = new PermanentEmployee()
             {
@@ -62,6 +94,31 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Prototype
 
 
             Console.Read();
+        }
+
+        //Create Employee based on Employee type passed in parameter
+        public static Employee GetEmployee(string empType, EmployeeStruct employeeStruct)
+        {
+            switch (empType)
+            {
+                case "Permanent":
+                    return new PermanentEmployee() { Department = employeeStruct.Department, Name = employeeStruct.Name, Salary = employeeStruct.Salary};
+                case "Temporary":
+                    return new TemporaryEmployee() { Department = employeeStruct.Department, Name = employeeStruct.Name, FixedAmount = employeeStruct.FixedAmount};
+                case "Contract":
+                    return new ContractEmployee() { Department = employeeStruct.Department, Name = employeeStruct.Name, Wage = employeeStruct.Wage};
+                default:
+                    throw new ArgumentException("Invalid employee type");
+            }
+        }
+        public struct EmployeeStruct
+        {
+            public string Name;
+            public string Department;
+            public string Type;
+            public int Salary;
+            public int FixedAmount;
+            public int Wage;
         }
     }
 }
