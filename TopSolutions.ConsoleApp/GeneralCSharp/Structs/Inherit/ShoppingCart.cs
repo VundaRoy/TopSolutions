@@ -13,5 +13,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Structs.Inherit
             string info = "";
             return info = FormId > 2 ? "over rated" : "under rated";
         }
+        public string CartStatus { get; set; }
+        public int ItemCount { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Structs.Inherit
     {
         public static void Main(string[] args)
         {
-            ShoppingCart sc = new ShoppingCart();
+            ShoppingCart sc = new ();
             var id = Console.ReadLine();
 
             sc.GetInfoByFormId(Convert.ToInt32(id));
