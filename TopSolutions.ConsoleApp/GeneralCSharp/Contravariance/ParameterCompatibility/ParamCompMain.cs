@@ -16,10 +16,15 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Contravariance.ParameterCompatib
         {
             StringDelegate del = new (ActionObject);
             del("Hello, World!");
-            //IntegerDelegate delInt = new IntegerDelegate(ActionString); // This line would cause a compile-time error
+            //IntegerDelegate delInt = new (ActionObject); // This line would cause a compile-time error
+            //due to delegate variance rules, because ActionObject expects an object, not an int.
+            IntegerDelegate delInt = num => ActionObject(num); //lambda works with boxing
             //call another string delgate
             AnotherStringDelegate del2 = new (AnotherStringDelegate);
             del2("Yes another one type");
+            //Intgeger type
+            IntegerDelegate del3 = new (IntegerDelegate);
+            del3(233);
             
         }
         static void ActionObject(object obj)
@@ -29,6 +34,11 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Contravariance.ParameterCompatib
         static void AnotherStringDelegate(object obj)
         {
             Console.WriteLine("Another string type: " + obj);
+        }
+        static void IntegerDelegate(int num)
+        {
+            Console.WriteLine("An int type of "+ num );
+
         }
     }
 }
