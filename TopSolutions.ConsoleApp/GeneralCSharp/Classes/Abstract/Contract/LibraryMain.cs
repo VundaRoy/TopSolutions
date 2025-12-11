@@ -28,6 +28,11 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.Abstract.Contract
             {
                 Console.WriteLine(book);
             }
-        }   
+            //MarrickvilleLibrary instance
+            PublicLibrary marrickvilleLibrary = new MarrickvilleLibrary();
+            marrickvilleLibrary.AddBook("Learning C#", "Chris Johnson");
+            marrickvilleLibrary.OrganizeCommunityEvent("Book Reading Session");
+
+        }
     }
 }
