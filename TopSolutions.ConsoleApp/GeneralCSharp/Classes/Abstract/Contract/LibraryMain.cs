@@ -32,6 +32,10 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.Abstract.Contract
             PublicLibrary marrickvilleLibrary = new MarrickvilleLibrary();
             marrickvilleLibrary.AddBook("Learning C#", "Chris Johnson");
             marrickvilleLibrary.OrganizeCommunityEvent("Book Reading Session");
+            marrickvilleLibrary.LendBook("Learning C#", "Eve");
+            marrickvilleLibrary.ReturnBook("Learning C#");
+            List<string> marrickvilleAvailableBooks = marrickvilleLibrary.GetAvailableBooks();
+            Console.WriteLine("Available Books in Marrickville Library:");
 
         }
     }
