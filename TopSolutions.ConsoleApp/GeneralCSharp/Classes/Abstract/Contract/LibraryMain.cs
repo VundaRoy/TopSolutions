@@ -36,7 +36,17 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.Abstract.Contract
             marrickvilleLibrary.ReturnBook("Learning C#");
             List<string> marrickvilleAvailableBooks = marrickvilleLibrary.GetAvailableBooks();
             Console.WriteLine("Available Books in Marrickville Library:");
+            //do UTS Library instance
+            universityLibrary = new UniversityOfTechnologySydneyLibrary();
+            universityLibrary.AddBook("Advanced C# Programming", "David Brown");
+            universityLibrary.LendBook("Advanced C# Programming", "Frank");
+            List<string> utsAvailableBooks = universityLibrary.GetAvailableBooks();
+            Console.WriteLine("Available Books in UTS Library:");
+            foreach (var book in utsAvailableBooks)
+            {
+                Console.WriteLine(book);
 
+            }
         }
     }
 }
