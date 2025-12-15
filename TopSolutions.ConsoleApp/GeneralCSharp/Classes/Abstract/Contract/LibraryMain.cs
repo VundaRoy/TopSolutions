@@ -11,15 +11,15 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.Abstract.Contract
         public static void Main()
         {
             ILibrary universityLibrary = new FisherLibrary();
-            universityLibrary.AddBook("C# Programming", "John Doe");
-            universityLibrary.LendBook("C# Programming", "Alice");
-            List<string> availableBooks = universityLibrary.GetAvailableBooks();
-            Console.WriteLine("Available Books in University Library:");
-            foreach (var book in availableBooks)
-            {
-                Console.WriteLine(book);
-            }
+            CreateUniversityLibraryWithParam(universityLibrary);
             ILibrary publicLibrary = new NewtownLibrary();
+            CreatePublicLibraryWithParam(publicLibrary);
+            CreatePublicLibrary();
+            universityLibrary = CreateUniversityLibrary();
+        }
+
+        private static void CreatePublicLibraryWithParam(ILibrary publicLibrary)
+        {
             publicLibrary.AddBook("Introduction to the world of mary janes", "Jane Smith");
             publicLibrary.LendBook("Introduction to Algorithms", "Bob");
             List<string> publicAvailableBooks = publicLibrary.GetAvailableBooks();
@@ -28,16 +28,24 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.Abstract.Contract
             {
                 Console.WriteLine(book);
             }
-            //MarrickvilleLibrary instance
-            PublicLibrary marrickvilleLibrary = new MarrickvilleLibrary();
-            marrickvilleLibrary.AddBook("Learning C#", "Chris Johnson");
-            marrickvilleLibrary.OrganizeCommunityEvent("Book Reading Session");
-            marrickvilleLibrary.LendBook("Learning C#", "Eve");
-            marrickvilleLibrary.ReturnBook("Learning C#");
-            List<string> marrickvilleAvailableBooks = marrickvilleLibrary.GetAvailableBooks();
-            Console.WriteLine("Available Books in Marrickville Library:");
+        }
+
+        private static void CreateUniversityLibraryWithParam(ILibrary universityLibrary)
+        {
+            universityLibrary.AddBook("C# Programming", "John Doe");
+            universityLibrary.LendBook("C# Programming", "Alice");
+            List<string> availableBooks = universityLibrary.GetAvailableBooks();
+            Console.WriteLine("Available Books in University Library:");
+            foreach (var book in availableBooks)
+            {
+                Console.WriteLine(book);
+            }
+        }
+
+        private static ILibrary CreateUniversityLibrary()
+        {
             //do UTS Library instance
-            universityLibrary = new UniversityOfTechnologySydneyLibrary();
+            ILibrary universityLibrary = new UniversityOfTechnologySydneyLibrary();
             universityLibrary.AddBook("Advanced C# Programming", "David Brown");
             universityLibrary.LendBook("Advanced C# Programming", "Frank");
             List<string> utsAvailableBooks = universityLibrary.GetAvailableBooks();
@@ -47,6 +55,20 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.Abstract.Contract
                 Console.WriteLine(book);
 
             }
+
+            return universityLibrary;
+        }
+
+        private static void CreatePublicLibrary()
+        {
+            //MarrickvilleLibrary instance
+            PublicLibrary marrickvilleLibrary = new MarrickvilleLibrary();
+            marrickvilleLibrary.AddBook("Learning C#", "Chris Johnson");
+            marrickvilleLibrary.OrganizeCommunityEvent("Book Reading Session");
+            marrickvilleLibrary.LendBook("Learning C#", "Eve");
+            marrickvilleLibrary.ReturnBook("Learning C#");
+            List<string> marrickvilleAvailableBooks = marrickvilleLibrary.GetAvailableBooks();
+            Console.WriteLine("Available Books in Marrickville Library:");
         }
     }
 }
