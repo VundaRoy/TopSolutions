@@ -16,6 +16,9 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.Abstract.Contract
             CreatePublicLibraryWithParam(publicLibrary);
             CreatePublicLibrary();
             universityLibrary = CreateUniversityLibrary();
+            //SchoolLibrary instance
+            ILibrary schoolLibrary = new SydneyBoysLibrary();
+            CreateSchoolLibraryWithParam(schoolLibrary);
         }
 
         private static void CreatePublicLibraryWithParam(ILibrary publicLibrary)
@@ -41,6 +44,17 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.Abstract.Contract
                 Console.WriteLine(book);
             }
         }
+        private static void CreateSchoolLibraryWithParam(ILibrary schoolLibrary)
+        {
+            schoolLibrary.AddBook("Mathematics for Beginners", "Jane Doe");
+            schoolLibrary.LendBook("Mathematics for Beginners", "Charlie");
+            List<string> schoolAvailableBooks = schoolLibrary.GetAvailableBooks();
+            Console.WriteLine("Available Books in School Library:");
+            foreach (var book in schoolAvailableBooks)
+            {
+                Console.WriteLine(book);
+            }
+        }   
 
         private static ILibrary CreateUniversityLibrary()
         {
