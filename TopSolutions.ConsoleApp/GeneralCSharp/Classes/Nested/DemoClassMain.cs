@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.Nested
+{
+    public class DemoClassMain : ContainerClass.InnerClass.FurtherInnerClass
+    {
+        public static void Main()
+        {
+            ContainerClass container = new ();
+            InnerClass SecondTierClass = new InnerClass();
+            
+            if (container.Equals(SecondTierClass))
+            {
+                Console.WriteLine("Inner is equal to outer");
+            }
+            //first tier class method call
+            container.FirstTierMethod();
+            //Second tier class method call
+            SecondTierClass.SecondTierMethod();
+            SecondTierClass.FirstTierMethod();//Calling first tier method from second tier instance
+            //Third tier class method call
+            FurtherInnerClass thirdTierClass = new();
+            thirdTierClass.ThirdTierMethod();
+            thirdTierClass.SecondTierMethod();//Calling second tier method from third tier instance
+
+        }
+    }
+}

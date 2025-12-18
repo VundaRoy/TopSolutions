@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Classes.Abstract.Contract.LibraryMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Classes.Nested.DemoClassMain</StartupObject>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
