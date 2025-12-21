@@ -26,7 +26,12 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.Nested
             FurtherInnerClass thirdTierClass = new();
             thirdTierClass.ThirdTierMethod();
             thirdTierClass.SecondTierMethod();//Calling second tier method from third tier instance
-
+            //Third tier class calling first tier method    
+            thirdTierClass.FirstTierMethod();
+            //second tier class calling third tier method
+            //SecondTierClass.ThirdTierMethod(); // This line would cause a compile-time error
+            //first tier class calling second tier method
+            //container.SecondTierMethod(); // This line would cause a compile-time error
         }
     }
 }
