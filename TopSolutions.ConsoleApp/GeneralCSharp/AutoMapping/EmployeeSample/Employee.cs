@@ -12,5 +12,6 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.AutoMapping.EmployeeSample
         public int Salary { get; set; }
         public string Address { get; set; }
         public string Department { get; set; }
+        public string JobTitle { get; set; }
     }
 }

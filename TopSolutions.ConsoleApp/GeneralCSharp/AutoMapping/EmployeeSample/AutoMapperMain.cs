@@ -12,9 +12,9 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.AutoMapping.EmployeeSample
         {
             //create and populate employee object
             AutoMapperMain aum = new AutoMapperMain();
-            Employee employee = aum.CreateEmployee("John Doe", 50000, "123 Main St", "IT");
-            Employee employee2 = aum.CreateEmployee("Jane Smith", 60000, "456 Oak Ave", "HR");
-            Employee employee3 = aum.CreateEmployee("Mike Johnson", 55000, "789 Pine Rd", "Finance");
+            Employee employee = aum.CreateEmployee("John Doe", 50000, "123 Main St", "IT", "Engineer");
+            Employee employee2 = aum.CreateEmployee("Jane Smith", 60000, "456 Oak Ave", "HR", "Consultant");
+            Employee employee3 = aum.CreateEmployee("Mike Johnson", 55000, "789 Pine Rd", "Finance", "Accountant");
 
             //initialize automapper
 
@@ -30,21 +30,24 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.AutoMapping.EmployeeSample
             var empDTO1 = mapper.Map<EmployeeDTO>(employee);
             var empDTO2 = mapper.Map<Employee, EmployeeDTO>(employee);
             Console.WriteLine("Name: " + empDTO1.Name + ", Salary: " + empDTO1.Salary +
-                ", Address: " + empDTO1.Address + ", Department: " + empDTO1.Department);
+                ", Address: " + empDTO1.Address + ", Department: " + empDTO1.Department + ", Job title: " + empDTO1.JobTitle);
             //Get empDTO2 details
             Console.WriteLine("Name: " + empDTO2.Name + ", Salary: " + empDTO2.Salary +
-                ", Address: " + empDTO2.Address + ", Department: " + empDTO2.Department);
+                ", Address: " + empDTO2.Address + ", Department: " + empDTO2.Department + ", Job title: " + empDTO2.JobTitle);
+            Console.WriteLine("---------------------------------------------------");
+            Console.WriteLine("Enter to continue...");
             Console.ReadLine();
         }
 
-        public Employee CreateEmployee(string name, int salary, string address, string department)
+        public Employee CreateEmployee(string name, int salary, string address, string department, string jottitle)
         {
             return new Employee()
             {
                 Name = name,
                 Salary = salary,
                 Address = address,
-                Department = department
+                Department = department,
+                JobTitle = jottitle
             };
 
         }
