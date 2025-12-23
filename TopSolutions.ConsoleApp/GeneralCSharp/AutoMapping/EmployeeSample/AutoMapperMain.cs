@@ -32,10 +32,10 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.AutoMapping.EmployeeSample
             var empDTO1 = mapper.Map<EmployeeDTO>(employee);
             var empDTO2 = mapper.Map<Employee, EmployeeDTO>(employee);
             Console.WriteLine("Name: " + empDTO1.Name + ", Salary: " + empDTO1.Salary +
-                ", Address: " + empDTO1.Address + ", Department: " + empDTO1.Department + ", Job title: " + empDTO1.JobTitle);
+                ", Address: " + empDTO1.Address + ", Department: " + empDTO1.Department + ", Job title: " + empDTO1.JobTitle + ", Type of job: " + empDTO1.JobType);
             //Get empDTO2 details
             Console.WriteLine("Name: " + empDTO2.Name + ", Salary: " + empDTO2.Salary +
-                ", Address: " + empDTO2.Address + ", Department: " + empDTO2.Department + ", Job title: " + empDTO2.JobTitle);
+                ", Address: " + empDTO2.Address + ", Department: " + empDTO2.Department + ", Job title: " + empDTO2.JobTitle + ", Type of job: " + empDTO2.JobType);
             Console.WriteLine("---------------------------------------------------");
             Console.WriteLine("Enter to continue...");
             Console.ReadLine();
@@ -50,7 +50,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.AutoMapping.EmployeeSample
                 Address = address,
                 Department = department,
                 JobTitle = jottitle,
-                TypeOfJob = type
+                JobType = type
             };
 
         }
