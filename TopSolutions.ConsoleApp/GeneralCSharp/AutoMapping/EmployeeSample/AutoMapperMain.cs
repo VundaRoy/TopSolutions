@@ -12,14 +12,16 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.AutoMapping.EmployeeSample
         {
             //create and populate employee object
             AutoMapperMain aum = new AutoMapperMain();
-            Employee employee = aum.CreateEmployee("John Doe", 50000, "123 Main St", "IT", "Engineer");
-            Employee employee2 = aum.CreateEmployee("Jane Smith", 60000, "456 Oak Ave", "HR", "Consultant");
-            Employee employee3 = aum.CreateEmployee("Mike Johnson", 55000, "789 Pine Rd", "Finance", "Accountant");
+            Employee employee = aum.CreateEmployee("John Doe", 50000, "123 Main St", "IT", "Engineer", "Perm");
+            Employee employee2 = aum.CreateEmployee("Jane Smith", 60000, "456 Oak Ave", "HR", "Consultant", "Contract");
+            Employee employee3 = aum.CreateEmployee("Mike Johnson", 55000, "789 Pine Rd", "Finance", "Accountant", "Perm");
+            Employee employee4 = aum.CreateEmployee("Emily Davis", 70000, "321 Maple St", "Marketing", "Manager", "Contract");
 
             //initialize automapper
 
             MapToDTO(employee);
             MapToDTO(employee3);
+            MapToDTO(employee4);
             MapToDTO(employee2);
 
         }
@@ -39,7 +41,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.AutoMapping.EmployeeSample
             Console.ReadLine();
         }
 
-        public Employee CreateEmployee(string name, int salary, string address, string department, string jottitle)
+        public Employee CreateEmployee(string name, int salary, string address, string department, string jottitle, string type)
         {
             return new Employee()
             {
@@ -47,7 +49,8 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.AutoMapping.EmployeeSample
                 Salary = salary,
                 Address = address,
                 Department = department,
-                JobTitle = jottitle
+                JobTitle = jottitle,
+                TypeOfJob = type
             };
 
         }
