@@ -13,5 +13,9 @@
         {
             Console.WriteLine("Overseas/International registry");
         }
+        public void ProcessInternationalPaperwork()
+        {
+            Console.WriteLine("Processing international student paperwork");
+        }
     }
 }

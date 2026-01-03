@@ -12,6 +12,7 @@
             Student foreignStudent1 = new();
             foreignStudent1.ApplyOverseasScholarship();
             foreignStudent1.RegisterSubject("am123");
+            foreignStudent1.ProcessInternationalPaperwork();
             //NZ file
             Student nz = new();
             nz.RegisterNZCampus();
