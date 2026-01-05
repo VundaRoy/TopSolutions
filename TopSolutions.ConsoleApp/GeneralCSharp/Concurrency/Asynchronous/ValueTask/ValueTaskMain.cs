@@ -12,7 +12,11 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.Asynchronous.ValueTa
         {
             { 1, "1 Card Info" },
             { 2, "2 Card info " },
-            { 3, "3 Card info" }
+            { 3, "3 Card info part I" },
+            //{ 3, "3 Card info part I" }, not allowed to add duplicate key
+            { 15, "15 Card info part II" },
+            { 4, "4 Card info" },
+            { 10, "10 Card info" }
         };
         public static async Task Main(string[] args)
         {
@@ -22,6 +26,9 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Concurrency.Asynchronous.ValueTa
             //asynchronous call
             var Card3Result = await GetCardInfoAsync(3);
             Console.WriteLine(Card3Result);
+            //asynchronous call to 15
+            var Card15Result = await GetCardInfoAsync(15);
+            Console.WriteLine(Card15Result);
             //not found card
             var Card5Result = await GetCardInfoAsync(5);
             Console.WriteLine(Card5Result);
