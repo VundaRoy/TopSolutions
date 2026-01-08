@@ -30,5 +30,13 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Singleton.Practical
             Console.WriteLine("Executing the once-off call.");
             _hasBeenCalled = true;
         }
+        //property of the singleton
+        public string CallStatus
+        {
+            get
+            {
+                return _hasBeenCalled ? "Method has been called." : "Method has not been called yet.";
+            }
+        }
     }
 }
