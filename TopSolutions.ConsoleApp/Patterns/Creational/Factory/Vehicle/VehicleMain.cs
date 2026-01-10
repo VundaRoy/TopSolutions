@@ -19,6 +19,19 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.Vehicle
             //heavy vehicle
             dealer.BuildVehicle(VehicleType.HeavyVehicle);
             dealer.GetVehicle().Drive();
+            //Get info
+            dealer.GetVehicle().Stop();
+            //Create invalid vehicle type
+            try
+            {
+                dealer.BuildVehicle((VehicleType)999);
+                dealer.GetVehicle().Drive();
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
         }
     }
 }
