@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TopSolutions.ConsoleApp.Patterns.Creational.ObjectPool.BookInventory
 {
-    internal class BookInventoryPoolManager
+    public class BookInventoryPoolManager
     {
         private readonly DefaultObjectPool<Book> _bookPool;
         public BookInventoryPoolManager()
