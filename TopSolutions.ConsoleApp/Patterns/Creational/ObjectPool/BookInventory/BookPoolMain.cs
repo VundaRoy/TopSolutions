@@ -18,9 +18,17 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.ObjectPool.BookInventory
             //Checkout status change example
             new BookPoolMain().ChangeBookStatus(book3, true);
             Console.WriteLine($"Book 3 - ISBN: {book3.ISBN}, Title: {book3.Title}, Checked Out: {book3.IsCheckedOut}");
+            //Display book info with DisplayBookInfo example
+            new BookPoolMain().DisplayBookInfo(book3);
+
             //ReturnBook example
             new BookPoolMain().ReturnBook(bookPoolManager, book3);
-            
+            //Create another book to see reused instance
+            Book book4 = new BookPoolMain().CreateBook(bookPoolManager, "The Pragmatic Programmer");
+            Console.WriteLine($"Book 4 - ISBN: {book4.ISBN}, Title: {book4.Title}, Checked Out: {book4.IsCheckedOut}");
+            new BookPoolMain().ChangeBookStatus(book4, false);
+            new BookPoolMain().DisplayBookInfo(book4);
+
 
         }
         public Book CreateBook(BookInventoryPoolManager poolManager, string bookTitle)
