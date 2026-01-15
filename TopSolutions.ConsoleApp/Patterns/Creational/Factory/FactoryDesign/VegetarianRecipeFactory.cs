@@ -31,6 +31,9 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Factory.FactoryDesign
                 case "Jain":
                     vegetarianRecipe = new JainRecipe();
                     break;
+                case "Lacto-Vegetarian":
+                    vegetarianRecipe = new LactoVegetarianRecipe();
+                    break;
                 default:
                     throw new ArgumentException("Invalid vegetarian type");
             }
