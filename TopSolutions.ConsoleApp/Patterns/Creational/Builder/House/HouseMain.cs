@@ -15,6 +15,13 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Builder.House
             engineer.ConstructHouse();
             House house = engineer.GetHouse();
             Console.WriteLine("House built:\n" + house);
+            //build Yurt
+            IHouseBuilder yurtBuilder = new YurtHouseBuilder();
+            engineer = new CivilEngineer(yurtBuilder);
+            engineer.ConstructHouse();
+            house = engineer.GetHouse();
+            Console.WriteLine("House built:\n" + house);
+
         }
     }
 }
