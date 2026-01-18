@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.Patterns.Structural.Facade.HomeTheater.TheaterMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.Patterns.Behavioural.Strategy.Payment.PaymentMain</StartupObject>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 

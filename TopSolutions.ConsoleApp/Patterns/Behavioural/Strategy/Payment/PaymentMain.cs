@@ -10,10 +10,13 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Strategy.Payment
     {
         public static void Main()
         {
-            Checkout checkout = new Checkout(new CreditCardParyment()); // Default strategy
+            Checkout checkout = new Checkout(new CreditCardPayment()); // Default strategy
             checkout.ProcessOrder(100);
             checkout.setStrategy(new PayPalPayment()); // Change strategy at runtime
             checkout.ProcessOrder(200);
+            //direct debit
+            checkout.setStrategy(new DirectDebitPayment());
+            checkout.ProcessOrder(300);
         }
 
     }

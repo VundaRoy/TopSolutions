@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Strategy.Payment
 {
-    public class CreditCardParyment : IPaymentStrategy
+    public class DirectDebitPayment : IPaymentStrategy
     {
         public void Pay(decimal amount)
         {
-            Console.WriteLine($"Paid {amount} using Credit Card.");
+            Console.WriteLine($"Processing direct debit payment of {amount:C}");
+            // Logic for processing direct debit payment
         }
+
     }
 }
