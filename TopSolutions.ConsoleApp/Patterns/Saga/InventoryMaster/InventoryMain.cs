@@ -17,6 +17,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Saga.InventoryMaster
             var orchestrator = new OrderOrchestrator();
             orchestrator.AddService(new InventoryService());
             orchestrator.AddService(new PaymentService()); //this one will fail
+            orchestrator.AddService(new DeliveryService());
             orchestrator.Execute(orderState);
         }
     }

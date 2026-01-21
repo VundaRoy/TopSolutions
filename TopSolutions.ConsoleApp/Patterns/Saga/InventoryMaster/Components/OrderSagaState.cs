@@ -11,5 +11,6 @@ namespace TopSolutions.ConsoleApp.Patterns.Saga.InventoryMaster.Components
         public int OrderId { get; set; }
         public bool PaymentCompleted { get; set; }
         public bool InventoryReserved { get; set; }
+        public bool DeliveryArranged { get; set; }
     }
 }
