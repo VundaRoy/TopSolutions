@@ -10,6 +10,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Patterns\Saga\Ticketing\BookingService\" />
+    <Folder Include="Patterns\Saga\Ticketing\StateManagement\" />
     <Folder Include="Samples\GitHub\" />
     <Folder Include="Samples\Misc\ElasticSearch\Before\" />
     <Folder Include="Samples\Misc\ElasticSearch\After\" />
