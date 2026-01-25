@@ -8,7 +8,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Saga.Ticketing.EventInfrastructure
 {
     public class DomainEvent :IEvent    
     {
-        public Guid CorrelationId { get; private set; }
-        public DateTime Timestamp { get; private set; } = DateTime.UtcNow;
+        public Guid CorrelationId { get; set; }
+        public DateTime Timestamp { get; set; } = DateTime.UtcNow;
     }
 }
