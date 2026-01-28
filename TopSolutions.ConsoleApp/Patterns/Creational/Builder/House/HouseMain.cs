@@ -10,42 +10,19 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.Builder.House
     {
         public static void Main()
         {
-            //build Igloo
-            CivilEngineer engineer;
-            House house;
-            IglooBuilder(out engineer, out house);
-            //build Yurt
-            YurtBuilder(out engineer, out house);
-            //build Chateau Mansion
-            ChateauMansionBuilder(out engineer, out house);
-
+            BuildAndPrint(() => new IglooHouseBuilder());
+            BuildAndPrint(() => new YurtHouseBuilder());
+            BuildAndPrint(() => new ChateauMansionBuilder());
         }
 
-        private static void ChateauMansionBuilder(out CivilEngineer engineer, out House house)
+        private static House BuildAndPrint(Func<IHouseBuilder> builderFactory)
         {
-            IHouseBuilder chateauBuilder = new ChateauMansionBuilder();
-            engineer = new CivilEngineer(chateauBuilder);
+            var engineer = new CivilEngineer(builderFactory());
             engineer.ConstructHouse();
-            house = engineer.GetHouse();
+            var house = engineer.GetHouse();
             Console.WriteLine("House built:\n" + house);
+            return house;
         }
 
-        private static void YurtBuilder(out CivilEngineer engineer, out House house)
-        {
-            IHouseBuilder yurtBuilder = new YurtHouseBuilder();
-            engineer = new CivilEngineer(yurtBuilder);
-            engineer.ConstructHouse();
-            house = engineer.GetHouse();
-            Console.WriteLine("House built:\n" + house);
-        }
-
-        private static void IglooBuilder(out CivilEngineer engineer, out House house)
-        {
-            IHouseBuilder iglooBuilder = new IglooHouseBuilder();
-            engineer = new CivilEngineer(iglooBuilder);
-            engineer.ConstructHouse();
-            house = engineer.GetHouse();
-            Console.WriteLine("House built:\n" + house);
-        }
     }
 }
