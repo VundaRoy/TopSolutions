@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.Patterns.Saga.BookingEvent.BookingMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.Patterns.Creational.Builder.Computer.BuilderComputerMain</StartupObject>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
