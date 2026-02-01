@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TopSolutions.ConsoleApp.Patterns.Saga.BookingEvent.Orchestrator;
-using TopSolutions.ConsoleApp.Patterns.Saga.BookingEvent.Services;
+using TopSolutions.ConsoleApp.Patterns.Behavioural.Saga.BookingEvent.Orchestrator;
+using TopSolutions.ConsoleApp.Patterns.Behavioural.Saga.BookingEvent.Services;
 
 namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Saga.BookingEvent
 {

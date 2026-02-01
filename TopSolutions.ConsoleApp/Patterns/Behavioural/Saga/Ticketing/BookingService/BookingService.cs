@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using TopSolutions.ConsoleApp.Patterns.Behavioural.Saga.Ticketing.DomainEvents;
 using TopSolutions.ConsoleApp.Patterns.Behavioural.Saga.Ticketing.EventInfrastructure;
 using TopSolutions.ConsoleApp.Patterns.Behavioural.Saga.Ticketing.StateManagement;
-using TopSolutions.ConsoleApp.Patterns.Saga.Ticketing.DomainEvents;
 
 namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Saga.Ticketing.BookingService
 {
