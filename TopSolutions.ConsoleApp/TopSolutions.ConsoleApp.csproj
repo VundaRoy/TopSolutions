@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Patterns\Saga\Ticketing\DependencyInjection\" />
+    <Folder Include="Patterns\Behavioural\Saga\Ticketing\DependencyInjection\" />
     <Folder Include="Samples\GitHub\" />
     <Folder Include="Samples\Misc\ElasticSearch\Before\" />
     <Folder Include="Samples\Misc\ElasticSearch\After\" />
