@@ -8,7 +8,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.SmartHome
 {
     public class HomeController : IHomeController
     {
-        public void Notify(Component sender, string eventInfo)
+        public void Notify(Component sender, string eventInfo) 
         {
             if (sender is Window && eventInfo == "opened")
             {
