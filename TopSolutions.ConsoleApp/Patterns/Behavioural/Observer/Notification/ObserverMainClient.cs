@@ -48,7 +48,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Observer.Notification
             user2 = new("Pranaya", "23 Atola Ave");
             user2.AddSubscriber(RedMI);
             //User Priyanka will be created and the user3 object will be registered to the subject
-            user3 = new("Priyanka", "3/7 Quaker rd. Tourisma");
+            user3 = new("Priyanka", "3/7 Quaker rd. Tourisma");           
             user3.AddSubscriber(RedMI);
         }
         private static List<Observer> GetObserversList()
@@ -59,6 +59,10 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Observer.Notification
             o1 = new("Satoo", "123 Ben Ali shara, Aasimat at-Tunis");
             observers.Add(o1);
             o1 = new("Fee Masr", "23 Auqaat, as-Saaba");
+            observers.Add(o1);
+            o1 = new("Laila", "7 Haret al-Andalus, Dimashq");
+            observers.Add(o1);
+            o1 = new("Zainab", "45 Salah ad-Din, Al Qahirah");
             observers.Add(o1);
             return observers;
     }
