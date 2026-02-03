@@ -26,5 +26,13 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Decorator.Car
                 Console.WriteLine("Added hybrid engine to the car " + car);
             }
         }
+        public void ManageBattery()
+        {
+            Console.WriteLine("Managing the hybrid car battery.");
+        }
+        public void MonitorFuelEfficiency()
+        {
+            Console.WriteLine("Monitoring fuel efficiency of the hybrid car.");
+        }
     }
 }

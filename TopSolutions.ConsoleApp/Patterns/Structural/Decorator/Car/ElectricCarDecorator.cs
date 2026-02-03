@@ -25,5 +25,9 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Decorator.Car
                 Console.WriteLine("ElectricCarDecorator added Electric Engine to the Car : " + car);
             }
         }
+        public void MonitorBatteryHealth()
+        {
+            Console.WriteLine("Monitoring the electric car battery health.");
+        }
     }
 }

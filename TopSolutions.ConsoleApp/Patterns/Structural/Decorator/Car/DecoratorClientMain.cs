@@ -29,10 +29,13 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Decorator.Car
             ICar bmwcar3 = new BMWCar();
             HybridCarDecorator carHyrbrid = new(bmwcar3);
             carHyrbrid.ManufactureCar();
+            carHyrbrid.ManageBattery();
+            carHyrbrid.MonitorFuelEfficiency();
             //Electric
             ICar bmwElectric = new BMWCar();
             ElectricCarDecorator bmwElec = new(bmwElectric);
             bmwElec.ManufactureCar();
+            bmwElec.MonitorBatteryHealth();
             Console.ReadKey();
         }
     }
