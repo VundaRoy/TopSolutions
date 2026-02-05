@@ -37,6 +37,30 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Decorator.Car
             bmwElec.ManufactureCar();
             bmwElec.MonitorBatteryHealth();
             Console.ReadKey();
+            //
+            //alternate way to create decorated cars using a helper method
+
+            // BMW with Petrol Engine
+            var carWithPetrolEngine1 = CreateDecoratedCar<PetrolCarDecorator>();
+            carWithPetrolEngine1.ManufactureCar();
+            // BMW Hybrid
+            var carHybrid = CreateDecoratedCar<HybridCarDecorator>();
+            carHybrid.ManufactureCar();
+            carHybrid.ManageBattery();
+            carHybrid.MonitorFuelEfficiency();
+
+            // BMW Electric
+            var bmwElec1 = CreateDecoratedCar<ElectricCarDecorator>();
+            bmwElec1.ManufactureCar();
+            bmwElec1.MonitorBatteryHealth();
+
+
+        }
+        // Helper method to create a decorated BMW car
+        static T CreateDecoratedCar<T>() where T : class
+        {
+            ICar bmwCar = new BMWCar();
+            return (T)Activator.CreateInstance(typeof(T), bmwCar);
         }
     }
 }
