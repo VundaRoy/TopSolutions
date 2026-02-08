@@ -13,7 +13,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Strategy.Payment
         {
             _paymentStrategy = paymentStrategy;
         }
-        public void setStrategy(IPaymentStrategy paymentStrategy) // Setter for changing strategy at runtime
+        public void SetStrategy(IPaymentStrategy paymentStrategy) // Setter for changing strategy at runtime
         {
             _paymentStrategy = paymentStrategy;
         }
