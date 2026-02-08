@@ -17,6 +17,12 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Strategy.Payment
             //direct debit
             checkout.setStrategy(new DirectDebitPayment());
             checkout.ProcessOrder(300);
+            //Use google wallet
+            checkout.setStrategy(new GoogleWalletPayment());
+            //Verify Google account before processing payment
+            GoogleWalletPayment.VerifyGoogleAccount();
+            checkout.ProcessOrder(400);
+
         }
 
     }
