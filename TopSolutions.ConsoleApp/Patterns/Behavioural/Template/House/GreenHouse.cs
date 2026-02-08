@@ -27,5 +27,14 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Template.House
         {
             Console.WriteLine("4 sided window setup");
         }
+        protected override void BuildRoof()
+        {
+            base.BuildRoof();
+            Console.WriteLine("Transparent roof setup");
+        }
+        protected override void BuildDoors()
+        {
+            Console.WriteLine("Glass door setup");
+        }
     }
 }

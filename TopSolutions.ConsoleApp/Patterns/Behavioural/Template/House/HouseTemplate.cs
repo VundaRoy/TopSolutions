@@ -16,6 +16,8 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Template.House
             BuildPillars(); //Step2
             BuildWalls(); //Step3
             BuildWindows(); //Step4
+            BuildDoors(); //Step5
+            BuildRoof(); //Step6
             Console.WriteLine("House is Built");
         }
         // Methods to be implemented by subclasses
@@ -23,5 +25,10 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Template.House
         protected abstract void BuildPillars();
         protected abstract void BuildWalls();
         protected abstract void BuildWindows();
+        protected abstract void BuildDoors();
+        protected virtual void BuildRoof()
+        {
+            Console.WriteLine("Building basic roof");
+        }
     }
 }

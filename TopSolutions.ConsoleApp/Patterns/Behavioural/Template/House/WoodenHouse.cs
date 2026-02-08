@@ -24,5 +24,9 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Template.House
         {
             Console.WriteLine("Building Wood Windows");
         }
+        protected override void BuildDoors()
+        {
+            Console.WriteLine("Building Wood Doors");
+        }
     }
 }
