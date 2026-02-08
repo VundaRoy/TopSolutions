@@ -11,5 +11,6 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.FluentInterfaceDesign.Airp
         public string AirportId { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
+        public int NumberOfRunways { get; set; }
     }
 }

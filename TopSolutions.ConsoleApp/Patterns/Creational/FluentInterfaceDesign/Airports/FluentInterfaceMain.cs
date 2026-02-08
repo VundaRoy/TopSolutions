@@ -35,17 +35,20 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.FluentInterfaceDesign.Airp
             FluentAirport airport1 = new FluentAirport()
                 .AirportId("SYD")
                 .City("Sydney")
-                .Country("Australia");
+                .Country("Australia")
+                .NumberOfRunways(3);
             oceaniaAirports.Add(airport1);
             FluentAirport airport2 = new FluentAirport()
                 .AirportId("AKL")
                 .City("Auckland")
-                .Country("New Zealand");
+                .Country("New Zealand")
+                .NumberOfRunways(1);
             oceaniaAirports.Add(airport2);
             FluentAirport airport3 = new FluentAirport()
                 .AirportId("NOU")
                 .City("Noumea")
-                .Country("New Caledonia");
+                .Country("New Caledonia")
+                .NumberOfRunways(1);
             oceaniaAirports.Add(airport3);
             FluentAirport airport4 = new FluentAirport()
                 .AirportId("POM")
@@ -67,12 +70,14 @@ namespace TopSolutions.ConsoleApp.Patterns.Creational.FluentInterfaceDesign.Airp
             FluentAirport airport1 = new FluentAirport()
                 .AirportId("DEL")
                 .City("Delhi")
-                .Country("India");
+                .Country("India")
+                .NumberOfRunways(4);
             asiaAirports.Add(airport1);
             FluentAirport airport2 = new FluentAirport()
                 .AirportId("BKK")
                 .City("Bangkok")
-                .Country("Thailand");
+                .Country("Thailand")
+                .NumberOfRunways(3);
             asiaAirports.Add(airport2);
             FluentAirport airport3 = new FluentAirport()
                 .AirportId("KUL")
