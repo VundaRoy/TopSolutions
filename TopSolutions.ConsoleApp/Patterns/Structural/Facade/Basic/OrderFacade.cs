@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TopSolutions.ConsoleApp.Patterns.Structural.Facade.Basic
 {
-    public class Order
+    public class OrderFacade
     {
         // The Facade class provides a simple interface to the complex logic of one
         // or several subsystems. The Facade delegates the client requests to the
