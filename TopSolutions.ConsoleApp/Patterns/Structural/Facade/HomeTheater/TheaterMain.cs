@@ -15,6 +15,8 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Facade.HomeTheater
             theater.WatchMovie("Baahubali");
             //watch Tamil movie
             theater.WatchMovie("Enthiran");
+            //watch Hindi movie
+            theater.WatchMovie("Dangal");
 
         }
     }
