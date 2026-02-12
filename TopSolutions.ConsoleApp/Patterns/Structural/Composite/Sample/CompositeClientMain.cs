@@ -19,6 +19,9 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Composite.Sample
                 Emp("Kausalya", "Secundarabad road Hyderabad",    58000),
                 Emp("Karthik",  "Jhanvi street Chennai",          48000),
                 Emp("Govardhan","Tumkur district Karnataka",      41000),
+                Emp("Ravi",     "Gulbarga district Karnataka",    35000),
+                Emp("Suresh",   "Mandya district Karnataka",    32000),
+                Emp("Gopichand", "Mysore district Karnataka",    30000)
             };
 
             // Helper lookups
@@ -26,10 +29,10 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Composite.Sample
 
             // --- Build composites via small factory helpers ---
             var itDepartment = Dept("ITDepartment", "New Ward South",
-                                      E("Pranaya"), E("Rohit"), E("Anurag"));
+                                      E("Pranaya"), E("Rohit"), E("Anurag"), E("Gopichand"), E("Suresh"));
 
             var hrDepartment = Dept("HRDepartment", "Raiwind East",
-                                      E("Priyanka"), E("Sambit"));
+                                      E("Priyanka"), E("Sambit"), E("Ravi"));
 
             var directors = Dept("Directors", "Gulbarga",
                                       E("Kausalya"), E("Karthik"), E("Govardhan"));
