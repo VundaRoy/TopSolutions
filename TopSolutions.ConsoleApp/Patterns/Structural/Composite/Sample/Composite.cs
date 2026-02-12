@@ -21,9 +21,10 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Composite.Sample
         }
 
         //The following Method is used to add Child Components inside the Composite Component
-        public void AddComponent(Component NewComponent)
+        public void AddComponent(Component[] NewComponent)
         {
-            ChildComponents.Add(NewComponent);
+            foreach (var component in NewComponent)
+                ChildComponents.Add(component);
         }
         //The following Method is used to Remove Child Components from the Composite Component
         public void RemoveComponent(Component RemoveComponent)

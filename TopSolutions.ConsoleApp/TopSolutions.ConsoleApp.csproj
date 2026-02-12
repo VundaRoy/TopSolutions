@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.Patterns.Structural.Proxy.ManageUserAccess.ManageAccessMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.Patterns.Structural.Composite.Sample.CompositeClientMain</StartupObject>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
