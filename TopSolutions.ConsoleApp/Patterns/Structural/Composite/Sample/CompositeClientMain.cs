@@ -58,7 +58,11 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Composite.Sample
 
             Console.WriteLine("\nSalary of Employee Anurag:");
             Console.WriteLine(E("Anurag").GetSalary());
-
+            //Remove child component and show the change in total salary
+            Console.WriteLine("\nRemoving Employee Anurag from IT Department...");
+            itDepartment.RemoveComponent(E("Anurag"));
+            Console.WriteLine($"Total Salary of IT Department after removal: {itDepartment.GetSalary()}");
+            
             Console.Read();
         }
 
