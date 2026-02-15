@@ -26,6 +26,8 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Facade.HomeTheater
             _audioSystem.SetVolume(20);
             _streamingService.Connect("Netflix");
             _streamingService.PlayContent(movieName);
+            _streamingService.StopContent();
+            _streamingService.Disconnect();
             Console.WriteLine("Enjoy your movie!");
         }
     }
