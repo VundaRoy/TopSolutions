@@ -11,30 +11,30 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Composite.Sample
             // --- Seed data (concise, data-driven) ---
             var employees = new[]
             {
-                Emp("Pranaya",  "12 Anderi West Mumbai", "Delhi",        22000),
-                Emp("Rohit",    "2F 223 Manikkar rd North Bhiwandi","Delhi", 33000),
-                Emp("Anurag",   "1112/23 Jyothish str East Pune","Bengaluru", 42000),
-                Emp("Priyanka", "Haridwar city",  "Delhi",                52000),
-                Emp("Sambit",   "RB Patel stadium", "Delhi",              28000),
-                Emp("Kausalya", "Secundarabad road Hyderabad","All India",    58000),
-                Emp("Karthik",  "Jhanvi street Chennai", "Bengaluru",         48000),
-                Emp("Govardhan","Tumkur district Karnataka","Bengaluru",      41000),
-                Emp("Ravi",     "Gulbarga district Karnataka","Bengaluru",    35000),
-                Emp("Suresh",   "Mandya district Karnataka", "Bengaluru",   32000),
-                Emp("Gopichand", "Mysore district Karnataka",  "Bengaluru",   30000)
+                Emp("Pranaya",  "12 Anderi West Mumbai", "North",        22000),
+                Emp("Rohit",    "2F 223 Manikkar rd North Bhiwandi","North", 33000),
+                Emp("Anurag",   "1112/23 Jyothish str East Pune","West", 42000),
+                Emp("Priyanka", "Haridwar city",  "North",                52000),
+                Emp("Sambit",   "RB Patel stadium", "West",              28000),
+                Emp("Kausalya", "Secundarabad road Hyderabad","South",    58000),
+                Emp("Karthik",  "Jhanvi street Chennai", "South",         48000),
+                Emp("Govardhan","Tumkur district Karnataka","South",      41000),
+                Emp("Ravi",     "Gulbarga district Karnataka","South",    35000),
+                Emp("Suresh",   "Mandya district Karnataka", "South",   32000),
+                Emp("Gopichand", "Mysore district Karnataka",  "South",   30000)
             };
 
             // Helper lookups
             Component E(string name) => employees.First(e => e.Name == name);
 
             // --- Build composites via small factory helpers ---
-            var itDepartment = Dept("ITDepartment", "New Ward South","Delhi",
+            var itDepartment = Dept("ITDepartment", "New Ward South","North",
                                       E("Pranaya"), E("Rohit"), E("Anurag"), E("Gopichand"), E("Suresh"));
 
-            var hrDepartment = Dept("HRDepartment", "Raiwind East","Delhi",
+            var hrDepartment = Dept("HRDepartment", "Raiwind East","North",
                                       E("Priyanka"), E("Sambit"), E("Ravi"));
 
-            var directors = Dept("Directors", "Gulbarga","Bengaluru",
+            var directors = Dept("Directors", "Gulbarga","South",
                                       E("Kausalya"), E("Karthik"), E("Govardhan"));
 
             var company = Dept("Company", "Central Zone","All India",

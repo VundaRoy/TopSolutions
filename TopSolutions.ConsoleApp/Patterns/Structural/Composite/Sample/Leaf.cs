@@ -25,7 +25,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Composite.Sample
         public override int GetSalary()
         {
             //We are Printing the Name and Salary of the Employee and then returning the Salary
-            Console.WriteLine($"\t Name: {Name} of {Address} and Salary: {Salary}");
+            Console.WriteLine($"\t Name: {Name} of {Address} from region of {Region} and Salary: {Salary}");
             return Salary;
         }
     }
