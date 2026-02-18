@@ -12,12 +12,14 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Composite.Sample
         //This Property is used to store the Component Name
         public string Name { get; }
         public string Address { get; }
+        public string Region { get; set; }
 
         //Initializing the Name Property using Class Parameterized Constructor
-        public Component(string name, string address)
+        public Component(string name, string address, string region)
         {
             Name = name;
             Address = address;
+            Region = region;
         }
         //The following GetSalary method is going to be overridden in both Leaf and Composite classes
         public abstract int GetSalary();

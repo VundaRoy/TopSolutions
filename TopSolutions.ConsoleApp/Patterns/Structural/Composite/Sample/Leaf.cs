@@ -17,7 +17,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Composite.Sample
         //we need to pass the Name and the Salary of the Employee
         //The Employee Name we need to pass to the Base class constructor
         //Initializing the Salary Property using the Constructor
-        public Leaf(string Name, string address, int Salary) : base(Name, address)
+        public Leaf(string Name, string address, string region, int Salary) : base(Name, address, region )
         {
             this.Salary = Salary;
         }

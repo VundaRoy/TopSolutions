@@ -13,10 +13,10 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Composite.Sample
     public class Composite : Component
     {
         //The Following ChildComponents variable is going to hold all the child components of a composite object
-        private List<Component> ChildComponents = new List<Component>();
+        private List<Component> ChildComponents = new();
         //The Constructor takes the Composite Component name as the input parameter 
         //and passed that parameter value to the base class constructor
-        public Composite(string name, string address) : base(name, address)
+        public Composite(string name, string address, string region) : base(name, address, region)
         {
         }
 
