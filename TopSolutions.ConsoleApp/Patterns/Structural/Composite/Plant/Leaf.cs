@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TopSolutions.ConsoleApp.Patterns.Structural.Composite.Plant
+{
+    public class Leaf : IPlant
+    {
+        public bool IsEaten { get; private set; } = false;
+        public void Eat()
+        {
+            IsEaten = true;
+            Console.WriteLine("Leaf is eaten.");
+        }
+    }
+}
