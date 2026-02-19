@@ -11,6 +11,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Composite.Plant
         private readonly IList<IPlant> children;
         public Branch(IList<IPlant> children)
         {
+            Console.WriteLine($"Branch is created with {children.Count} leaves ");
             this.children = children;
         }
         public void Eat()
