@@ -11,7 +11,7 @@
             sonyRemoteControl.SwitchOn();
             sonyRemoteControl.SetChannel(101);
             sonyRemoteControl.SwitchOff();
-            sonyRemoteControl.
+            sonyRemoteControl.TuneChannel();
             Console.WriteLine();
             AbstractRemoteControl samsungRemoteControl = new SamsungRemoteControl(new SamsungLedTv());
             samsungRemoteControl.SwitchOn();
@@ -22,6 +22,7 @@
             panasonicRemoteControl.SwitchOn();
             panasonicRemoteControl.SwitchOff();
             panasonicRemoteControl.SetChannel(309);
+            panasonicRemoteControl.TuneChannel();
             Console.ReadKey();
         }
     }
