@@ -24,5 +24,9 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Bridge.Simple
         {
             ledTv.SetChannel(channelNumber);
         }
+        public override void TuneChannel()
+        {
+            ledTv.TuneChannel();
+        }
     }
 }

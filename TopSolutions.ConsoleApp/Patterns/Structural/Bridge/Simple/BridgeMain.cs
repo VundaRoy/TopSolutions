@@ -11,6 +11,7 @@
             sonyRemoteControl.SwitchOn();
             sonyRemoteControl.SetChannel(101);
             sonyRemoteControl.SwitchOff();
+            sonyRemoteControl.
             Console.WriteLine();
             AbstractRemoteControl samsungRemoteControl = new SamsungRemoteControl(new SamsungLedTv());
             samsungRemoteControl.SwitchOn();

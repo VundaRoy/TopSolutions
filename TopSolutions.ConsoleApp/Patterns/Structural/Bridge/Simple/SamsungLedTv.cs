@@ -20,5 +20,9 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Bridge.Simple
         {
             Console.WriteLine("Setting channel Number " + channelNumber + " on Samsung TV");
         }
+        public void TuneChannel()
+        {
+            Console.WriteLine("Tuning channel Number on Samsung TV");
+        }
     }
 }

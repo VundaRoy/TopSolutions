@@ -12,5 +12,6 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Bridge.Simple
         public abstract void SwitchOn();
         public abstract void SwitchOff();
         public abstract void SetChannel(int channelNumber);
+        public abstract void TuneChannel();
     }
 }

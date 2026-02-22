@@ -22,5 +22,9 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Bridge.Simple
         {
             Console.WriteLine("Turning ON : Panasonic TV");
         }
+        public void TuneChannel()
+        {
+            Console.WriteLine("Tuning channel Numbers on Panasonic TV");
+        }
     }
 }

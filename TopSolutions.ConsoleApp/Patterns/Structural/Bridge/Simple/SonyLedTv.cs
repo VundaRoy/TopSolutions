@@ -20,5 +20,9 @@ namespace TopSolutions.ConsoleApp.Patterns.Structural.Bridge.Simple
         {
             Console.WriteLine("Setting channel Number " + channelNumber + " on Sony TV");
         }
+        public void TuneChannel(int channelNumber)
+        {
+            Console.WriteLine("Tuning channel Number " + channelNumber + " on Sony TV");
+        }
     }
 }
