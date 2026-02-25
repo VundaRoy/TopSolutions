@@ -34,6 +34,15 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.MultipleDb
             ingresServerDataProc.ProcessAndDisplayData("Select * from entityDb");
             ingresServerDataProc.StoreProcessedData("New entity from ingres db");
 
+            Console.WriteLine("\n--- Using MongoDb Data Reader ---");
+            IDataReader mongoDbDataReader = new MongoDbReader();
+            DataProcessor mongoDbDataProc = new(mongoDbDataReader);
+            mongoDbDataProc.ProcessAndDisplayData("Select * from mongoCollection");
+            mongoDbDataProc.StoreProcessedData("New entity from mongo collection");
+            //Call another mongo collection
+            mongoDbDataProc.ProcessAndDisplayData("Select * from anotherMongoCollection");
+            mongoDbDataProc.StoreProcessedData("New entity from another mongo collection");
+
         }
     }
 }
