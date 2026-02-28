@@ -20,9 +20,14 @@ namespace TopSolutions.ConsoleApp.SOLID.OCP.ValidateFuel
             // Get fuel type for a truck
             string truckFuelType = fuelService.GetFuelTypeBaseOnVehicleType("SemiTrailer");
             Console.WriteLine($"Fuel type for SemiTrailer: {truckFuelType}");
-            //hyrbid vehicle type
-            fuelService = new FuelService(new HybridSUV());
-            string hybridFuelType = fuelService.GetFuelTypeBaseOnVehicleType("HybridSUV");
+            //hyrbid SUV vehicle type
+            fuelService = new FuelService(new SportUtilityVehicle());
+            string hybridFuelType = fuelService.GetFuelTypeBaseOnVehicleType("Hybrid");
+            Console.WriteLine($"Fuel type for HybridSUV: {hybridFuelType}");
+            //SUV non hybrid vehicle type
+            fuelService = new FuelService(new SportUtilityVehicle());
+            string suvFuelType = fuelService.GetFuelTypeBaseOnVehicleType("SUV");
+            Console.WriteLine($"Fuel type for normal SUV: {suvFuelType}");
 
         }
     }

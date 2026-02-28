@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace TopSolutions.ConsoleApp.SOLID.OCP.ValidateFuel
 {
-    public class HybridSUV : IValidateFuel
+    public class SportUtilityVehicle : IValidateFuel
     {
         public string GetFuelTypeBaseOnVehicleType(string vehicleType)
         {
-            if (vehicleType == "SUV")
+            if (vehicleType == "Hybrid")
             {
                 return "Premium 98";
             }
