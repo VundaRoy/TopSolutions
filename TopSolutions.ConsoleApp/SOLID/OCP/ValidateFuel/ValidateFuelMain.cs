@@ -19,6 +19,7 @@ namespace TopSolutions.ConsoleApp.SOLID.OCP.ValidateFuel
             fuelService = new FuelService(new SemiTrailer());
             // Get fuel type for a truck
             string truckFuelType = fuelService.GetFuelTypeBaseOnVehicleType("SemiTrailer");
+            Console.WriteLine($"Fuel type for SemiTrailer: {truckFuelType}");
         }
     }
 }
