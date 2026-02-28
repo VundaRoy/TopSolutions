@@ -11,7 +11,7 @@ namespace TopSolutions.ConsoleApp.SOLID.OCP.ValidateFuel
         public static void Main()
         {
             // Create instances of the vehicle types
-            FuelService fuelService = new FuelService(new SedanVehicle());
+            FuelService fuelService = new (new SedanVehicle());
             // Get fuel type for a sedan
             string sedanFuelType = fuelService.GetFuelTypeBaseOnVehicleType("Sedan");
             Console.WriteLine($"Fuel type for Sedan: {sedanFuelType}");
@@ -20,6 +20,10 @@ namespace TopSolutions.ConsoleApp.SOLID.OCP.ValidateFuel
             // Get fuel type for a truck
             string truckFuelType = fuelService.GetFuelTypeBaseOnVehicleType("SemiTrailer");
             Console.WriteLine($"Fuel type for SemiTrailer: {truckFuelType}");
+            //hyrbid vehicle type
+            fuelService = new FuelService(new HybridSUV());
+            string hybridFuelType = fuelService.GetFuelTypeBaseOnVehicleType("HybridSUV");
+
         }
     }
 }

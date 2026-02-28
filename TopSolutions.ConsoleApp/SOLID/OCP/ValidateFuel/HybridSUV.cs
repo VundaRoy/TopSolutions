@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TopSolutions.ConsoleApp.SOLID.OCP.ValidateFuel
 {
-    public class HyrbidSUV : IValidateFuel
+    public class HybridSUV : IValidateFuel
     {
         public string GetFuelTypeBaseOnVehicleType(string vehicleType)
         {
