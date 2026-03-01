@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace TopSolutions.ConsoleApp.SOLID.DIP.PropertyDI
 {
     //This is the class that is responsible for Interacting with the Database
-    //This class is going to be used by the EmpoloyeeBL class
+    //This class is going to be used by the EmployeeBL class
     //That means it is going to be the Dependency Object
     public class EmployeeDAL : IEmployeeDAL
     {
@@ -22,7 +22,8 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.PropertyDI
                 new Employee() { ID = 3, Name = "Rout", Department = "Payroll" },
                 new Employee() { ID = 4, Name = "Maniratnam", Department = "Payroll" },
                 new Employee() { ID = 5, Name = "Koyilthaan", Department = "IT" },
-                new Employee() { ID = 6, Name = "Southein", Department = "HR" }
+                new Employee() { ID = 6, Name = "Southein", Department = "HR" },
+                new Employee() { ID = 7, Name = "Maryada", Department = "IT" }
             };
             return ListEmployees;
         }
