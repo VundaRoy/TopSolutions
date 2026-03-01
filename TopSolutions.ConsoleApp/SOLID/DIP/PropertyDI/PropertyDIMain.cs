@@ -11,9 +11,11 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.PropertyDI
         static void Main(string[] args)
         {
             //Create an Instance of Client Class i.e. EmployeeBL 
-            EmployeeBL employeeBL = new EmployeeBL();
-            //Inject the Dependency Object using the Public Property of the Client Class
-            employeeBL.EmployeeDataObject = new EmployeeDAL();
+            EmployeeBL employeeBL = new()
+            {
+                //Inject the Dependency Object using the Public Property of the Client Class
+                EmployeeDataObject = new EmployeeDAL()
+            };
             List<Employee> ListEmployee = employeeBL.GetAllEmployees();
             foreach (Employee emp in ListEmployee)
             {

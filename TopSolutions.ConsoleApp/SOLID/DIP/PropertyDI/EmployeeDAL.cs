@@ -13,7 +13,7 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.PropertyDI
     {
         public List<Employee> SelectAllEmployees()
         {
-            List<Employee> ListEmployees = new List<Employee>
+            List<Employee> ListEmployees = new()
             {
                 //Get the Employees from the Database
                 //for now we are hard coded the employees
