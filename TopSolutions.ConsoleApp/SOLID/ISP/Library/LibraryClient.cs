@@ -11,8 +11,8 @@ namespace TopSolutions.ConsoleApp.SOLID.ISP.Library
         public static void Main()
         {
             Console.WriteLine("Librarian:");
-            Librarian librarian = new Librarian();
-            Book book = new Book()
+            Librarian librarian = new ();
+            Book book = new ()
             {
                 BookId = "BK-10001",
                 Title = "SOLID Principle using C#",
