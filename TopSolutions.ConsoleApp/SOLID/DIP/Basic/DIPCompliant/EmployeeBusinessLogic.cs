@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant.Contract;
+using static TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant.DIPMain;
 
 namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant
 {
@@ -36,7 +37,7 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant
         {
             return _IOverseasEmployee.ProcessForeignPay(id, country, pay);
         }
-        public void RegisterStudentWithConsulate(int studentId, string country)
+        public void RegisterStudentWithConsulate(int studentId, Countries country)
         {
             _IOverseasEmployee.RegisterWithConsulate(studentId, country);
         }

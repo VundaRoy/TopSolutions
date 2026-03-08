@@ -29,9 +29,11 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant
             Console.WriteLine("Employee from UK with pay of $60000 is $" + employeeBusinessLogic.GetOverseasEmployeePay(1001, "UK", 60000.00));
             Console.WriteLine("Whereas employee from Canada with pay of $60000 is $" + employeeBusinessLogic.GetOverseasEmployeePay(1001, "Canada", 60000.00));
             //Register a Barbudan
-            employeeBusinessLogic.RegisterStudentWithConsulate(2002, Countries.Barbuda.ToString());
+            employeeBusinessLogic.RegisterStudentWithConsulate(2002, Countries.Barbuda);
             //Register a Guadapoupian
-            employeeBusinessLogic.RegisterStudentWithConsulate(2003, Countries.Guadeloupe.ToString());
+            employeeBusinessLogic.RegisterStudentWithConsulate(2003, Countries.Grenadines);
+            //Register and Trinidadian
+            employeeBusinessLogic.RegisterStudentWithConsulate(2004, Countries.Trinidad);
         }
 
         private static Employee ProcessEmployee(EmployeeBusinessLogic employeeBusinessLogic, Employee emp)
@@ -53,17 +55,21 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant
         }
         public enum Countries
         {
-            [Description("Aruba")]
+            [Description("Country of Aruba")]
             Aruba = 1,
-            [Description("Barbuda")]
+            [Description("Antigua & Barbuda")]
             Barbuda = 2,
             [Description("Curacao")]
             Curacao = 3,
             [Description("Grenada")]
             Grenada = 4,
+            [Description("Barbados")]
             Barbados = 5,
+            [Description("Trinidad & Tobago")]
             Trinidad = 6,
+            [Description("Guadeloupe")]
             Guadeloupe = 7,
+            [Description("St Vincent & Grenadines")]
             Grenadines = 8
         }
     }

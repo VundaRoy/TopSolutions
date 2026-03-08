@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant.Contract;
+using static TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant.DIPMain;
 
 namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant
 {
@@ -45,9 +46,9 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.Basic.DIPCompliant
                 return pay * 1.2;
         }
 
-        public void RegisterWithConsulate(int EmployeeID, string Country)
+        public void RegisterWithConsulate(int EmployeeID, Countries country)
         {
-            Console.WriteLine($"Student id :{EmployeeID} is from {Country}.");
+            Console.WriteLine($"Student id :{EmployeeID} is from {country.GetDescription()}.");
         }
 
         public void UpdateEmployee(int id, Employee employee)
