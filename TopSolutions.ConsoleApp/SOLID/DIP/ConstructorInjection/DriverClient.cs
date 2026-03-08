@@ -20,6 +20,9 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.ConstructorInjection
             WhateverCar(audi);
             //ford again
             WhateverCar(ford);
+            //Tesal run
+            ICar tesla = new Tesla();
+            WhateverCar(tesla);
         }
 
         private static void WhateverCar(ICar whatever)
