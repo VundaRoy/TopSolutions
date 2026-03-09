@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace TopSolutions.ConsoleApp.SOLID.DIP.DatabaseSample
 {
+    // The Logger class depends on the IDataService abstraction, allowing for flexibility in how data is saved without changing the Logger class
     public class Logger
     {
-        // The Logger class depends on the IDataService abstraction, allowing for flexibility in how data is saved without changing the Logger class
+        // _dataService is an abstraction that allows the Logger class to use data saving functionality without being tightly coupled to a specific implementation,
+        // adhering to the Dependency Inversion Principle
         private readonly IDataService _dataService; 
         // _loggingService is an abstraction that allows the Logger class to use logging functionality without being tightly coupled to
         // a specific implementation, adhering to the Dependency Inversion Principle
