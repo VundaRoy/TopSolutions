@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TopSolutions.ConsoleApp.SOLID.DIP.DatabaseSample
 {
-    public class LoggingService : ILoggingService
+    // This is a concrete implementation of the ILoggingService interface, providing specific functionality for logging messages and archiving logs
+    public class LoggingService : ILoggingService  
     {
         public void ArchiveSeriLog()
         {

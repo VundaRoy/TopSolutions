@@ -10,7 +10,7 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.DatabaseSample
     {
         public static void Main(string[] args)
         {
-            var logger = new Logger(new DatabaseService(), new LoggingService());            
+            var logger = new Logger(new DatabaseService(), new LoggingService());  //initialize the logger with the concrete implementations of the services          
             logger.Log("Hello, no errors");
             logger.WriteToLog("Logged at " + DateTime.Now);
             logger.ArchiveLogs();

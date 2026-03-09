@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TopSolutions.ConsoleApp.SOLID.DIP.DatabaseSample
 {
-    public class DatabaseService : IDataService
+    public class DatabaseService : IDataService  // This is the concrete implementation of the IDataService interface
 
     {
         public void RollBack(string message)
