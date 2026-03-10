@@ -17,8 +17,8 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.MultipleDb
         public static void DemonstrateMultipleDataReaders()
         {
             Console.WriteLine("--- Demonstrating Multiple Data Readers ---");
-            IDataReader ibmServerReader = new IbmDataReader();
-            DataProcessor ibmDataProcessor = new(ibmServerReader);
+            IDataReader ibmServerReader = new IbmDataReader(); //Create an instance of the IBM data reader
+            DataProcessor ibmDataProcessor = new(ibmServerReader); //Create a data processor and inject the IBM data reader
             ibmDataProcessor.ProcessAndDisplayData("SELECT * FROM Customers");
             ibmDataProcessor.StoreProcessedData("New Customer Record");
             IDataReader mySqlReader = new MySqlDataReader();
