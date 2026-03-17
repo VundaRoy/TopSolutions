@@ -13,18 +13,18 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Iterator.RadioChannels
         static void Main()
         {
             RadioStation newsStations = CreateNewsChannelsList();
-            IIterator<Channel> iterator1 = newsStations.GetIterator();
-            GoForward(iterator1);
-            GoBackward(iterator1);
+            IIterator<Channel> newsChannel_iterator = newsStations.GetIterator();
+            GoForward(newsChannel_iterator);
+            GoBackward(newsChannel_iterator);
             RadioStation hipHopStations = CreateHipHopChannelsList();
-            IIterator<Channel> iterator2 = hipHopStations.GetIterator();
-            GoForward(iterator2);
-            GoBackward(iterator2);
+            IIterator<Channel> hiphop_interator = hipHopStations.GetIterator();
+            GoForward(hiphop_interator);
+            GoBackward(hiphop_interator);
             //Classic hits
             RadioStation classicHits = CreateClassicHitsList();
-            IIterator<Channel> iterator3 = classicHits.GetIterator();
-            GoForward(iterator3);
-            GoBackward(iterator3);
+            IIterator<Channel> classic_iterator = classicHits.GetIterator();
+            GoForward(classic_iterator);
+            GoBackward(classic_iterator);
 
             Console.ReadKey();
         }
