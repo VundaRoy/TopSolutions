@@ -15,11 +15,11 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Iterator.RadioChannels
         {
             _channels = channels;
         }
-        public bool HasNext()
+        public bool HasNext() //Check if there are more channels to iterate forward
         {
             return _position < _channels.Count;
         }
-        public Channel Next()
+        public Channel Next() //Return the next channel and move the position forward
         {
             if (HasNext())
             {
@@ -31,7 +31,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Iterator.RadioChannels
         {
             return _position > 0;
         }
-        public Channel Previous()
+        public Channel Previous() //Return the previous channel and move the position backward
         {
             if (HasPrevious())
             {

@@ -50,6 +50,8 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Iterator.RadioChannels
             RadioStation classicHist  = new RadioStation();
             classicHist.AddChannel(new Channel(107.2, "4RO"));
             classicHist.AddChannel(new Channel(102.8, "JAZ6"));
+            classicHist.AddChannel(new Channel(100.5, "Classic FM"));
+            classicHist.AddChannel(new Channel(99.9, "Classic Rock"));
             return classicHist;
         }
         private static void GoBackward(IIterator<Channel> iterator1)
