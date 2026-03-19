@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.ATC
 {
+    //A mediator class that manages the communication between airplanes and runways.
+    //It keeps track of available runways and grants landing permissions to airplanes based on runway availability.
     public class ControlTower : IControlTower
     {
         private List<Runway> _availableRunways = new();
@@ -13,7 +15,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.ATC
         {
             _availableRunways.Add(runway);
         }
-        public bool RequestLandingPermission(Airplane airplane)
+        public bool RequestLandingPermission(Airplane airplane) // This method checks if there are any available runways and assigns one to the airplane if possible.
         {
             if (_availableRunways.Any())
             {

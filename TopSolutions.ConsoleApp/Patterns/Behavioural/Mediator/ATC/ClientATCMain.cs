@@ -8,26 +8,24 @@
             // Register two runways
             controlTower.RegisterRunway(new Runway("R1"));
             controlTower.RegisterRunway(new Runway("R2"));
-            
-            var listOfPlanes = new ClientATCMain().CreateAirplanes(controlTower);
+            controlTower.RegisterRunway(new Runway("R3"));
+
+            var listOfPlanes = CreateAirplanes(controlTower);
             foreach (var plane in listOfPlanes)
             {
                 plane.RequestLanding();
             }
             Console.ReadKey();
         }
-        public List<Airplane> CreateAirplanes(IControlTower controlTower)
+        public static List<Airplane> CreateAirplanes(IControlTower controlTower) => new()
         {
-            return new List<Airplane>
-            {
-                new Airplane("FL123", controlTower),
-                new Airplane("FL456", controlTower),
-                new Airplane("FJ522", controlTower),
-                new Airplane("CA100", controlTower),
-                new Airplane("MH105", controlTower),
-                new Airplane("BA200", controlTower),
-                new Airplane("AF330", controlTower)
+                new("FL123", controlTower),
+                new("FL456", controlTower),
+                new("FJ522", controlTower),
+                new("CA100", controlTower),
+                new("MH105", controlTower),
+                new("BA200", controlTower),
+                new("AF330", controlTower)
             };
-        }
     }
 }
