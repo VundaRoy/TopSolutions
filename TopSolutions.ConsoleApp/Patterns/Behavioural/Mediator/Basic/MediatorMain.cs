@@ -44,6 +44,8 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.Basic
             Anurag.Mediator.QuitGroup(Anurag);
             John.Send("Who else is here?");
             Anurag.Receive("Got it!");
+            //Unregister one of the users from the Facebook Group
+            facebookMediator.UnregisterUser(Smith);
             Console.Read();
         }
     }

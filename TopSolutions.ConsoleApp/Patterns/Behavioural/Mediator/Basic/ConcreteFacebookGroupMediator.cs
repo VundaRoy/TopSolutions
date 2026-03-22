@@ -26,6 +26,12 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.Basic
             //Registering the user with Mediator
             user.Mediator = this;
         }
+        public void UnregisterUser(User user)
+        {
+            UsersList.Remove(user);
+            Console.WriteLine($"{user.Name} has just left the chat");
+            user.Mediator = this;
+        }
         //The following method is going to send the message in the group i.e. to the group users
         public void SendMessage(string message, User user)
         {
