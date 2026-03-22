@@ -8,6 +8,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.SmartHome
 {
     public class HomeController : IHomeController
     {
+        // This class acts as the mediator, coordinating interactions between various smart home components.
         public void Notify(Component sender, string eventInfo) 
         {
             if (sender is Window && eventInfo == "opened")

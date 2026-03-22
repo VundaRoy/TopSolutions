@@ -8,6 +8,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.SmartHome
 {
     public class Heater : Component
     {
+        // Constructor to set the mediator (home controller) for the heater component
         public Heater(IHomeController controller) : base(controller) { }
         public void TurnOn()
         {

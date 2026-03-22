@@ -8,6 +8,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.SmartHome
 {
     public class SmartFridge : Component
     {
+        // Constructor to set the mediator (home controller) for the smart fridge component
         public SmartFridge(IHomeController controller) : base(controller) { }
         public void TurnOn()
         {

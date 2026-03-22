@@ -9,7 +9,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.SmartHome
     public abstract class Component
     {
         protected IHomeController _controller;
-        public Component(IHomeController controller)
+        public Component(IHomeController controller) // Constructor to set the mediator (home controller) for the component
         {
             _controller = controller;
         }
