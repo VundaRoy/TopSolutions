@@ -27,6 +27,10 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Contravariance.Sample
             //use the derived method directly with a derived class object
             DerivedMethod(new DerivedClass());
             derivedDelegate(new DerivedClass());
+            //call derived method with a base class object - this will cause a compile-time error because the derived method expects a DerivedClass object
+            //DerivedMethod(new BaseClass()); // Uncommenting this line will cause a compile-time error
+            //call derived method from base class delegate - this will also cause a compile-time error because the base class delegate expects a BaseClass object, not a DerivedClass object
+            //contravariantDelegate(new DerivedClass()); // Uncommenting this line will cause a compile-time error
 
 
         }
