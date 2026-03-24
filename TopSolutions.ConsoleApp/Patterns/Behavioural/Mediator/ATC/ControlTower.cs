@@ -11,7 +11,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Mediator.ATC
     public class ControlTower : IControlTower
     {
         private List<Runway> _availableRunways = new();
-        public void RegisterRunway(Runway runway)
+        public void RegisterRunway(Runway runway) 
         {
             _availableRunways.Add(runway);
         }

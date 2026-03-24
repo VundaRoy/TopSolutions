@@ -9,6 +9,7 @@
             controlTower.RegisterRunway(new Runway("R1"));
             controlTower.RegisterRunway(new Runway("R2"));
             controlTower.RegisterRunway(new Runway("R3"));
+            controlTower.RegisterRunway(new Runway("R4"));
 
             var listOfPlanes = CreateAirplanes(controlTower);
             foreach (var plane in listOfPlanes)
