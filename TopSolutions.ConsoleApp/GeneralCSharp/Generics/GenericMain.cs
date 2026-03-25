@@ -21,8 +21,13 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Generics
             EvaluateAndPrint(isEqual, "22 and 22f");
             isEqual = GenericCalculator.AreTwoTypesEqual<int, float>(22, 22);
             EvaluateAndPrint(isEqual, "22 (int) and 22 (float)");
-
-
+            //Add two numbers using generic method
+            double result = GenericCalculator.Add<double>(10.5, 20.5);
+            Console.WriteLine("Addition of 10.5 and 20.5 is " + result);
+            //add two integers using generic method
+            int result1 = GenericCalculator.Add<int>(10, 20);
+            Console.WriteLine("Addition of 10 and 20 is " + result1);
+          
         }
 
         static void EvaluateAndPrint(bool isEqual, string comparison)

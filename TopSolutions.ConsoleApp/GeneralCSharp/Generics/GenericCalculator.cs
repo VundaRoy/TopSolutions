@@ -25,5 +25,11 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Generics
             }
             return value1.Equals(value2);
         }
+        public static T Add<T>(T value1, T value2) where T : struct
+        {
+            dynamic a = value1;
+            dynamic b = value2;
+            return a + b;
+        }   
     }
 }
