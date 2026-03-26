@@ -30,6 +30,12 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Generics
             dynamic a = value1;
             dynamic b = value2;
             return a + b;
-        }   
+        }
+        public static T Subtract<T>(T value1, T value2) where T : struct
+        {
+            dynamic a = value1;
+            dynamic b = value2;
+            return a - b;
+        }
     }
 }

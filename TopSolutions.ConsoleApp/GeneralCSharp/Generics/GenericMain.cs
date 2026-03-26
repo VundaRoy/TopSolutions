@@ -27,7 +27,10 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Generics
             //add two integers using generic method
             int result1 = GenericCalculator.Add<int>(10, 20);
             Console.WriteLine("Addition of 10 and 20 is " + result1);
-          
+            //subtract two numbers using generic method
+            result = GenericCalculator.Subtract<double>(20.5, 10.5);
+            Console.WriteLine("Subtraction of 20.5 and 10.5 is " + result);
+
         }
 
         static void EvaluateAndPrint(bool isEqual, string comparison)
@@ -41,7 +44,7 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Generics
             {
                 Console.WriteLine("Both are Not Equal");
             }
-            Console.ReadKey();
+           // Console.ReadKey();
         }
     }
 }
