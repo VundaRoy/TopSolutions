@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Saga.BookingEvent.Event
 {
+    // These classes represent the various events that occur during the ticket booking saga, such as starting the booking, reserving a ticket,
+    // processing payment, and handling compensation if something goes wrong.
     public class BookingStartedEvent : SagaEvent { public string CustomerName { get; set; } }
     public class TicketReservedEvent : SagaEvent { public string TicketId { get; set; } }
     public class TicketReservationFailedEvent : SagaEvent { public string Reason { get; set; } }

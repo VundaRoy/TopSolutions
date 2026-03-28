@@ -8,6 +8,7 @@ using TopSolutions.ConsoleApp.Patterns.Behavioural.Saga.BookingEvent.Services;
 
 namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Saga.BookingEvent.Orchestrator
 {
+    //A class that orchestrates the entire ticket booking process, managing the state and flow of the saga.
     public class TicketBookingSaga
     {
         private readonly TicketService _ticketService;
@@ -28,6 +29,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Saga.BookingEvent.Orchest
             _notificationService = notificationService;
         }
 
+        //A method that executes the saga, coordinating the steps of the ticket booking process and handling compensation if any step fails.
         public async Task<bool> ExecuteAsync(string customerName, decimal amount)
         {
             var bookingId = Guid.NewGuid();
@@ -44,7 +46,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Saga.BookingEvent.Orchest
 
             // Step 2: Reserve ticket
             var (ticketSuccess, ticketId, ticketError) = await _ticketService.ReserveTicket(bookingId);
-            if (!ticketSuccess)
+            if (!ticketSuccess) // Simulate failure in ticket reservation
             {
                 PublishEvent(new TicketReservationFailedEvent { BookingId = bookingId, Reason = ticketError });
                 await CompensateAsync(bookingId);
@@ -56,7 +58,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Saga.BookingEvent.Orchest
 
             // Step 3: Process payment
             var (paymentSuccess, paymentError) = await _paymentService.ProcessPayment(bookingId, amount);
-            if (!paymentSuccess)
+            if (!paymentSuccess) // Simulate failure in payment processing
             {
                 PublishEvent(new PaymentFailedEvent { BookingId = bookingId, Reason = paymentError });
                 await CompensateAsync(bookingId);
@@ -80,6 +82,7 @@ namespace TopSolutions.ConsoleApp.Patterns.Behavioural.Saga.BookingEvent.Orchest
             return true;
         }
 
+        //a private method that handles compensation logic, rolling back any completed steps in reverse order if a failure occurs during the saga execution.
         private async Task CompensateAsync(Guid bookingId)
         {
             Console.WriteLine($"\n{'!',60}");
