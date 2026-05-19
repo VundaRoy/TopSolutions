@@ -1,4 +1,5 @@
 ﻿using MiniBus.MqApp.Core;
+using MiniBus.MqApp.Messages;
 using System;
 using System.Collections.Generic;
 using System.Linq;

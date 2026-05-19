@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Xunit.Sdk;
+using MiniBus.MqApp.Consumers;
+using MiniBus.MqApp.Core;
+using MiniBus.MqApp.Messages;
 
 var services = new ServiceCollection();
 
