@@ -14,11 +14,13 @@ namespace MiniBus.MqApp.Messages
 
         private readonly IServiceProvider _provider;
         private readonly BlockingCollection<IMessage> _queue;
+        private readonly RetryExecutor _retry;
 
-        public MessageBus(IServiceProvider provider)
+        public MessageBus(IServiceProvider provider, RetryExecutor retry)
         {
             _provider = provider;
             _queue = new BlockingCollection<IMessage>();
+            _retry = retry;
         }
 
         public async Task Publish<T>(T message) where T : IMessage

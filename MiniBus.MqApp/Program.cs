@@ -6,6 +6,7 @@ using MiniBus.MqApp.Messages;
 var services = new ServiceCollection();
 
 // Register your mini bus + consumers
+services.AddTransient<RetryExecutor>();
 services.AddSingleton<MessageBus>();
 services.AddTransient<IConsumer<OrderSubmitted>, OrderSubmittedConsumer>();
 
