@@ -12,11 +12,11 @@ namespace MiniBus.MqApp.Messages
     public class MessageBus
     {
 
-        private readonly IServiceProvider _provider;
-        private readonly BlockingCollection<IMessage> _queue;
-        private readonly RetryExecutor _retry;
+        private readonly IServiceProvider _provider; //inject the service provider to resolve consumers when dispatching messages
+        private readonly BlockingCollection<IMessage> _queue; //use a thread-safe collection to hold messages for processing in the background
+        private readonly RetryExecutor _retry; //use the retry executor to handle retries when processing messages
 
-        public MessageBus(IServiceProvider provider, RetryExecutor retry)
+        public MessageBus(IServiceProvider provider, RetryExecutor retry) //inject the retry executor to handle retries when processing messages
         {
             _provider = provider;
             _queue = new BlockingCollection<IMessage>();
@@ -24,13 +24,7 @@ namespace MiniBus.MqApp.Messages
         }
 
         public async Task Publish<T>(T message) where T : IMessage
-        {
-            //var consumers = _provider.GetServices<IConsumer<T>>();
-
-            //foreach (var consumer in consumers)
-            //{
-            //    await consumer.Consume(message);
-            //}
+        {            
             _queue.Add(message); //enqueue the message for processing instead of processing it immediately
         }
 
