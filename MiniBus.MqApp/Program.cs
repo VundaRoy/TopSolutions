@@ -16,7 +16,7 @@ var bus = provider.GetRequiredService<MessageBus>();
 
 bus.Start();  // start background queue processing
 
-bus.Publish(new OrderSubmitted { OrderId = Guid.NewGuid() });
+bus.Publish(new OrderSubmitted { OrderId = Guid.NewGuid(), Name = "Sample Order", Description = "This is a sample order." });
 
 Console.ReadLine();
 

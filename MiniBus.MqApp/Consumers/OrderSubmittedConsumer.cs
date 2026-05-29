@@ -12,7 +12,7 @@ namespace MiniBus.MqApp.Consumers
     {
         public Task Consume(OrderSubmitted message)
         {
-            Console.WriteLine($"Order submitted: {message.OrderId}");
+            Console.WriteLine($"Order submitted: {message.OrderId}, Name: {message.Name}, Description: {message.Description}");
             return Task.CompletedTask;
         }
     }
