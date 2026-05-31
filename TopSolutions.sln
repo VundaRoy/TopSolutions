@@ -5,8 +5,6 @@ VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopSolutions.ConsoleApp", "TopSolutions.ConsoleApp\TopSolutions.ConsoleApp.csproj", "{0E847493-14E9-4664-8E07-F98958DF79DB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReWrite", "ReWrite\ReWrite.csproj", "{3A23EA8A-C0F2-4977-BBEF-8E058AE06BBD}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cornucopia", "Cornucopia\Cornucopia.csproj", "{278F361D-4886-46A6-81BE-A8E1367FAD07}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandConnect", "CommandConnect\CommandConnect.csproj", "{697A7E17-5DB4-49E6-B3E3-BEC1C3C222E7}"
@@ -18,10 +16,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UltraWPFApp", "UltraWPFApp\UltraWPFApp.csproj", "{6A315EFD-8F74-4123-AB0C-4DA5D3B4F8F5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazeAwayApp", "BlazeAwayApp\BlazeAwayApp.csproj", "{BEA35A0C-4064-48FE-A64C-EAF901425ECF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Top.Weather.Backend.API", "Top.Weather.Backend.API\Top.Weather.Backend.API.csproj", "{C15E1457-7643-46F5-9CCA-43D16A4E2DBF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Top.Weather.FrontEnd", "Top.Weather.FrontEnd\Top.Weather.FrontEnd.csproj", "{C87E6CCA-9D66-45A0-9BFA-EE85A4393839}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBus.MqApp", "MiniBus.MqApp\MiniBus.MqApp.csproj", "{BE1873B6-937C-411A-ADD8-11E10977796B}"
 EndProject
@@ -35,10 +29,6 @@ Global
 		{0E847493-14E9-4664-8E07-F98958DF79DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E847493-14E9-4664-8E07-F98958DF79DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E847493-14E9-4664-8E07-F98958DF79DB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3A23EA8A-C0F2-4977-BBEF-8E058AE06BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3A23EA8A-C0F2-4977-BBEF-8E058AE06BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3A23EA8A-C0F2-4977-BBEF-8E058AE06BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3A23EA8A-C0F2-4977-BBEF-8E058AE06BBD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{278F361D-4886-46A6-81BE-A8E1367FAD07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{278F361D-4886-46A6-81BE-A8E1367FAD07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{278F361D-4886-46A6-81BE-A8E1367FAD07}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,14 +53,6 @@ Global
 		{BEA35A0C-4064-48FE-A64C-EAF901425ECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEA35A0C-4064-48FE-A64C-EAF901425ECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEA35A0C-4064-48FE-A64C-EAF901425ECF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C15E1457-7643-46F5-9CCA-43D16A4E2DBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C15E1457-7643-46F5-9CCA-43D16A4E2DBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C15E1457-7643-46F5-9CCA-43D16A4E2DBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C15E1457-7643-46F5-9CCA-43D16A4E2DBF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C87E6CCA-9D66-45A0-9BFA-EE85A4393839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C87E6CCA-9D66-45A0-9BFA-EE85A4393839}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C87E6CCA-9D66-45A0-9BFA-EE85A4393839}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C87E6CCA-9D66-45A0-9BFA-EE85A4393839}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BE1873B6-937C-411A-ADD8-11E10977796B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BE1873B6-937C-411A-ADD8-11E10977796B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE1873B6-937C-411A-ADD8-11E10977796B}.Release|Any CPU.ActiveCfg = Release|Any CPU
