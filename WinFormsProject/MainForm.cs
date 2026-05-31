@@ -63,6 +63,20 @@ namespace WinFormsProject
         private void containerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MainForm.ActiveForm.BackColor = Color.Gainsboro;
-        }       
+        }
+
+        private void offsetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainForm.ActiveForm.BackColor = Color.LightSteelBlue;
+            label1.BackColor = Color.OldLace;
+            label2.BackColor = Color.Peru;
+        }
+
+        private void onsetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainForm.ActiveForm.BackColor = Color.LightPink;
+            label1.BackColor = Color.MistyRose;
+            label2.BackColor = Color.Chartreuse;
+        }
     }
 }

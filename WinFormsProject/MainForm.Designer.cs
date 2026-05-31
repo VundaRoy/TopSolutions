@@ -133,26 +133,28 @@
             // offsetToolStripMenuItem
             // 
             offsetToolStripMenuItem.Name = "offsetToolStripMenuItem";
-            offsetToolStripMenuItem.Size = new Size(190, 34);
+            offsetToolStripMenuItem.Size = new Size(270, 34);
             offsetToolStripMenuItem.Text = "Offset";
+            offsetToolStripMenuItem.Click += offsetToolStripMenuItem_Click;
             // 
             // onsetToolStripMenuItem
             // 
             onsetToolStripMenuItem.Name = "onsetToolStripMenuItem";
-            onsetToolStripMenuItem.Size = new Size(190, 34);
+            onsetToolStripMenuItem.Size = new Size(270, 34);
             onsetToolStripMenuItem.Text = "Onset";
+            onsetToolStripMenuItem.Click += onsetToolStripMenuItem_Click;
             // 
             // containerToolStripMenuItem
             // 
             containerToolStripMenuItem.Name = "containerToolStripMenuItem";
-            containerToolStripMenuItem.Size = new Size(190, 34);
+            containerToolStripMenuItem.Size = new Size(270, 34);
             containerToolStripMenuItem.Text = "Container";
             containerToolStripMenuItem.Click += containerToolStripMenuItem_Click;
             // 
             // horizonToolStripMenuItem
             // 
             horizonToolStripMenuItem.Name = "horizonToolStripMenuItem";
-            horizonToolStripMenuItem.Size = new Size(190, 34);
+            horizonToolStripMenuItem.Size = new Size(270, 34);
             horizonToolStripMenuItem.Text = "Horizon";
             horizonToolStripMenuItem.Click += horizonToolStripMenuItem_Click;
             // 
@@ -168,7 +170,6 @@
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(300, 31);
             dateTimePicker1.TabIndex = 5;
-            //dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // panel1
             // 
