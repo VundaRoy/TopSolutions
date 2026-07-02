@@ -73,5 +73,55 @@ namespace TopSolutions.ConsoleApp.Algorithms.Sorting
             arr[right] = temp2;
             return i + 1;
         }
+        //Djikstra's algorithm is not a sorting algorithm, but rather a graph traversal algorithm used to find the shortest path between nodes in a graph.
+        //However, if you want to implement Dijkstra's algorithm in C#, here's a simple implementation:
+        public void Dijkstra(int[,] graph, int source)
+        {
+            int n = graph.GetLength(0);
+            int[] dist = new int[n];
+            bool[] visited = new bool[n];
+            for (int i = 0; i < n; i++)
+            {
+                dist[i] = int.MaxValue;
+                visited[i] = false;
+            }
+            dist[source] = 0;
+            for (int count = 0; count < n - 1; count++)
+            {
+                int u = MinDistance(dist, visited);
+                visited[u] = true;
+                for (int v = 0; v < n; v++)
+                {
+                    if (!visited[v] && graph[u, v] != 0 && dist[u] != int.MaxValue && dist[u] + graph[u, v] < dist[v])
+                    {
+                        dist[v] = dist[u] + graph[u, v];
+                    }
+                }
+            }
+            PrintSolution(dist);
+        }
+        public void PrintSolution(int[] dist)
+        {
+            Console.WriteLine("Vertex Distance from Source");
+            for (int i = 0; i < dist.Length; i++)
+            {
+                Console.WriteLine($"{i}\t\t{dist[i]}");
+            }
+
+        }
+        private int MinDistance(int[] dist, bool[] visited)
+        {
+            int min = int.MaxValue;
+            int minIndex = -1;
+            for (int v = 0; v < dist.Length; v++)
+            {
+                if (!visited[v] && dist[v] <= min)
+                {
+                    min = dist[v];
+                    minIndex = v;
+                }
+            }
+            return minIndex;
+        }
     }
 }
