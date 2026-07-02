@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TopSolutions.ConsoleApp.Algorithms.Sorting
+namespace TopSolutions.ConsoleApp.Algorithms.RedBlackTree
 {
     public class RedBlackTree<T> where T : IComparable<T>
     {
@@ -229,7 +229,7 @@ namespace TopSolutions.ConsoleApp.Algorithms.Sorting
             else if (node.Right == null)
             {
                 x = node.Left;
-                Transplant(node, node.Left);
+                Transplant(node, node.Left); // Replace node with its left child
             }
             else
             {
@@ -266,7 +266,7 @@ namespace TopSolutions.ConsoleApp.Algorithms.Sorting
             {
                 root = v;
             }
-            else if (u == u.Parent.Left)
+            else if (u == u.Parent.Left) // If u is the left child of its parent
             {
                 u.Parent.Left = v;
             }

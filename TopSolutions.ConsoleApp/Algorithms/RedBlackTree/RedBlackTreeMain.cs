@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TopSolutions.ConsoleApp.Algorithms.Sorting
+namespace TopSolutions.ConsoleApp.Algorithms.RedBlackTree
 {
-    public class BlackRedTreeMain
+    public class RedBlackTreeMain
     {
         // Implement a Red-Black Tree in C# and demonstrate its usage with insertion and traversal methods.
         static void Main(string[] args)
@@ -17,7 +17,9 @@ namespace TopSolutions.ConsoleApp.Algorithms.Sorting
             rbt.Insert(30);
             rbt.Insert(15);
             Console.WriteLine("In-order Traversal of the Red-Black Tree:");
-            rbt.InOrderTraversal();
+           //Suggested implementation of existing methods for traversal
+            // rbt.InOrderTraversal(rbt.Root);
+            Console.ReadLine();
         }
     }
 }
