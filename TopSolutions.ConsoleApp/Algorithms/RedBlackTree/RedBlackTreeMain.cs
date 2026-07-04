@@ -20,6 +20,11 @@ namespace TopSolutions.ConsoleApp.Algorithms.RedBlackTree
            //Suggested implementation of existing methods for traversal
             // rbt.InOrderTraversal(rbt.Root);
             Console.ReadLine();
+            //insert more nodes and demonstrate deletion
+            rbt.Remove(20);
+            //re-alignment of the tree after deletion
+            Console.WriteLine("In-order Traversal after deletion of 20:");
+            rbt.InOrderTraversal(value => Console.WriteLine(value));
         }
     }
 }

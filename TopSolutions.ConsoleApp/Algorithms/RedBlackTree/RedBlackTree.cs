@@ -378,6 +378,21 @@ namespace TopSolutions.ConsoleApp.Algorithms.RedBlackTree
                 node.IsRed = false; // Ensure the root is black
             }
         }
+        public void InOrderTraversal(Action<T> action)
+        {
+            // Perform an in-order traversal of the tree and apply the given action to each node's value
+            InOrderTraversal(root, action);
+        }
+        private void InOrderTraversal(Node node, Action<T> action)
+        {
+            if (node != null)
+            {
+                InOrderTraversal(node.Left, action);
+                action(node.Value);
+                InOrderTraversal(node.Right, action);
+            }
+        }
+        
     }
     
 }
