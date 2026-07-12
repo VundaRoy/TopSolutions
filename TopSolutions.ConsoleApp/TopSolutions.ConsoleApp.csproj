@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.Algorithms.Performance.ONotation.NLog.NLogMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.Algorithms.Performance.ONotation.ON.ONmain</StartupObject>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
