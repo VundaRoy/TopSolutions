@@ -23,6 +23,9 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.ConstructorInjection
             //Tesal run
             ICar tesla = new Tesla();
             WhateverCar(tesla);
+            //BYD run
+            ICar byd = new BYD();
+            WhateverCar(byd);
         }
 
         private static void WhateverCar(ICar whatever)
