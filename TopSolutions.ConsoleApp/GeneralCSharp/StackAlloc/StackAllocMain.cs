@@ -12,8 +12,8 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.StackAlloc
         {
             unsafe
             {
-                int* ptr = stackalloc int[11];
-                for(int i = 0; i < 11; i++)
+                int* ptr = stackalloc int[11]; // allocating memory on the stack for 11 integers
+                for (int i = 0; i < 11; i++)
                 {
                     ptr[i] = i + 1;
                 }

@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.Advanced.Delegates.DelegateMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Reflection.Sample.SampleReflectionMain</StartupObject>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 

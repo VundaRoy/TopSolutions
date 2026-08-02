@@ -13,13 +13,16 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Structs
             BooksStruct book1 = new();
             BooksStruct book2 = new();
             BooksStruct cantonese = new();
+            BooksStruct tokpisin = new();
 
             book1.getBookInfo("French English Phrases", "A full on language book", "Harrap Editors", "Language learning");
             book2.getBookInfo("Structural Pattern", "Go4 typical books for engineers", "Keith Reigh", "Software engineering");
             cantonese.getBookInfo("Streetwise Cantonese", "Learn like a Hongkonger", "Sidney Lau", "Language Learning");
+            tokpisin.getBookInfo("Tok Pisin Dictionary", "Learn the lingua franca of Papua New Guinea", "John Smith", "Language Learning");
             book1.DisplayBook();
             book2.DisplayBook();
             cantonese.DisplayBook();
+            tokpisin.DisplayBook();
 
             Console.ReadKey();
 
