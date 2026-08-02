@@ -5,12 +5,11 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.GeneralCSharp.Reflection.Sample.SampleReflectionMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.Advanced.Linq.CustomerSearch.CustomerMain</StartupObject>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Advanced\Linq\" />
     <Folder Include="Advanced\Asynchronous\" />
     <Folder Include="Patterns\Behavioural\Saga\Ticketing\DependencyInjection\" />
     <Folder Include="Samples\GitHub\" />
