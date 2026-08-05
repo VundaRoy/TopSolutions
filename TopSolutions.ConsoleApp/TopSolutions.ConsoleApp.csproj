@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.Advanced.Linq.CustomerSearch.CustomerByLastNameMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.Advanced.Reflection.ReflectionMain</StartupObject>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
