@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.Advanced.Concurrency.MultiThreadingMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.Advanced.Linq.CustomerSearch.CustomerByLastNameMain</StartupObject>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 

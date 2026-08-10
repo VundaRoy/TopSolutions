@@ -27,6 +27,40 @@ namespace TopSolutions.ConsoleApp.Advanced.Linq.CustomerSearch
             {
                 Console.WriteLine("Customer not found.");
             }
+            //Update customer address using linq where last name is Johnson
+            UpdateCustomerAddress(CustomerList, "C003", "999 New Address St");
+            //Insert new customer into CustomerList
+            InsertIntoList(CustomerList, new Customer { CustomerId = "C007", FirstName = "David", LastName = "Johnson", Address = "404 Cedar St" });
+            //show all customers in CustomerList
+            Console.WriteLine("All customers in the list:");
+            ShowAllCustomers(CustomerList);
+
+        }
+
+        public static void UpdateCustomerAddress(List<Customer> customerList, string customerId, string newAddress)
+        {
+            var customer = customerList.FirstOrDefault(c => c.CustomerId == customerId);
+            if (customer != null)
+            {
+                customer.Address = newAddress;
+                Console.WriteLine($"Customer address updated: {customer.FirstName} {customer.LastName}, New Address: {customer.Address}");
+            }
+            else
+            {
+                Console.WriteLine("Customer not found.");
+            }
+        }
+
+        public static void InsertIntoList(List<Customer> customerList, Customer customer)
+        {
+            customerList.Add(customer);
+        }
+        public static void ShowAllCustomers(List<Customer> customerList)
+        {
+            foreach (var customer in customerList)
+            {
+                Console.WriteLine($"CustomerId: {customer.CustomerId}, Name: {customer.FirstName} {customer.LastName}, Address: {customer.Address}");
+            }
         }
     }
 }
