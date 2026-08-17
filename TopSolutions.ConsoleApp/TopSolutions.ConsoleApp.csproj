@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.Advanced.Performance.Span.SpanAndSliceMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.Advanced.Performance.Span.TypeOf.SliceOfCarMain</StartupObject>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
