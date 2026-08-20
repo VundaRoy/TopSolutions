@@ -15,7 +15,8 @@ namespace TopSolutions.ConsoleApp.Advanced.Performance.Span.TypeOf
                 new () { Model = "Mustang", Name = "Ford", Price = 55000, Maker = "Ford" },
                 new () { Model = "Civic", Name = "Honda", Price = 25000, Maker = "Honda" },
                 new () { Model = "Camry", Name = "Toyota", Price = 30000, Maker = "Toyota" },
-                new () { Model = "Accord", Name = "Honda", Price = 28000, Maker = "Honda" }
+                new () { Model = "Accord", Name = "Honda", Price = 28000, Maker = "Honda" },
+                new () { Model = "Corolla", Name = "Toyota", Price = 20000, Maker = "Toyota" }
             };
             Console.WriteLine("Span of Car objects:");
             foreach (var car in cars)
@@ -28,6 +29,15 @@ namespace TopSolutions.ConsoleApp.Advanced.Performance.Span.TypeOf
             foreach (var car in slicedCars)
             {
                 Console.WriteLine($"Model: {car.Model}, Name: {car.Name}, Price: {car.Price}, Maker: {car.Maker}");
+            }
+            //slice example to get the last 3 elements
+            Console.WriteLine("Getting the last 3 elements of the span:");
+            slicedCars.Clear();
+            slicedCars = cars.Slice(cars.Length - 3, 3);
+            foreach (var car in slicedCars)
+            {
+                Console.WriteLine($"Model: {car.Model}, Name: {car.Name}, Price: {car.Price}, Maker: {car.Maker}");
+
             }
         }
     }
