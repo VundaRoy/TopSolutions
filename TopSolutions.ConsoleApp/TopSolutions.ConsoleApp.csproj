@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.Advanced.Performance.Memory.ReadOnlyMemoryMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.Advanced.Performance.Unsafe.UnsafeMain</StartupObject>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
