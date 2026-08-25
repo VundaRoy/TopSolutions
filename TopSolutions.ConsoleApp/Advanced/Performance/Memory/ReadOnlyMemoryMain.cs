@@ -18,6 +18,15 @@ namespace TopSolutions.ConsoleApp.Advanced.Performance.Memory
             Console.WriteLine("Enter the index of the car you want to retrieve (0-9):");
             //Read the index from the console
             var index = int.Parse(Console.ReadLine());
+            //ensure index does not exceed the length of the ReadOnlyMemory
+            do
+            {
+                if (index < 0 || index >= cars.Length)
+                {
+                    Console.WriteLine("Index out of range. Please enter a valid index (0-9):");
+                    index = int.Parse(Console.ReadLine());
+                }
+            } while (index < 0 || index >= cars.Length);
             Console.WriteLine("Car at index {0}: Model: {1}, Name: {2}, Price: {3}, Maker: {4}", 
                       index, cars.Span[index].Model, cars.Span[index].Name, cars.Span[index].Price, cars.Span[index].Maker);
         }
