@@ -17,6 +17,8 @@ namespace TopSolutions.ConsoleApp.Advanced.Performance.Unsafe
             {
                 Console.WriteLine(number);
             }
+            Console.WriteLine("Running unsafe methods:");
+            RunUnsafeMethods();
         }
 
         private static int[] GetUnsafeValues(int[] numbers)
@@ -35,6 +37,29 @@ namespace TopSolutions.ConsoleApp.Advanced.Performance.Unsafe
             }
 
             return numbers;
+        }
+        private static void RunUnsafeMethods()
+        {
+            //run unsafe method
+            unsafe
+            {
+                fixed (int* p = new int[10]) // Pin a dummy array in memory
+                {
+                    // Call the unsafe method
+                    p[0] = 1;
+                    for(int i = 0; i < 10; i++)
+                    {
+                        UnSafeMethod1(p);
+                        p[0]++;
+                    }
+                }
+                
+            }
+            
+        }
+        private unsafe static void UnSafeMethod1(int* p)
+        {
+            Console.WriteLine($"An unsafe method is running. Iteration number {p[0]}");
         }
     }
 }
