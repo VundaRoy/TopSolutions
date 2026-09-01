@@ -10,12 +10,20 @@ namespace TopSolutions.ConsoleApp.Advanced.Performance.Structs
         {
             //create a stack only struct
             StackOnlyStruct stackOnlyStruct = new StackOnlyStruct(10);
-            Console.WriteLine($"Initial Value: {stackOnlyStruct.GetAmount()}");
+            
             stackOnlyStruct.AddAmount(5);
-            Console.WriteLine($"After Adding 5: {stackOnlyStruct.GetAmount()}");
+            DisplayValuesBasedonDescription(stackOnlyStruct, "After Adding 5");
             stackOnlyStruct.RemoveAmount(3);
-            Console.WriteLine($"After Removing 3: {stackOnlyStruct.GetAmount()}");
+            DisplayValuesBasedonDescription(stackOnlyStruct, "After Removing 3");
+            stackOnlyStruct.TothePowerOfAmount(3);
+            DisplayValuesBasedonDescription(stackOnlyStruct, "After Raising to the Power of 3");
+            stackOnlyStruct.MultiplyAmount(2);
+            DisplayValuesBasedonDescription(stackOnlyStruct, "After Multiplying by 2");
 
+        }
+        public static void DisplayValuesBasedonDescription(StackOnlyStruct stackOnlyStruct, string description)
+        {
+            Console.WriteLine($"{description}: {stackOnlyStruct.GetAmount()}");
         }
         //create stack only structures
         //struct of integers that can only be allocated on the stack and cannot be boxed or stored in heap memory
@@ -32,6 +40,16 @@ namespace TopSolutions.ConsoleApp.Advanced.Performance.Structs
             }
             public int GetAmount()
             {
+                return Value;
+            }
+            public int MultiplyAmount(int amount)
+            {
+                Value *= amount;
+                return Value;
+            }
+            public int TothePowerOfAmount(int amount)
+            {                
+                Value = (int)Math.Pow(Value, amount);
                 return Value;
             }
             public void RemoveAmount(int amount){
