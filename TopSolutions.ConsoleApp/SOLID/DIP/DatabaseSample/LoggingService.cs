@@ -16,7 +16,7 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.DatabaseSample
 
         public void WriteToSeriLog(string message)
         {
-            Console.WriteLine(message);
+            Console.WriteLine($"Writing to SeriLog: {message}");
         }
     }
 }
