@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.SOLID.DIP.DatabaseSample.DatabaseDipMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.SOLID.DIP.RealWorld.Banking.BankingMain</StartupObject>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
