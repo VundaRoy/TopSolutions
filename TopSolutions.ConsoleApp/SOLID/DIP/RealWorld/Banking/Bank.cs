@@ -8,34 +8,36 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.RealWorld.Banking
     {
         public void Transfer(string fromAccount, string toAccount, decimal amount)
         {
-            // Implementation here
+            Amount += amount;
+            Console.WriteLine($"Transferred {amount} from account {fromAccount} to account {toAccount}. New balance: {Amount}");
         }
 
         public string GetAccountName(string account)
         {
             // Implementation here
-            return string.Empty;
+            return Name;
         }
 
         public void Deposit(string account, decimal amount)
         {
-            // Implementation here
+            Amount += amount;
         }
 
         public decimal GetAccountBalance(string account)
         {
             // Implementation here
-            return 0;
+            return Amount;
         }
 
         public decimal GetBalance(string account)
         {
             // Implementation here
-            return 0;
+            return Amount;
         }
 
         public string Name { get; set; }
         public string Description { get; set; }
         public string Address { get; set; } 
+        public decimal Amount { get; set; }
     }
 }
