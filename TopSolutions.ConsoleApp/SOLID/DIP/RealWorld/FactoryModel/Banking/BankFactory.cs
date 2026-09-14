@@ -13,6 +13,7 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.RealWorld.FactoryModel.Banking
             {
                 "WESTPAC" => new WestPac(),
                 "COMMBANK" => new CommBank(),
+                "NAB" => new NAB(),
                 _ => throw new ArgumentException("Invalid bank code")
             };
         }
