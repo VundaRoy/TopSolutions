@@ -20,6 +20,7 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.RealWorld.FactoryModel.Banking
 
             IBank bank = BankFactory.GetBank(bankCode); //Get the bank implementation based on the bank code
             bank.ProcessPayment(100.00m);
+            bank.ProcessDeposit(200.00m);
             bank.GetTotalBalance();
         }   
     }

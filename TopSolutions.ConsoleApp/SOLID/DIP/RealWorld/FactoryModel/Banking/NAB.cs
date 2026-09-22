@@ -15,6 +15,12 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.RealWorld.FactoryModel.Banking
             Console.WriteLine("please note that NAB policy only allows payments to be processed between 9am and 5pm. " +
                 "If you are trying to process a payment outside of these hours, please try again during business hours.");
         }
+        public void ProcessDeposit(decimal amount)
+        {
+            Console.WriteLine($"Processing deposit of {amount} with NAB");
+            Balance += amount;
+            Console.WriteLine($"Deposit of {amount} processed successfully. Please check your account for the updated balance.");
+        }
 
         public void GetTotalBalance()
         {

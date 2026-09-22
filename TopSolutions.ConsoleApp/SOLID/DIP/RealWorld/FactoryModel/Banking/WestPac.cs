@@ -9,7 +9,12 @@
             Balance -= amount;
             Console.WriteLine($"[WestPac] Payment of {amount} processed successfully. Please check your account for the updated balance.");
         }
-
+        public void ProcessDeposit(decimal amount)
+        {
+            Console.WriteLine($"[WestPac] API connected. Processing deposit of {amount}.");
+            Balance += amount;
+            Console.WriteLine($"[WestPac] Deposit of {amount} processed successfully. Please check your account for the updated balance.");
+        }
         public void GetTotalBalance()
         {
             Console.WriteLine($"[WestPac] API connected. Retrieving total balance. ${Balance}");

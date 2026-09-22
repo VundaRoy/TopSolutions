@@ -11,7 +11,10 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.RealWorld.FactoryModel.Banking
         {
             Console.WriteLine($"[Bank B] API connected. Processing payment of {amount}.");
         }
-
+        public void ProcessDeposit(decimal amount)
+        {
+            Console.WriteLine($"[Bank B] API connected. Processing deposit of {amount}.");
+        }
         public void GetTotalBalance()
         {
             Console.WriteLine($"[Bank B] API connected. Retrieving total balance: {Balance}.");
