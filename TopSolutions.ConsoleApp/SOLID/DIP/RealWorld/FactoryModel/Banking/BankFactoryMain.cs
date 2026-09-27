@@ -13,10 +13,10 @@ namespace TopSolutions.ConsoleApp.SOLID.DIP.RealWorld.FactoryModel.Banking
             //do while not valid bank code
             do {
 
-                Console.WriteLine("Enter bank code (WESTPAC, NAB or COMMBANK):");
+                Console.WriteLine("Enter bank code (WESTPAC, NAB, ANZ or COMMBANK):");
                 bankCode = Console.ReadLine();
             }
-            while(string.IsNullOrEmpty(bankCode) || (bankCode != "WESTPAC" && bankCode != "NAB" && bankCode != "COMMBANK"));
+            while(string.IsNullOrEmpty(bankCode) || (bankCode != "WESTPAC" && bankCode != "NAB" && bankCode != "COMMBANK" && bankCode != "ANZ"));
 
             IBank bank = BankFactory.GetBank(bankCode); //Get the bank implementation based on the bank code
             bank.ProcessPayment(100.00m);
