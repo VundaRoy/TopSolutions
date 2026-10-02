@@ -15,7 +15,7 @@
 
         public void UpdatePerson(int Id)
         {
-            //do managerial update
+            Console.WriteLine($"The Manager with ID {Id} has been updated.");
         }
     }
 }

@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopSolutions.ConsoleApp.SOLID.DIP.RealWorld.FactoryModel.Banking.BankFactoryMain</StartupObject>
+    <StartupObject>TopSolutions.ConsoleApp.OOP.Inheritance.InheritanceMain</StartupObject>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
