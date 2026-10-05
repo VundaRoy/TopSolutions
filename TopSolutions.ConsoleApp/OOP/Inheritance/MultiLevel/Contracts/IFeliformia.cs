@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TopSolutions.ConsoleApp.OOP.Inheritance.MultiLevel
+namespace TopSolutions.ConsoleApp.OOP.Inheritance.MultiLevel.Contracts
 {
-    public interface IFeliformia : ICarniformia
+    public interface IFeliformia : ICarnivora
     {
         void NightVision();
         void RetractileClaws();
