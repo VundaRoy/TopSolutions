@@ -19,6 +19,9 @@ namespace TopSolutions.ConsoleApp.GeneralCSharp.Classes.Abstract.Contract
             //SchoolLibrary instance
             ILibrary schoolLibrary = new SydneyBoysLibrary();
             CreateSchoolLibraryWithParam(schoolLibrary);
+            //UniversityLibrary instance
+            ILibrary lawLibrary = new USydHerbertLawLibrary();
+            CreateUniversityLibraryWithParam(lawLibrary);
         }
 
         private static void CreatePublicLibraryWithParam(ILibrary publicLibrary)
